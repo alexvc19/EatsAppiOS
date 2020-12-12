@@ -67,6 +67,12 @@
                                                         <integer key="value" value="15"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="JMV-qL-VU6" kind="presentation" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="KKK-mX-G8d">
+                                                        <segue key="commit" inheritsFrom="parent" id="Ay5-LC-UoZ"/>
+                                                        <segue key="preview" inheritsFrom="commit" id="ZiE-b8-1fV"/>
+                                                    </segue>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQ0-ip-32c">
                                                 <rect key="frame" x="193.5" y="433" width="27" height="28"/>
@@ -178,11 +184,24 @@
             </objects>
             <point key="canvasLocation" x="-291.304347826087" y="-29.464285714285712"/>
         </scene>
+        <!--Main-->
+        <scene sceneID="lG5-eP-PHs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="JMV-qL-VU6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mxX-89-84D"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nW2-la-6r2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="302" y="-29"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="KKK-mX-G8d"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Logotype" width="250" height="250"/>
         <namedColor name="Rojo">
-            <color red="1" green="0.36078431372549019" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.36100000143051147" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
