@@ -7,7 +7,6 @@
 
 import UIKit
 
-class MyCollectionCell: UICollectionViewCell {
+class PrincipalCollectionCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
-    
 }
