@@ -27,11 +27,21 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     //variable del PageControl
     var currentcellindex = 0
     
-    var categoriesPhotos:[String]=["categori1","categori2","categoria3","categoria4"]
+    var categoriesPhotos:[String] = [
+        "categori1",
+        "categori2",
+        "categoria3",
+        "categoria4"
+    ]
+    var namecategories:[String] = [
+        "Hamburguesas",
+        "Pizza",
+        "Sushi",
+        "Postres"
+    ]
     
     //MARK: - funciones datasorce y delegate CollectionView principal y categorias
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         
         if(collectionView == principalCollectionView){
             return slidePhotos.count
@@ -51,6 +61,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             
             cell2?.categorieImageView.image = UIImage(named: categoriesPhotos[indexPath.row])
             cell2?.categorieImageView.layer.cornerRadius = 5.0
+            cell2?.nameCategorie.text = namecategories[indexPath.row]
             return cell2!
         }
         return cell!
@@ -91,7 +102,7 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         pageView.numberOfPages = slidePhotos.count
         
         //timer del slider principal
-        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(slideToNext), userInfo: nil,repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(slideToNext), userInfo: nil,repeats: true)
         }
     
     //funcion para controlar el timer del slider principal

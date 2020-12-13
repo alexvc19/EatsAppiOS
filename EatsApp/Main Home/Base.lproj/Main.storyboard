@@ -105,17 +105,28 @@
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="categori1" translatesAutoresizingMaskIntoConstraints="NO" id="WVF-2K-bre">
                                                                     <rect key="frame" x="0.0" y="0.0" width="82" height="82"/>
                                                                 </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yf-af-wuW">
+                                                                    <rect key="frame" x="3" y="87" width="76" height="16.5"/>
+                                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                                                    <color key="textColor" name="Amarillo"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="WVF-2K-bre" secondAttribute="trailing" id="4BA-pO-xPk"/>
+                                                                <constraint firstAttribute="trailing" secondItem="9yf-af-wuW" secondAttribute="trailing" constant="3" id="5Ka-pq-4WK"/>
                                                                 <constraint firstAttribute="bottom" secondItem="WVF-2K-bre" secondAttribute="bottom" constant="24" id="Plm-ir-hQZ"/>
                                                                 <constraint firstItem="WVF-2K-bre" firstAttribute="top" secondItem="qKZ-7P-sfB" secondAttribute="top" id="Ya9-LM-Cxr"/>
+                                                                <constraint firstItem="9yf-af-wuW" firstAttribute="top" secondItem="WVF-2K-bre" secondAttribute="bottom" constant="5" id="aCM-ck-nZj"/>
+                                                                <constraint firstItem="9yf-af-wuW" firstAttribute="centerX" secondItem="WVF-2K-bre" secondAttribute="centerX" id="okf-5C-6T5"/>
                                                                 <constraint firstItem="WVF-2K-bre" firstAttribute="leading" secondItem="qKZ-7P-sfB" secondAttribute="leading" id="qak-4E-St0"/>
+                                                                <constraint firstItem="9yf-af-wuW" firstAttribute="leading" secondItem="qKZ-7P-sfB" secondAttribute="leading" constant="3" id="ueV-mt-hyt"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <size key="customSize" width="82" height="106"/>
                                                         <connections>
                                                             <outlet property="categorieImageView" destination="WVF-2K-bre" id="yBq-6t-NE9"/>
+                                                            <outlet property="nameCategorie" destination="9yf-af-wuW" id="gCe-RG-uQL"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
@@ -179,6 +190,9 @@
     <resources>
         <image name="categori1" width="82" height="82"/>
         <image name="pizza1" width="351" height="167"/>
+        <namedColor name="Amarillo">
+            <color red="0.94900000095367432" green="0.63499999046325684" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="GrisClaro">
             <color red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
