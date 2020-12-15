@@ -19,6 +19,9 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     //IBOutlets slideCategories
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     
+    //IBOutlets cardFood
+    @IBOutlet weak var cardCollectionView: UICollectionView!
+    
     //MARK: - Varibles del slider principal
     //array de las imagenes
     var slidePhotos:[String] = ["pizza1","pizza2","pizza3","pizza4"]
@@ -27,24 +30,41 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
     //variable del PageControl
     var currentcellindex = 0
     
+    //fotos de las categorias
     var categoriesPhotos:[String] = [
         "categori1",
         "categori2",
         "categoria3",
         "categoria4"
     ]
+    //nombre de las categorias
     var namecategories:[String] = [
         "Hamburguesas",
         "Pizza",
         "Sushi",
         "Postres"
     ]
+    //fotos card "mas popular"
+    var cardsPhotos:[String] = [
+        "card1",
+        "card2",
+    ]
+    //card nombre de la comida "mas popular"
+    var namesOfFood:[String]=[
+        "Pollo Frito",
+        "Sushi"
+    ]
+    
+    var waitTime = "30 - 40 minutos"
     
     //MARK: - funciones datasorce y delegate CollectionView principal y categorias
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if(collectionView == principalCollectionView){
             return slidePhotos.count
+        }
+        if(collectionView == cardCollectionView){
+            return cardsPhotos.count
         }
         
         return categoriesPhotos.count
@@ -64,24 +84,38 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             cell2?.nameCategorie.text = namecategories[indexPath.row]
             return cell2!
         }
+        if (collectionView == cardCollectionView){
+            let cellCard = cardCollectionView.dequeueReusableCell(withReuseIdentifier: "cellCard", for: indexPath) as? CardCollectionViewCell
+           
+            cellCard?.cardImageView.image = UIImage(named: cardsPhotos[indexPath.row])
+            cellCard?.nameFoodLabel.text = namesOfFood[indexPath.row]
+            cellCard?.waitLabel.text = waitTime
+            
+            //borders
+            cellCard?.layer.borderColor = (UIColor .black).cgColor
+            cellCard?.layer.borderWidth = 0.22
+            
+            //shadow
+            cellCard?.backgroundColor = .clear // very important
+            cellCard?.layer.masksToBounds = false
+            cellCard?.layer.shadowOpacity = 0.22
+            cellCard?.layer.shadowRadius = 3
+            cellCard?.layer.shadowOffset = CGSize(width: 0, height: 5)
+            cellCard?.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+            
+            cellCard?.contentView.backgroundColor = .white
+            cellCard?.contentView.layer.cornerRadius = 0
+            
+            
+            
+            return cellCard!
+            
+        }
+        
         return cell!
     
     }
-    /*
-    //MARK: -funciones datasorce y delegate CollectionView celda slide Categoria
-    func categoriesCollectionView(_ categoriesCollectionView: UICollectionView, numberOfitems section: Int) -> Int{
-        return categoriesPhotos.count
-    }
-    func categoriesCollectionView(_ categoriesCollectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
-        
-        let celld = categoriesCollectionView.dequeueReusableCell(withReuseIdentifier: "celld", for: indexPath) as? CategoriesCollectionViewCell
-        
-        celld?.categorieImageView.image = UIImage(named: categoriesPhotos[indexPath.row])
-        celld?.categorieImageView.layer.cornerRadius = 5.0
-        return celld!
-    }
-    */
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         

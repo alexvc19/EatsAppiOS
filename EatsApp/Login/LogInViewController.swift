@@ -22,9 +22,6 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //color del borde
-        let myColor = UIColor(named: "GrisClaro")
-        
         //MARK: - Configuracion del phoneNumberTextField
         phoneNumberTextField.delegate = self
         phoneNumberTextField.setFlag(countryCode: .MX)
@@ -32,19 +29,22 @@ class LogInViewController: UIViewController {
         phoneNumberTextField.placeholder = "Phone Number"
 
         
-        // MARK: - Aspecto de botones y textfields bordes, color de bordes y radio
-        //radio a los bordes
+        // MARK: - Aspecto de botones y textfields
+       
+        //textfields
+        phoneNumberTextField.layer.borderWidth = 0.5
+        phoneNumberTextField.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
+        phoneNumberTextField.layer.cornerRadius = 5
         pass.layer.cornerRadius = 5
-        create.layer.cornerRadius = 15
-        
-        pass.layer.borderColor = myColor?.cgColor
-        
-        //tamaño del borde
+        pass.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
         pass.layer.borderWidth = 0.5
+        
+        //botones
         googleButton.layer.borderWidth = 1.0
         create.layer.borderWidth = 1.0
+        create.layer.cornerRadius = 15
         
-        // MARK: - Icono de boton google
+        //Icono de boton google
         let icon = UIImage(named: "Google")!
         googleButton.setImage(icon, for: .normal)
         googleButton.imageView!.contentMode = .scaleAspectFill
