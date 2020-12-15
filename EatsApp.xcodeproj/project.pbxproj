@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,9 +17,13 @@
 		4A279E4B2582E5B80096F79A /* EatsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A279E4A2582E5B80096F79A /* EatsAppUITests.swift */; };
 		4A279E782582EF9F0096F79A /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A279E772582EF9F0096F79A /* LogIn.storyboard */; };
 		4A279E852582F0830096F79A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A279E842582F0830096F79A /* LogInViewController.swift */; };
+		4A2DB48625873D260024163C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DB48525873D260024163C /* GoogleService-Info.plist */; };
 		4A36B96725857E8000ED3059 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A36B96625857E8000ED3059 /* CategoriesCollectionViewCell.swift */; };
 		4A54D1B8258439CA00B64EE8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54D1B7258439CA00B64EE8 /* MainViewController.swift */; };
 		4A54D1DD25848B4700B64EE8 /* PrincipalCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54D1DC25848B4700B64EE8 /* PrincipalCollectionCell.swift */; };
+		91735F173AB2F4C042811E38 /* Pods_EatsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D8B98B3FB8FD200C24DEB2 /* Pods_EatsAppTests.framework */; };
+		D1EAA3A44C0CF66EC91A3AFF /* Pods_EatsApp_EatsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF937E729FEBB71B275E2C88 /* Pods_EatsApp_EatsAppUITests.framework */; };
+		D5E7B422B0B5B7262D4BE7BD /* Pods_EatsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713C2A85BCA61D60A0A18FB9 /* Pods_EatsApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33E530F06872FCDCD041C1EB /* Pods-EatsApp-EatsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp-EatsAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-EatsApp-EatsAppUITests/Pods-EatsApp-EatsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		47DDE463AB1CFEBABA24F4F5 /* Pods-EatsApp-EatsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp-EatsAppUITests.release.xcconfig"; path = "Target Support Files/Pods-EatsApp-EatsAppUITests/Pods-EatsApp-EatsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4A279E252582E5B30096F79A /* EatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A279E282582E5B30096F79A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A279E2A2582E5B30096F79A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,9 +62,17 @@
 		4A279E4C2582E5B80096F79A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A279E772582EF9F0096F79A /* LogIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
 		4A279E842582F0830096F79A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		4A2DB48525873D260024163C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A36B96625857E8000ED3059 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		4A54D1B7258439CA00B64EE8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4A54D1DC25848B4700B64EE8 /* PrincipalCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalCollectionCell.swift; sourceTree = "<group>"; };
+		4A75A3292144AE9B99B9AC90 /* Pods-EatsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp.debug.xcconfig"; path = "Target Support Files/Pods-EatsApp/Pods-EatsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		713C2A85BCA61D60A0A18FB9 /* Pods_EatsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74560C490A2656D564FACB0E /* Pods-EatsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-EatsAppTests/Pods-EatsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AAC345E16794F51F44C9F5F0 /* Pods-EatsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp.release.xcconfig"; path = "Target Support Files/Pods-EatsApp/Pods-EatsApp.release.xcconfig"; sourceTree = "<group>"; };
+		BF937E729FEBB71B275E2C88 /* Pods_EatsApp_EatsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatsApp_EatsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAB6CA896CE50409144A8859 /* Pods-EatsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsAppTests.release.xcconfig"; path = "Target Support Files/Pods-EatsAppTests/Pods-EatsAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		F3D8B98B3FB8FD200C24DEB2 /* Pods_EatsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5E7B422B0B5B7262D4BE7BD /* Pods_EatsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91735F173AB2F4C042811E38 /* Pods_EatsAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +96,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1EAA3A44C0CF66EC91A3AFF /* Pods_EatsApp_EatsAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03B16568E814CDE275363E3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A75A3292144AE9B99B9AC90 /* Pods-EatsApp.debug.xcconfig */,
+				AAC345E16794F51F44C9F5F0 /* Pods-EatsApp.release.xcconfig */,
+				33E530F06872FCDCD041C1EB /* Pods-EatsApp-EatsAppUITests.debug.xcconfig */,
+				47DDE463AB1CFEBABA24F4F5 /* Pods-EatsApp-EatsAppUITests.release.xcconfig */,
+				74560C490A2656D564FACB0E /* Pods-EatsAppTests.debug.xcconfig */,
+				CAB6CA896CE50409144A8859 /* Pods-EatsAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		0C9029BC673F8786CABF896B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				713C2A85BCA61D60A0A18FB9 /* Pods_EatsApp.framework */,
+				BF937E729FEBB71B275E2C88 /* Pods_EatsApp_EatsAppUITests.framework */,
+				F3D8B98B3FB8FD200C24DEB2 /* Pods_EatsAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4A279E1C2582E5B30096F79A = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +133,8 @@
 				4A279E3E2582E5B80096F79A /* EatsAppTests */,
 				4A279E492582E5B80096F79A /* EatsAppUITests */,
 				4A279E262582E5B30096F79A /* Products */,
+				03B16568E814CDE275363E3D /* Pods */,
+				0C9029BC673F8786CABF896B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +159,7 @@
 				4A279E312582E5B70096F79A /* Assets.xcassets */,
 				4A279E332582E5B70096F79A /* LaunchScreen.storyboard */,
 				4A279E362582E5B70096F79A /* Info.plist */,
+				4A2DB48525873D260024163C /* GoogleService-Info.plist */,
 			);
 			path = EatsApp;
 			sourceTree = "<group>";
@@ -166,9 +209,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A279E4F2582E5B80096F79A /* Build configuration list for PBXNativeTarget "EatsApp" */;
 			buildPhases = (
+				BBAD2D3F6E1DDF6FDAFA685C /* [CP] Check Pods Manifest.lock */,
 				4A279E212582E5B30096F79A /* Sources */,
 				4A279E222582E5B30096F79A /* Frameworks */,
 				4A279E232582E5B30096F79A /* Resources */,
+				C2A6998296B9A01C0EF22312 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +228,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A279E522582E5B80096F79A /* Build configuration list for PBXNativeTarget "EatsAppTests" */;
 			buildPhases = (
+				1A59B8CA6EDEC6DAB63B80EC /* [CP] Check Pods Manifest.lock */,
 				4A279E372582E5B80096F79A /* Sources */,
 				4A279E382582E5B80096F79A /* Frameworks */,
 				4A279E392582E5B80096F79A /* Resources */,
@@ -201,9 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A279E552582E5B80096F79A /* Build configuration list for PBXNativeTarget "EatsAppUITests" */;
 			buildPhases = (
+				6CF04289B08CDD911F4420B3 /* [CP] Check Pods Manifest.lock */,
 				4A279E422582E5B80096F79A /* Sources */,
 				4A279E432582E5B80096F79A /* Frameworks */,
 				4A279E442582E5B80096F79A /* Resources */,
+				36761BD38E92CD037C92A232 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -264,6 +312,7 @@
 			files = (
 				4A279E782582EF9F0096F79A /* LogIn.storyboard in Resources */,
 				4A279E352582E5B70096F79A /* LaunchScreen.storyboard in Resources */,
+				4A2DB48625873D260024163C /* GoogleService-Info.plist in Resources */,
 				4A279E322582E5B70096F79A /* Assets.xcassets in Resources */,
 				4A279E302582E5B30096F79A /* Main.storyboard in Resources */,
 			);
@@ -284,6 +333,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A59B8CA6EDEC6DAB63B80EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EatsAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36761BD38E92CD037C92A232 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EatsApp-EatsAppUITests/Pods-EatsApp-EatsAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EatsApp-EatsAppUITests/Pods-EatsApp-EatsAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EatsApp-EatsAppUITests/Pods-EatsApp-EatsAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6CF04289B08CDD911F4420B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EatsApp-EatsAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBAD2D3F6E1DDF6FDAFA685C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EatsApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2A6998296B9A01C0EF22312 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EatsApp/Pods-EatsApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EatsApp/Pods-EatsApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EatsApp/Pods-EatsApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4A279E212582E5B30096F79A /* Sources */ = {
@@ -469,6 +621,7 @@
 		};
 		4A279E502582E5B80096F79A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A75A3292144AE9B99B9AC90 /* Pods-EatsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -488,6 +641,7 @@
 		};
 		4A279E512582E5B80096F79A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAC345E16794F51F44C9F5F0 /* Pods-EatsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -507,6 +661,7 @@
 		};
 		4A279E532582E5B80096F79A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74560C490A2656D564FACB0E /* Pods-EatsAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -529,6 +684,7 @@
 		};
 		4A279E542582E5B80096F79A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAB6CA896CE50409144A8859 /* Pods-EatsAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -551,6 +707,7 @@
 		};
 		4A279E562582E5B80096F79A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33E530F06872FCDCD041C1EB /* Pods-EatsApp-EatsAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -571,6 +728,7 @@
 		};
 		4A279E572582E5B80096F79A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47DDE463AB1CFEBABA24F4F5 /* Pods-EatsApp-EatsAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

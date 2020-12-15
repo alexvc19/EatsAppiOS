@@ -29,14 +29,18 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number Phone" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="MBu-QL-X5F">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MBu-QL-X5F" customClass="FPNTextField" customModule="FlagPhoneNumber">
                                                 <rect key="frame" x="20" y="243" width="374" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="uec-dw-GeZ"/>
                                                 </constraints>
-                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                        <color key="value" name="Amarillo"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="7SJ-Hv-hUc">
                                                 <rect key="frame" x="20" y="298" width="374" height="40"/>
@@ -121,6 +125,7 @@
                                             <constraint firstItem="7c5-hv-966" firstAttribute="top" secondItem="VQ0-ip-32c" secondAttribute="bottom" constant="5" id="55j-Na-jrS"/>
                                             <constraint firstItem="3DN-2W-cPB" firstAttribute="top" secondItem="7SJ-Hv-hUc" secondAttribute="bottom" constant="47" id="7uB-dO-K3F"/>
                                             <constraint firstAttribute="trailing" secondItem="MBu-QL-X5F" secondAttribute="trailing" constant="20" id="8xL-Yc-sxL"/>
+                                            <constraint firstItem="hPv-Sd-lCm" firstAttribute="top" secondItem="Z9B-Fv-4fO" secondAttribute="bottom" id="996-wN-Vhd"/>
                                             <constraint firstAttribute="trailing" secondItem="xP2-1c-1UM" secondAttribute="trailing" constant="20" id="9Wp-QW-8Kj"/>
                                             <constraint firstItem="xP2-1c-1UM" firstAttribute="leading" secondItem="6ea-rc-vJd" secondAttribute="leading" constant="226" id="BbZ-1F-TiF"/>
                                             <constraint firstItem="hPv-Sd-lCm" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Z9B-Fv-4fO" secondAttribute="bottom" id="Ezg-m9-FUP"/>
@@ -174,10 +179,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="Phone" destination="MBu-QL-X5F" id="Ig9-0R-82D"/>
                         <outlet property="create" destination="Llc-Ic-DsK" id="6ey-Au-ywv"/>
                         <outlet property="googleButton" destination="7c5-hv-966" id="ZP4-qQ-Fst"/>
                         <outlet property="pass" destination="7SJ-Hv-hUc" id="H78-mE-f6J"/>
+                        <outlet property="phoneNumberTextField" destination="MBu-QL-X5F" id="A0R-Ym-5sS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fs-bo-0xY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -200,6 +205,9 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logotype" width="250" height="250"/>
+        <namedColor name="Amarillo">
+            <color red="0.94900000095367432" green="0.63499999046325684" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Rojo">
             <color red="1" green="0.36100000143051147" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
