@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rGS-Ia-YeU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YMf-dT-jxe">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nt-O6-9yX">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nt-O6-9yX">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ea-rc-vJd">
-                                        <rect key="frame" x="0.0" y="39" width="414" height="649"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="649"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPv-Sd-lCm">
                                                 <rect key="frame" x="20" y="205" width="130" height="28"/>
@@ -72,10 +72,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="JMV-qL-VU6" kind="presentation" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="KKK-mX-G8d">
-                                                        <segue key="commit" inheritsFrom="parent" id="Ay5-LC-UoZ"/>
-                                                        <segue key="preview" inheritsFrom="commit" id="ZiE-b8-1fV"/>
-                                                    </segue>
+                                                    <action selector="signUpButtonAction:" destination="rGS-Ia-YeU" eventType="touchUpInside" id="ptn-zi-fqp"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQ0-ip-32c">
@@ -159,7 +156,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="6ea-rc-vJd" firstAttribute="trailing" secondItem="7nt-O6-9yX" secondAttribute="trailing" id="48b-uO-fCM"/>
-                                    <constraint firstItem="6ea-rc-vJd" firstAttribute="top" secondItem="7nt-O6-9yX" secondAttribute="top" constant="39" id="Khp-7s-1Wi"/>
+                                    <constraint firstItem="6ea-rc-vJd" firstAttribute="top" secondItem="7nt-O6-9yX" secondAttribute="top" id="Khp-7s-1Wi"/>
                                     <constraint firstAttribute="bottom" secondItem="6ea-rc-vJd" secondAttribute="bottom" constant="198" id="bYa-ED-1II"/>
                                     <constraint firstItem="6ea-rc-vJd" firstAttribute="height" secondItem="7nt-O6-9yX" secondAttribute="height" multiplier="0.142857" priority="250" id="fL4-ap-Oo8"/>
                                     <constraint firstItem="6ea-rc-vJd" firstAttribute="leading" secondItem="7nt-O6-9yX" secondAttribute="leading" id="sqw-s2-PL4"/>
@@ -178,6 +175,7 @@
                             <constraint firstAttribute="bottom" secondItem="7nt-O6-9yX" secondAttribute="bottom" id="XaV-5e-RqM"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="gh7-cX-ZAG"/>
                     <connections>
                         <outlet property="create" destination="Llc-Ic-DsK" id="6ey-Au-ywv"/>
                         <outlet property="googleButton" destination="7c5-hv-966" id="ZP4-qQ-Fst"/>
@@ -187,22 +185,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1fs-bo-0xY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-291.304347826087" y="-29.464285714285712"/>
+            <point key="canvasLocation" x="618.84057971014499" y="-29.464285714285712"/>
         </scene>
         <!--Main-->
         <scene sceneID="lG5-eP-PHs">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nW2-la-6r2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Main" id="JMV-qL-VU6" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="mxX-89-84D"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nW2-la-6r2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="302" y="-29"/>
+            <point key="canvasLocation" x="1210.8695652173915" y="-29.464285714285712"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GMX-OL-y3F">
+            <objects>
+                <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="YMf-dT-jxe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hyR-1F-fYc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rGS-Ia-YeU" kind="relationship" relationship="rootViewController" id="e91-oW-IdL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i6u-RN-0bH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-291.304347826087" y="-29.464285714285712"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="KKK-mX-G8d"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Logotype" width="250" height="250"/>
         <namedColor name="Amarillo">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AWI-JL-CeX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -13,7 +13,7 @@
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T5z-7o-0Jy" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <rect key="frame" x="0.0" y="-44" width="414" height="896"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Direccion" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oHJ-BY-N0Y">
                                                 <rect key="frame" x="47" y="64" width="320" height="45"/>
@@ -196,6 +196,7 @@
                                                                 <constraint firstAttribute="bottom" secondItem="GlP-ct-sEp" secondAttribute="bottom" constant="7.5" id="lum-y3-e6L"/>
                                                                 <constraint firstItem="vBV-nD-Sst" firstAttribute="top" secondItem="jW9-bw-97A" secondAttribute="top" id="pnx-xO-Muv"/>
                                                                 <constraint firstItem="vBV-nD-Sst" firstAttribute="leading" secondItem="jW9-bw-97A" secondAttribute="leading" id="rTw-h2-wp8"/>
+                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GlP-ct-sEp" secondAttribute="trailing" constant="20" symbolic="YES" id="zDc-uO-Kil"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
                                                         <size key="customSize" width="300" height="177"/>
@@ -257,6 +258,7 @@
                             <constraint firstItem="tnE-4V-70e" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="vhS-6W-uu2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="5Ag-Oq-jfS"/>
                     <connections>
                         <outlet property="cardCollectionView" destination="vaH-2A-iHV" id="Mg0-Tb-4tC"/>
                         <outlet property="categoriesCollectionView" destination="WFY-MB-SUN" id="iiP-5L-cIX"/>
@@ -266,6 +268,23 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1013.0434782608696" y="83.705357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QGT-fK-9A9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="AWI-JL-CeX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mk1-Fg-BnC">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Fun-QX-BqX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BBu-sJ-iLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="102.89855072463769" y="83.705357142857139"/>
         </scene>

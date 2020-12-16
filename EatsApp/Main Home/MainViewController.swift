@@ -123,8 +123,8 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let imageView = UIImageView()
         let icon = UIImage(named: "Pin")
         imageView.image = icon
-        ubicationTextF.leftView = imageView
-        ubicationTextF.leftViewMode = UITextField.ViewMode.always
+        ubicationTextF?.leftView = imageView
+        ubicationTextF?.leftViewMode = UITextField.ViewMode.always
     
         
         //MARK: - Cerrar el keyboard
@@ -132,8 +132,8 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             view.addGestureRecognizer(tapGesture)
         
         //MARK: - UIPageControl del slide principal
-        pageView.currentPage = 0
-        pageView.numberOfPages = slidePhotos.count
+        pageView?.currentPage = 0
+        pageView?.numberOfPages = slidePhotos.count
         
         //timer del slider principal
         timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(slideToNext), userInfo: nil,repeats: true)
@@ -147,9 +147,9 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             currentcellindex = 0
         }
         
-        pageView.currentPage = currentcellindex
+        pageView?.currentPage = currentcellindex
         
-        principalCollectionView.scrollToItem(at: IndexPath(item: currentcellindex, section: 0), at: .right, animated: true)
+        principalCollectionView?.scrollToItem(at: IndexPath(item: currentcellindex, section: 0), at: .right, animated: true)
     }
     
     //MARK: - Funcion para cerrar el keyboard

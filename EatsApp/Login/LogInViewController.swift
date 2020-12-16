@@ -7,6 +7,9 @@
 
 import UIKit
 import FlagPhoneNumber
+import FirebaseFirestore
+
+
 
 class LogInViewController: UIViewController {
 
@@ -19,8 +22,36 @@ class LogInViewController: UIViewController {
     
     var listController: FPNCountryListViewController = FPNCountryListViewController(style: .grouped)
     
+    let db = Firestore.firestore()
+    
+    @IBAction func signUpButtonAction(_ sender: Any) {
+        
+        let phone = phoneNumberTextField.text
+        let password = pass.text
+        
+        //Consulta de la base de datos cloudFirestore
+        db.collection("users")
+            .whereField("phone", isEqualTo: phone as Any)
+            .whereField("password", isEqualTo: password as Any)
+            .getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else{
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    
+                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "Main") as? MainViewController
+                    self.navigationController?.pushViewController(vc!, animated: true)
+                }
+                
+            }
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         //MARK: - Configuracion del phoneNumberTextField
         phoneNumberTextField.delegate = self
