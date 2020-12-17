@@ -190,10 +190,10 @@
         <!--Main-->
         <scene sceneID="lG5-eP-PHs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nW2-la-6r2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Main" id="JMV-qL-VU6" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="mxX-89-84D"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nW2-la-6r2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1210.8695652173915" y="-29.464285714285712"/>
         </scene>

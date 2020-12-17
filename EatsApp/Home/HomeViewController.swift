@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
+class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
     @IBOutlet weak var ubicationTextF: UITextField!
     
@@ -106,8 +106,6 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
             cellCard?.contentView.backgroundColor = .white
             cellCard?.contentView.layer.cornerRadius = 0
             
-            
-            
             return cellCard!
             
         }
@@ -118,6 +116,8 @@ class MainViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.isNavigationBarHidden = true
         
         //MARK: - Icono a texfield de ubicacion
         let imageView = UIImageView()

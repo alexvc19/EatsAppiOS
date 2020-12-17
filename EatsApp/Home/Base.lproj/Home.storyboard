@@ -10,15 +10,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Inicio-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MainViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="HomeViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnE-4V-70e">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnE-4V-70e">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T5z-7o-0Jy" userLabel="ContentView">
@@ -258,7 +258,9 @@
                             <constraint firstItem="tnE-4V-70e" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="vhS-6W-uu2"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Inicio" image="house" catalog="system" id="8jR-rU-Qei"/>
                     <navigationItem key="navigationItem" id="5Ag-Oq-jfS"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="cardCollectionView" destination="vaH-2A-iHV" id="Mg0-Tb-4tC"/>
                         <outlet property="categoriesCollectionView" destination="WFY-MB-SUN" id="iiP-5L-cIX"/>
@@ -274,6 +276,7 @@
         <!--Navigation Controller-->
         <scene sceneID="QGT-fK-9A9">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BBu-sJ-iLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="AWI-JL-CeX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mk1-Fg-BnC">
@@ -284,13 +287,13 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Fun-QX-BqX"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BBu-sJ-iLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="102.89855072463769" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
         <image name="categori1" width="82" height="82"/>
+        <image name="house" catalog="system" width="128" height="106"/>
         <image name="pizza1" width="351" height="167"/>
         <namedColor name="Amarillo">
             <color red="0.94900000095367432" green="0.63499999046325684" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

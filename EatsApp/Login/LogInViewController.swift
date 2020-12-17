@@ -34,21 +34,45 @@ class LogInViewController: UIViewController {
             .whereField("phone", isEqualTo: phone as Any)
             .whereField("password", isEqualTo: password as Any)
             .getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else{
-                for document in querySnapshot!.documents {
+            if let querySnapshot = querySnapshot {
+            
+                print("Entro a consulta")
+                for document in querySnapshot.documents {
                     print("\(document.documentID) => \(document.data())")
-                    
-                    let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "Main") as? MainViewController
-                    self.navigationController?.pushViewController(vc!, animated: true)
+                    print("entro")
+                   let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "Main")
+                    self.navigationController?.show(vc, sender: nil)
+
                 }
                 
+                //valida que existen los datos
+                if (querySnapshot.isEmpty == true) {
+                    print("Entro a validar")
+                    let alertController = UIAlertController(title: "Error", message: "El numero de telefono o la contraseña no son validos", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
+
+            } else{
+                
+                print("Error getting documents:")
+            
             }
+                // valida que los textfields no esten vacios
+                if((phone == "") && password == ""){
+                    print("No hay numero ni contraseña en el textfield")
+                    
+                    let alertController = UIAlertController(title: "Error", message: "El numero de telefono o la contraseña no son validos", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                }
         }
         
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
