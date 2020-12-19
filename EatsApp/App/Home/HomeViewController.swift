@@ -7,9 +7,9 @@
 
 import UIKit
 import FirebaseFirestore
-import FirebaseStorage
 import FirebaseUI
 import FirebaseFirestoreSwift
+import Kingfisher
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
    
@@ -75,12 +75,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         super.viewDidLoad()
         
         FIRFirestoreService.shared.read(from: .photos, returning: Photos.self) { (photos) in
-           
             self.photos = photos
+            
             DispatchQueue.main.async {
-            self.PrincipalCollectionView.reloadData()
-                }
-
+                self.PrincipalCollectionView.reloadData()
+            }
+            self.pageView?.currentPage = 0
+            self.pageView?.numberOfPages = photos.count
         }
         
         //MARK: - Icono a texfield de ubicacion
@@ -96,8 +97,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             view.addGestureRecognizer(tapGesture)
         
         //MARK: - UIPageControl del slide principal
-        pageView?.currentPage = 0
-        pageView?.numberOfPages = slidePhotos.count
+       
         
         //timer del slider principal
         timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(slideToNext), userInfo: nil,repeats: true)
@@ -115,12 +115,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         PrincipalCollectionView?.scrollToItem(at: IndexPath(item: currentcellindex, section: 0), at: .right, animated: true)
     }
+
     
     //MARK: - funciones datasorce y delegate CollectionView principal y categorias
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        
         if(collectionView == PrincipalCollectionView){
+
             return photos.count
         }
         if(collectionView == cardCollectionView){
@@ -138,30 +139,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         if (collectionView == PrincipalCollectionView){
             
-        //MARK: - Consulta de la base de datos cloudFirestore para el slider principal
-
+        //MARK: - Consulta de la base de datos cloudFirestore para el slider principa
             
-        db.collection("photos").document("sliderPhotos").getDocument { (document, error) in
-            if let document = document, document.exists{
-                
-                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-                //print("Document data \(dataDescription)")
-                
-                let storageRef = StorageReference()
-                let reference = storageRef.child(dataDescription)
-                let imageView: UIImageView = (cell?.imageView)!
-                let placeholderImage =  UIImage(named: "pizza4")
-
-                imageView.sd_setImage(with: reference, placeholderImage: placeholderImage)
-                
-                //cell?.imageView.image = UIImage(named: slidePhotos[indexPath.row])
-                
-            }else{
-                print("docuemnt doesnt exist")
-            }
-        }
-
-            cell?.imageView.layer.cornerRadius = 5.0
+            let photo = photos[indexPath.row]
+            let img = photo.urlPhoto
+            let url: URL? = URL(string: img)
+            cell?.PrincipalimageView.kf.setImage(with: url)
+            cell?.PrincipalimageView.layer.cornerRadius = 5.0
+           
+            
         return cell!
     }
 
@@ -210,4 +196,3 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
        
       }
 }
-

@@ -8,7 +8,7 @@
 import UIKit
 
 class PrincipalCollectionCell: UICollectionViewCell {
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var PrincipalimageView: UIImageView!
     
     
 }
