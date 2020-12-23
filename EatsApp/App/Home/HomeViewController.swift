@@ -31,8 +31,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     let db = Firestore.firestore()
     
     //MARK: - Varibles del slider principal
-    //array de las imagenes
-    var slidePhotos:[String] = ["pizza1","pizza2","pizza3","pizza4"]
+
     //variable del timer
     var timer: Timer?
     //variable del PageControl
@@ -47,7 +46,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     ]
     //nombre de las categorias
     var namecategories:[String] = [
-        "Hamburguesas",
+        "Hamburguesa",
         "Pizza",
         "Sushi",
         "Postres"
@@ -69,22 +68,27 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     var waitTime = "30 - 40 minutos"
     
-
-   
+    
+    //MARK: -  ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        //Consulta a la base de datos -> retorna collection photos
         FIRFirestoreService.shared.read(from: .photos, returning: Photos.self) { (photos) in
             self.photos = photos
             
+            //CollectionView Reload data
             DispatchQueue.main.async {
                 self.PrincipalCollectionView.reloadData()
             }
+            //UIPageControl del slide principal
             self.pageView?.currentPage = 0
             self.pageView?.numberOfPages = photos.count
         }
         
-        //MARK: - Icono a texfield de ubicacion
+        //Icono a texfield de ubicacion
         let imageView = UIImageView()
         let icon = UIImage(named: "Pin")
         imageView.image = icon
@@ -92,20 +96,19 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         ubicationTextF?.leftViewMode = UITextField.ViewMode.always
     
         
-        //MARK: - Cerrar el keyboard
+        // Cerrar el keyboard
         let tapGesture = UITapGestureRecognizer(target: self, action:     #selector(tapGestureHandler))
             view.addGestureRecognizer(tapGesture)
         
-        //MARK: - UIPageControl del slide principal
+      
        
-        
         //timer del slider principal
         timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(slideToNext), userInfo: nil,repeats: true)
         }
     
     //funcion para controlar el timer del slider principal
     @objc func slideToNext(){
-        if currentcellindex < slidePhotos.count - 1{
+        if currentcellindex < photos.count - 1{
             currentcellindex = currentcellindex + 1
         }else {
             currentcellindex = 0
@@ -121,7 +124,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if(collectionView == PrincipalCollectionView){
-
             return photos.count
         }
         if(collectionView == cardCollectionView){
@@ -131,19 +133,17 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return categoriesPhotos.count
     }
     
-    
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         
         let cell = PrincipalCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? PrincipalCollectionCell
         
         if (collectionView == PrincipalCollectionView){
             
-        //MARK: - Consulta de la base de datos cloudFirestore para el slider principa
-            
+            //coloca la imagen url de la base de datos en el ImageView con la libreria kf
             let photo = photos[indexPath.row]
             let img = photo.urlPhoto
             let url: URL? = URL(string: img)
+            
             cell?.PrincipalimageView.kf.setImage(with: url)
             cell?.PrincipalimageView.layer.cornerRadius = 5.0
            
@@ -167,8 +167,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             cellCard?.waitLabel.text = waitTime
             
             //borders
-            cellCard?.layer.borderColor = (UIColor .black).cgColor
-            cellCard?.layer.borderWidth = 0.22
+            
             
             //shadow
             cellCard?.backgroundColor = .clear // very important

@@ -14,7 +14,18 @@ class TabBarViewController: UITabBarController {
 
         // Do any additional setup after loading the view.
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(true)
+    // Show the Navigation Bar
+    navigationController?.setNavigationBarHidden(true, animated: true)
+
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(true)
+    // Hide the Navigation Bar
+    navigationController?.setNavigationBarHidden(false, animated: false)
+    }
 
     /*
     // MARK: - Navigation

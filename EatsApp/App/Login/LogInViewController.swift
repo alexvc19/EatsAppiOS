@@ -77,11 +77,21 @@ class LogInViewController: UIViewController {
         
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(true)
+    // Show the Navigation Bar
+    self.navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(true)
+    // Hide the Navigation Bar
+    self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+
         //MARK: - Configuracion del phoneNumberTextField
         phoneNumberTextField.delegate = self
         phoneNumberTextField.setFlag(countryCode: .MX)
