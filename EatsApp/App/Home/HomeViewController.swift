@@ -68,6 +68,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     var waitTime = "30 - 40 minutos"
     
+    let imagePicker = UIImagePickerController()
+    let storage = Storage.storage()
     
     //MARK: -  ViewDidLoad
     override func viewDidLoad() {
@@ -120,7 +122,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
 
     
-    //MARK: - funciones datasorce y delegate CollectionView principal y categorias
+    //MARK: - CollectionView principal funciones datasorce y delegate
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if(collectionView == PrincipalCollectionView){
@@ -139,14 +141,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         if (collectionView == PrincipalCollectionView){
             
-            //coloca la imagen url de la base de datos en el ImageView con la libreria kf
+            //coloca la imagen url de la base de datos en el ImageView
             let photo = photos[indexPath.row]
-            let img = photo.urlPhoto
-            let url: URL? = URL(string: img)
             
-            cell?.PrincipalimageView.kf.setImage(with: url)
-            cell?.PrincipalimageView.layer.cornerRadius = 5.0
-           
+            cell?.PrincipalimageView.sd_setImage(with: URL(string: photo.urlPhoto))
             
         return cell!
     }
@@ -187,8 +185,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return cell!
     
     }
-
-    
     //MARK: - Funcion para cerrar el keyboard
     @objc func tapGestureHandler() {
         ubicationTextF.endEditing(true)

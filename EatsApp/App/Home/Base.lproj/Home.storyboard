@@ -280,7 +280,6 @@
         <!--Navigation Controller-->
         <scene sceneID="QGT-fK-9A9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BBu-sJ-iLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="homes" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="AWI-JL-CeX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mk1-Fg-BnC">
@@ -291,6 +290,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Fun-QX-BqX"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BBu-sJ-iLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="102.89855072463769" y="83.705357142857139"/>
         </scene>
