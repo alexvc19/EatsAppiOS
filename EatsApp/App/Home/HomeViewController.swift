@@ -38,12 +38,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var currentcellindex = 0
     
     //fotos de las categorias
-    var categoriesPhotos:[String] = [
-        "categori1",
-        "categori2",
-        "categoria3",
-        "categoria4"
-    ]
+
     //nombre de las categorias
     var namecategories:[String] = [
         "Hamburguesa",
@@ -64,12 +59,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     var photos = [Photos]()
     var users = [User]()
+    var photosCategories = [PhotosCategories]()
     
     
     var waitTime = "30 - 40 minutos"
     
     let imagePicker = UIImagePickerController()
-    let storage = Storage.storage()
     
     //MARK: -  ViewDidLoad
     override func viewDidLoad() {
@@ -85,9 +80,17 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             DispatchQueue.main.async {
                 self.PrincipalCollectionView.reloadData()
             }
+            print("error\(photos)")
             //UIPageControl del slide principal
             self.pageView?.currentPage = 0
             self.pageView?.numberOfPages = photos.count
+        }
+        
+        FIRFirestoreService.shared.read(from: .categories, returning: PhotosCategories.self) { (photosCategories) in
+            self.photosCategories = photosCategories
+            DispatchQueue.main.async {
+                self.categoriesCollectionView.reloadData()
+            }
         }
         
         //Icono a texfield de ubicacion
@@ -131,8 +134,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if(collectionView == cardCollectionView){
             return cardsPhotos.count
         }
-        
-        return categoriesPhotos.count
+
+        return photosCategories.count
     }
     
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -143,18 +146,20 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             
             //coloca la imagen url de la base de datos en el ImageView
             let photo = photos[indexPath.row]
+            let img = photo.urlPhoto
+            let url: URL? = URL(string: img)
             
-            cell?.PrincipalimageView.sd_setImage(with: URL(string: photo.urlPhoto))
+            cell?.PrincipalimageView.kf.setImage(with: url)
             
         return cell!
     }
 
         if (collectionView == categoriesCollectionView){
             let cell2 = categoriesCollectionView.dequeueReusableCell(withReuseIdentifier:"cell2", for: indexPath) as? CategoriesCollectionViewCell
+            let photograp = photosCategories[indexPath.row]
             
-            cell2?.categorieImageView.image = UIImage(named: categoriesPhotos[indexPath.row])
-            cell2?.categorieImageView.layer.cornerRadius = 5.0
-            cell2?.nameCategorie.text = namecategories[indexPath.row]
+            cell2?.categorieImageView.sd_setImage(with: URL(string: photograp.photoUrl))
+            cell2?.nameCategorie.text = photograp.categorieName
             return cell2!
         }
         if (collectionView == cardCollectionView){

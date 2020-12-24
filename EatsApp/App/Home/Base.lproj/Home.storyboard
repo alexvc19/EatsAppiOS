@@ -88,7 +88,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="106" id="rvx-mS-RSA"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="25" minimumInteritemSpacing="45" id="Ttf-hu-Eig">
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="25" minimumInteritemSpacing="45" id="Ttf-hu-Eig">
                                                     <size key="itemSize" width="82" height="106"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -98,7 +98,7 @@
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell2" id="kJh-h5-5bY" customClass="CategoriesCollectionViewCell" customModule="EatsApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="82" height="106"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qKZ-7P-sfB">
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WS2-Qy-uh0">
                                                             <rect key="frame" x="0.0" y="0.0" width="82" height="106"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
@@ -116,16 +116,16 @@
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="K8B-gh-RNd" firstAttribute="leading" secondItem="qKZ-7P-sfB" secondAttribute="leading" id="4AV-Jq-lMk"/>
+                                                                <constraint firstItem="K8B-gh-RNd" firstAttribute="leading" secondItem="WS2-Qy-uh0" secondAttribute="leading" id="4AV-Jq-lMk"/>
                                                                 <constraint firstAttribute="trailing" secondItem="WVF-2K-bre" secondAttribute="trailing" id="4BA-pO-xPk"/>
                                                                 <constraint firstAttribute="trailing" secondItem="K8B-gh-RNd" secondAttribute="trailing" id="FYc-O8-S6H"/>
-                                                                <constraint firstItem="K8B-gh-RNd" firstAttribute="top" secondItem="qKZ-7P-sfB" secondAttribute="top" id="KQI-3M-kGf"/>
+                                                                <constraint firstItem="K8B-gh-RNd" firstAttribute="top" secondItem="WS2-Qy-uh0" secondAttribute="top" id="KQI-3M-kGf"/>
                                                                 <constraint firstAttribute="bottom" secondItem="WVF-2K-bre" secondAttribute="bottom" constant="24" id="Plm-ir-hQZ"/>
-                                                                <constraint firstItem="9yf-af-wuW" firstAttribute="leading" relation="lessThanOrEqual" secondItem="qKZ-7P-sfB" secondAttribute="leading" constant="15" id="TJg-vK-CrX"/>
-                                                                <constraint firstItem="WVF-2K-bre" firstAttribute="top" secondItem="qKZ-7P-sfB" secondAttribute="top" id="Ya9-LM-Cxr"/>
+                                                                <constraint firstItem="9yf-af-wuW" firstAttribute="leading" relation="lessThanOrEqual" secondItem="WS2-Qy-uh0" secondAttribute="leading" constant="15" id="TJg-vK-CrX"/>
+                                                                <constraint firstItem="WVF-2K-bre" firstAttribute="top" secondItem="WS2-Qy-uh0" secondAttribute="top" id="Ya9-LM-Cxr"/>
                                                                 <constraint firstItem="9yf-af-wuW" firstAttribute="top" secondItem="WVF-2K-bre" secondAttribute="bottom" constant="5" id="aCM-ck-nZj"/>
                                                                 <constraint firstItem="9yf-af-wuW" firstAttribute="centerX" secondItem="WVF-2K-bre" secondAttribute="centerX" id="okf-5C-6T5"/>
-                                                                <constraint firstItem="WVF-2K-bre" firstAttribute="leading" secondItem="qKZ-7P-sfB" secondAttribute="leading" id="qak-4E-St0"/>
+                                                                <constraint firstItem="WVF-2K-bre" firstAttribute="leading" secondItem="WS2-Qy-uh0" secondAttribute="leading" id="qak-4E-St0"/>
                                                                 <constraint firstAttribute="bottom" secondItem="K8B-gh-RNd" secondAttribute="bottom" id="vhA-7U-W5Y"/>
                                                                 <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="9yf-af-wuW" secondAttribute="trailing" constant="15" id="yOR-0I-Agz"/>
                                                             </constraints>
