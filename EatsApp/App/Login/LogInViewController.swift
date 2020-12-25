@@ -9,7 +9,7 @@ import UIKit
 import FlagPhoneNumber
 import FirebaseFirestore
 import FirebaseUI
-import FirebaseFirestoreSwift
+//import FirebaseFirestoreSwift
 import FirebaseStorage
 
 class LogInViewController: UIViewController {

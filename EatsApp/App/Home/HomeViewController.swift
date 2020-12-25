@@ -9,22 +9,16 @@ import UIKit
 import FirebaseFirestore
 import FirebaseUI
 import FirebaseFirestoreSwift
-import Kingfisher
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
    
     @IBOutlet weak var PrincipalCollectionView: UICollectionView!
     
     @IBOutlet weak var ubicationTextF: UITextField!
-    
-    
     //IBOutlet slidePrincipal
     @IBOutlet weak var pageView: UIPageControl!
-
-   
     //IBOutlets slideCategories
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
-    
     //IBOutlets cardFood
     @IBOutlet weak var cardCollectionView: UICollectionView!
     
@@ -69,9 +63,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     //MARK: -  ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-        
+    
         //Consulta a la base de datos -> retorna collection photos
         FIRFirestoreService.shared.read(from: .photos, returning: Photos.self) { (photos) in
             self.photos = photos
@@ -149,7 +141,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             let img = photo.urlPhoto
             let url: URL? = URL(string: img)
             
-            cell?.PrincipalimageView.kf.setImage(with: url)
+            cell?.PrincipalimageView.sd_setImage(with: url)
             
         return cell!
     }

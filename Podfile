@@ -17,10 +17,8 @@ target 'EatsApp' do
   end
 # add the Firebase pod for Google Analytics
 pod 'Firebase/Firestore'
-pod 'Firebase/Storage'
 pod 'FirebaseUI/Storage'
 pod 'FirebaseFirestoreSwift'
-pod 'Kingfisher', '~> 5.0'
 pod "FlagPhoneNumber"
 
 end
