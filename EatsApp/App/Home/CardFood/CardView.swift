@@ -23,9 +23,11 @@ import UIKit
 
        func xibSetup() {
            guard let view = loadViewFromNib() else { return }
-           view.frame = bounds
-            view.autoresizingMask =
-                       [.flexibleWidth, .flexibleHeight]
+            view.frame = bounds
+            view.layer.masksToBounds = true
+            view.layer.borderWidth = 0.5
+            view.layer.borderColor = UIColor(named: "Gris")?.cgColor
+            view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
            addSubview(view)
            contentView = view
        }

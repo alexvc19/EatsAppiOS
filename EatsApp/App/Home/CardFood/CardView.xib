@@ -36,16 +36,24 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="OiT-iB-275" firstAttribute="top" secondItem="NKK-Ud-579" secondAttribute="bottom" constant="7" id="1NJ-zm-bKn"/>
-                <constraint firstAttribute="bottom" secondItem="AMR-nC-sRL" secondAttribute="bottom" constant="7" id="1mx-Up-HoF"/>
                 <constraint firstAttribute="trailing" secondItem="NKK-Ud-579" secondAttribute="trailing" id="27i-P6-2T2"/>
                 <constraint firstItem="AMR-nC-sRL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="F97-gY-t7j"/>
                 <constraint firstItem="NKK-Ud-579" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="G93-1T-Ego"/>
+                <constraint firstItem="AMR-nC-sRL" firstAttribute="top" secondItem="OiT-iB-275" secondAttribute="bottom" constant="5.5" id="MfD-Xm-VdN"/>
                 <constraint firstItem="OiT-iB-275" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ZW9-he-fiY"/>
                 <constraint firstItem="NKK-Ud-579" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="h1A-zy-ll2"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                    <integer key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="cardImageview" destination="NKK-Ud-579" id="bqZ-EV-vj1"/>
                 <outlet property="estimateTimeLabel" destination="OiT-iB-275" id="JAp-bH-hfy"/>

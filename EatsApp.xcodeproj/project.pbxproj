@@ -289,15 +289,31 @@
 		4A54D1B22584395500B64EE8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4A2D428025955EA4003E422F /* CardCollectionViewCell.swift */,
+				4ABA5DC02596C53800773D47 /* Collections */,
+				4ABA5DBF2596C4EF00773D47 /* CardFood */,
 				4A279E2E2582E5B30096F79A /* Home.storyboard */,
 				4A54D1B7258439CA00B64EE8 /* HomeViewController.swift */,
-				4A54D1DC25848B4700B64EE8 /* PrincipalCollectionCell.swift */,
-				4A36B96625857E8000ED3059 /* CategoriesCollectionViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4ABA5DBF2596C4EF00773D47 /* CardFood */ = {
+			isa = PBXGroup;
+			children = (
 				4A2D429625956F11003E422F /* CardView.swift */,
 				4A2D429B25956F65003E422F /* CardView.xib */,
 			);
-			path = Home;
+			path = CardFood;
+			sourceTree = "<group>";
+		};
+		4ABA5DC02596C53800773D47 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				4A2D428025955EA4003E422F /* CardCollectionViewCell.swift */,
+				4A54D1DC25848B4700B64EE8 /* PrincipalCollectionCell.swift */,
+				4A36B96625857E8000ED3059 /* CategoriesCollectionViewCell.swift */,
+			);
+			path = Collections;
 			sourceTree = "<group>";
 		};
 		4AC97131258D8B03008A73FB /* Register */ = {
