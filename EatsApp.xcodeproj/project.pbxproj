@@ -28,12 +28,12 @@
 		4A2B299F258ACF5D0045EAD0 /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2B299E258ACF5D0045EAD0 /* Orders.storyboard */; };
 		4A2D428125955EA5003E422F /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2D428025955EA4003E422F /* CardCollectionViewCell.swift */; };
 		4A2D429725956F11003E422F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2D429625956F11003E422F /* CardView.swift */; };
-		4A2D429C25956F65003E422F /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A2D429B25956F65003E422F /* CardView.xib */; };
 		4A2DB48625873D260024163C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DB48525873D260024163C /* GoogleService-Info.plist */; };
 		4A36B96725857E8000ED3059 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A36B96625857E8000ED3059 /* CategoriesCollectionViewCell.swift */; };
 		4A46ED81258DA756006CB62E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A46ED80258DA755006CB62E /* SceneDelegate.swift */; };
 		4A54D1B8258439CA00B64EE8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54D1B7258439CA00B64EE8 /* HomeViewController.swift */; };
 		4A54D1DD25848B4700B64EE8 /* PrincipalCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54D1DC25848B4700B64EE8 /* PrincipalCollectionCell.swift */; };
+		4A57DE06259AACCE00560186 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A57DE05259AACCE00560186 /* CardView.xib */; };
 		4A7900FE25947ED30055852C /* PhotosCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7900FD25947ED30055852C /* PhotosCategories.swift */; };
 		4A79010325948F600055852C /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A79010225948F600055852C /* Register.storyboard */; };
 		4A79010B25948FD10055852C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79010A25948FD10055852C /* RegisterViewController.swift */; };
@@ -90,12 +90,12 @@
 		4A2B299E258ACF5D0045EAD0 /* Orders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Orders.storyboard; sourceTree = "<group>"; };
 		4A2D428025955EA4003E422F /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		4A2D429625956F11003E422F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		4A2D429B25956F65003E422F /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		4A2DB48525873D260024163C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A36B96625857E8000ED3059 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		4A46ED80258DA755006CB62E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4A54D1B7258439CA00B64EE8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4A54D1DC25848B4700B64EE8 /* PrincipalCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalCollectionCell.swift; sourceTree = "<group>"; };
+		4A57DE05259AACCE00560186 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		4A75A3292144AE9B99B9AC90 /* Pods-EatsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp.debug.xcconfig"; path = "Target Support Files/Pods-EatsApp/Pods-EatsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4A7900FD25947ED30055852C /* PhotosCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCategories.swift; sourceTree = "<group>"; };
 		4A79010225948F600055852C /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
@@ -301,7 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				4A2D429625956F11003E422F /* CardView.swift */,
-				4A2D429B25956F65003E422F /* CardView.xib */,
+				4A57DE05259AACCE00560186 /* CardView.xib */,
 			);
 			path = CardFood;
 			sourceTree = "<group>";
@@ -440,7 +440,7 @@
 				4A2B299F258ACF5D0045EAD0 /* Orders.storyboard in Resources */,
 				4A279E322582E5B70096F79A /* Assets.xcassets in Resources */,
 				4A279E302582E5B30096F79A /* Home.storyboard in Resources */,
-				4A2D429C25956F65003E422F /* CardView.xib in Resources */,
+				4A57DE06259AACCE00560186 /* CardView.xib in Resources */,
 				4A2B2997258ACF4A0045EAD0 /* Search.storyboard in Resources */,
 				4A2B2990258AACC70045EAD0 /* Account.storyboard in Resources */,
 				4A79010325948F600055852C /* Register.storyboard in Resources */,

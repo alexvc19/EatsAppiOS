@@ -218,8 +218,8 @@
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="goO-oU-UQC"/>
                                                 </connections>
                                             </collectionView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Recientemente pedido" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aua-9M-Bjb">
-                                                <rect key="frame" x="20" y="635" width="225" height="25"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Favoritos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aua-9M-Bjb">
+                                                <rect key="frame" x="20" y="635" width="95" height="25"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -230,9 +230,6 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="190" id="HHj-b2-hUt"/>
                                                 </constraints>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="CardView"/>
-                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hac-Pc-Ch8" customClass="CardView" customModule="EatsApp" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="875" width="354" height="190"/>
@@ -305,6 +302,7 @@
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
                         <outlet property="PrincipalCollectionView" destination="RNB-2R-92Y" id="bUV-u2-gK1"/>
+                        <outlet property="card1" destination="jVB-Ha-aFA" id="n74-eS-U7O"/>
                         <outlet property="cardCollectionView" destination="vaH-2A-iHV" id="Mg0-Tb-4tC"/>
                         <outlet property="categoriesCollectionView" destination="WFY-MB-SUN" id="iiP-5L-cIX"/>
                         <outlet property="pageView" destination="8e1-ay-n2z" id="CRY-ZD-u8k"/>

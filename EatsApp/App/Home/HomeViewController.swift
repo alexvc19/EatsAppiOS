@@ -13,7 +13,6 @@ import FirebaseFirestoreSwift
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
    
     @IBOutlet weak var PrincipalCollectionView: UICollectionView!
-    
     @IBOutlet weak var ubicationTextF: UITextField!
     //IBOutlet slidePrincipal
     @IBOutlet weak var pageView: UIPageControl!
@@ -24,6 +23,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     let db = Firestore.firestore()
     
+    @IBOutlet weak var card1: CardView!
+    
     //MARK: - Varibles del slider principal
 
     //variable del timer
@@ -31,21 +32,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     //variable del PageControl
     var currentcellindex = 0
     
-    //fotos de las categorias
-
-    //nombre de las categorias
-    var namecategories:[String] = [
-        "Hamburguesa",
-        "Pizza",
-        "Sushi",
-        "Postres"
-    ]
     //fotos card "mas popular"
     var cardsPhotos:[String] = [
         "card1",
         "card2",
     ]
-    //card nombre de la comida "mas popular"
+    //card nombre de la comida
     var namesOfFood:[String]=[
         "Pollo Frito",
         "Sushi"
@@ -60,10 +52,18 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     let imagePicker = UIImagePickerController()
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
     //MARK: -  ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        card1.names?.text = "Sushi"
+        card1.waitTime?.text = waitTime
+        card1.photo?.image = UIImage(named: "pedido")
+        
         //Consulta a la base de datos -> retorna collection photos
         FIRFirestoreService.shared.read(from: .photos, returning: Photos.self) { (photos) in
             self.photos = photos
@@ -162,8 +162,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             cellCard?.waitLabel.text = waitTime
             
             //borders
-            
-            
             //shadow
             cellCard?.backgroundColor = .clear // very important
             cellCard?.layer.masksToBounds = false

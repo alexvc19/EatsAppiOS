@@ -7,42 +7,27 @@
 
 import UIKit
 
-@IBDesignable class CardView: UIView {
-
-    var contentView:UIView?
-    @IBInspectable var nibName:String?
+class CardView: UIView {
     
-    @IBOutlet weak var cardImageview: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var estimateTimeLabel: UILabel!
+    @IBOutlet weak var names: UILabel!
+    @IBOutlet weak var waitTime: UILabel!
+    @IBOutlet weak var photo: UIImageView!
     
-    override func awakeFromNib() {
-           super.awakeFromNib()
-            xibSetup()
-       }
-
-       func xibSetup() {
-           guard let view = loadViewFromNib() else { return }
-            view.frame = bounds
-            view.layer.masksToBounds = true
-            view.layer.borderWidth = 0.5
-            view.layer.borderColor = UIColor(named: "Gris")?.cgColor
-            view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-           addSubview(view)
-           contentView = view
-       }
-
-       func loadViewFromNib() -> UIView? {
-           guard let nibName = nibName else { return nil }
-           let bundle = Bundle(for: type(of: self))
-           let nib = UINib(nibName: nibName, bundle: bundle)
-           return nib.instantiate(
-                       withOwner: self,
-                       options: nil).first as? UIView
-       }
-    override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        xibSetup()
-        contentView?.prepareForInterfaceBuilder()
+    override init(frame: CGRect){
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        commonInit()
+    }
+    
+    func commonInit(){
+        let viewFromXib = Bundle.main.loadNibNamed("CardView", owner: self, options: nil)![0] as! UIView
+        viewFromXib.layer.borderWidth = 0.5
+        viewFromXib.layer.borderColor = UIColor(named: "Gris")?.cgColor
+        viewFromXib.frame = self.bounds
+        addSubview(viewFromXib)
     }
 }

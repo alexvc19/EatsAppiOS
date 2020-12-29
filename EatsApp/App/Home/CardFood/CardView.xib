@@ -4,66 +4,66 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardView" customModule="EatsApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardView" customModule="EatsApp" customModuleProvider="target">
+            <connections>
+                <outlet property="names" destination="5OD-hH-VM6" id="VRZ-Wd-wXW"/>
+                <outlet property="photo" destination="fqa-Sp-Cuo" id="SNG-Jy-8W0"/>
+                <outlet property="waitTime" destination="kgZ-WT-stm" id="BeD-oQ-JJx"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="CardView" customModule="EatsApp" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="354" height="190"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card2" translatesAutoresizingMaskIntoConstraints="NO" id="NKK-Ud-579">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pedido" translatesAutoresizingMaskIntoConstraints="NO" id="fqa-Sp-Cuo">
                     <rect key="frame" x="0.0" y="0.0" width="354" height="138"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="138" id="ZAP-hz-SR5"/>
+                        <constraint firstAttribute="height" constant="138" id="F6F-Be-iPf"/>
+                        <constraint firstAttribute="width" constant="354" id="iBP-FY-baY"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiT-iB-275">
-                    <rect key="frame" x="8" y="145" width="39.5" height="18.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgZ-WT-stm">
+                    <rect key="frame" x="7" y="169" width="29.5" height="14"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                    <color key="textColor" name="Gris"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OD-hH-VM6">
+                    <rect key="frame" x="7" y="145" width="39.5" height="18.5"/>
                     <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMR-nC-sRL">
-                    <rect key="frame" x="8" y="169" width="29.5" height="14"/>
-                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="OiT-iB-275" firstAttribute="top" secondItem="NKK-Ud-579" secondAttribute="bottom" constant="7" id="1NJ-zm-bKn"/>
-                <constraint firstAttribute="trailing" secondItem="NKK-Ud-579" secondAttribute="trailing" id="27i-P6-2T2"/>
-                <constraint firstItem="AMR-nC-sRL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="F97-gY-t7j"/>
-                <constraint firstItem="NKK-Ud-579" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="G93-1T-Ego"/>
-                <constraint firstItem="AMR-nC-sRL" firstAttribute="top" secondItem="OiT-iB-275" secondAttribute="bottom" constant="5.5" id="MfD-Xm-VdN"/>
-                <constraint firstItem="OiT-iB-275" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ZW9-he-fiY"/>
-                <constraint firstItem="NKK-Ud-579" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="h1A-zy-ll2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="kgZ-WT-stm" secondAttribute="bottom" constant="7" id="6fh-Xb-nn8"/>
+                <constraint firstItem="kgZ-WT-stm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="7" id="6y3-lH-bH8"/>
+                <constraint firstItem="5OD-hH-VM6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="7" id="JDj-N9-S4g"/>
+                <constraint firstItem="fqa-Sp-Cuo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ML2-2E-UGn"/>
+                <constraint firstItem="5OD-hH-VM6" firstAttribute="top" secondItem="fqa-Sp-Cuo" secondAttribute="bottom" constant="7" id="d8q-15-wQ5"/>
+                <constraint firstItem="fqa-Sp-Cuo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="m5v-5m-ZZ0"/>
+                <constraint firstItem="fqa-Sp-Cuo" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="qjd-gi-UcO"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                    <integer key="value" value="1"/>
-                </userDefinedRuntimeAttribute>
-                <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                </userDefinedRuntimeAttribute>
-            </userDefinedRuntimeAttributes>
-            <connections>
-                <outlet property="cardImageview" destination="NKK-Ud-579" id="bqZ-EV-vj1"/>
-                <outlet property="estimateTimeLabel" destination="OiT-iB-275" id="JAp-bH-hfy"/>
-                <outlet property="nameLabel" destination="AMR-nC-sRL" id="bAM-vX-f6B"/>
-            </connections>
-            <point key="canvasLocation" x="5.7971014492753632" y="-155.35714285714286"/>
+            <point key="canvasLocation" x="88.405797101449281" y="126.22767857142857"/>
         </view>
     </objects>
     <resources>
-        <image name="card2" width="600" height="254"/>
+        <image name="pedido" width="708" height="250"/>
+        <namedColor name="Gris">
+            <color red="0.54900002479553223" green="0.54900002479553223" blue="0.54900002479553223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
