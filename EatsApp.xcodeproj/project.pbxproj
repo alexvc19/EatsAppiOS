@@ -38,6 +38,8 @@
 		4A79010325948F600055852C /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A79010225948F600055852C /* Register.storyboard */; };
 		4A79010B25948FD10055852C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79010A25948FD10055852C /* RegisterViewController.swift */; };
 		4ABB4B8B258C4F8200C8520E /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABB4B8A258C4F8200C8520E /* Photos.swift */; };
+		4ACB5138259FBCA1000E0857 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACB5137259FBCA1000E0857 /* SearchViewController.swift */; };
+		4ACB513D259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACB513C259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift */; };
 		91735F173AB2F4C042811E38 /* Pods_EatsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D8B98B3FB8FD200C24DEB2 /* Pods_EatsAppTests.framework */; };
 		D1EAA3A44C0CF66EC91A3AFF /* Pods_EatsApp_EatsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF937E729FEBB71B275E2C88 /* Pods_EatsApp_EatsAppUITests.framework */; };
 		D5E7B422B0B5B7262D4BE7BD /* Pods_EatsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713C2A85BCA61D60A0A18FB9 /* Pods_EatsApp.framework */; };
@@ -101,6 +103,8 @@
 		4A79010225948F600055852C /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		4A79010A25948FD10055852C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4ABB4B8A258C4F8200C8520E /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		4ACB5137259FBCA1000E0857 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4ACB513C259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		713C2A85BCA61D60A0A18FB9 /* Pods_EatsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74560C490A2656D564FACB0E /* Pods-EatsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-EatsAppTests/Pods-EatsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AAC345E16794F51F44C9F5F0 /* Pods-EatsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp.release.xcconfig"; path = "Target Support Files/Pods-EatsApp/Pods-EatsApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -268,6 +272,8 @@
 			isa = PBXGroup;
 			children = (
 				4A2B2996258ACF4A0045EAD0 /* Search.storyboard */,
+				4ACB5137259FBCA1000E0857 /* SearchViewController.swift */,
+				4ACB513C259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -575,6 +581,7 @@
 				4A23A415258DF0CD00A5F3A8 /* Encodable Extensions.swift in Sources */,
 				4A23A41D258DF63F00A5F3A8 /* Snapshot Extensions.swift in Sources */,
 				4A7900FE25947ED30055852C /* PhotosCategories.swift in Sources */,
+				4ACB5138259FBCA1000E0857 /* SearchViewController.swift in Sources */,
 				4A279E852582F0830096F79A /* LogInViewController.swift in Sources */,
 				4A2D428125955EA5003E422F /* CardCollectionViewCell.swift in Sources */,
 				4A36B96725857E8000ED3059 /* CategoriesCollectionViewCell.swift in Sources */,
@@ -583,6 +590,7 @@
 				4A23A40B258DE75A00A5F3A8 /* User.swift in Sources */,
 				4A2B2989258AA80B0045EAD0 /* TabBarViewController.swift in Sources */,
 				4A54D1B8258439CA00B64EE8 /* HomeViewController.swift in Sources */,
+				4ACB513D259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift in Sources */,
 				4A46ED81258DA756006CB62E /* SceneDelegate.swift in Sources */,
 				4A79010B25948FD10055852C /* RegisterViewController.swift in Sources */,
 				4A2D429725956F11003E422F /* CardView.swift in Sources */,

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct PhotosCategories: Codable{
+struct PhotosCategories: Decodable{
     let categorieName: String
     let photoUrl: String
 }

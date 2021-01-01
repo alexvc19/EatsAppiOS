@@ -15,7 +15,7 @@ target 'EatsApp' do
   target 'EatsAppUITests' do
     # Pods for testing
   end
-# add the Firebase pod for Google Analytics
+
 pod 'Firebase/Firestore'
 pod 'FirebaseUI/Storage'
 pod 'FirebaseFirestoreSwift'
