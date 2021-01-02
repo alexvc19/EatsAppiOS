@@ -55,7 +55,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="167"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza1" translatesAutoresizingMaskIntoConstraints="NO" id="wc7-IS-wSW">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wc7-IS-wSW">
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="167"/>
                                                                 </imageView>
                                                             </subviews>
@@ -106,6 +106,11 @@
                                                                 </button>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WVF-2K-bre">
                                                                     <rect key="frame" x="0.0" y="0.0" width="82" height="82"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="10"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yf-af-wuW">
                                                                     <rect key="frame" x="25" y="87" width="32" height="15"/>
@@ -285,7 +290,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="tnE-4V-70e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0XG-YP-sMi"/>
                             <constraint firstItem="tnE-4V-70e" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="VVx-Nx-Tex"/>
@@ -332,7 +337,6 @@
     </scenes>
     <resources>
         <image name="house" catalog="system" width="128" height="106"/>
-        <image name="pizza1" width="351" height="167"/>
         <namedColor name="Amarillo">
             <color red="0.94900000095367432" green="0.63499999046325684" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

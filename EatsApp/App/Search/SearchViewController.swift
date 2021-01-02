@@ -10,29 +10,21 @@ import UIKit
 class SearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
     @IBOutlet weak var collectionViewCategories: UICollectionView!
-    
-    let names:[String] = [
-        "China",
-        "Sushi",
-        "Cafe",
-        "Tacos"
-    ]
-    let image:[String] = [
-        "search",
-        "search",
-        "search",
-        "search"
-    ]
+
+    var photosCategories = [PhotosCategories]()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return photosCategories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionViewCategories.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? PrincipalCategoriesCollectionViewCell
         
-        cell?.categorieImage.image = UIImage(named: "search")
-        cell?.categorieName.text = "CATEGORIA"
+        let photograp = photosCategories[indexPath.row]
+        
+        cell?.categorieImage.sd_setImage(with: URL(string: photograp.photoUrl))
+        
+        cell?.categorieName.text = photograp.categorieName
 
         return cell!
     }
@@ -40,7 +32,13 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        FIRFirestoreService.shared.read(from: .categories, returning: PhotosCategories.self) { (photosCategories) in
+            self.photosCategories = photosCategories
+            
+            DispatchQueue.main.async {
+                self.collectionViewCategories.reloadData()
+            }
+        }
     }
     
 

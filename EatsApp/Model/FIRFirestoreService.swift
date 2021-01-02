@@ -35,11 +35,14 @@ class FIRFirestoreService{
         //userRef.addDocument(data: parameters)
     }
     func read<T: Decodable>(from collectionReference: FIRCollectionReference, returning objectType: T.Type, completion: @escaping ([T]) -> Void){
+       
+        let slider = reference(to: .photos)
         
-        reference(to: .photos).addSnapshotListener { (query, _) in
+        slider.addSnapshotListener{ (query, _) in
             guard let query = query else {return}
             
             do {
+                
                 var objects = [T]()
                 for doc in query.documents{
                     let object = try doc.decode(as: objectType.self)
@@ -50,28 +53,24 @@ class FIRFirestoreService{
                 
             } catch{
                 //print(error)
+    
             }
-            
         }
-        reference(to: .categories).addSnapshotListener { (docum, _) in
-            guard let docum = docum else {return}
-            
+        reference(to: .categories).addSnapshotListener{ (q, _) in
+            guard let q = q else {return}
             do {
-                var objec = [T]()
-                for doc in docum.documents{
-                    let object = try doc.decode(as: objectType.self)
-                    objec.append(object)
+                var objs = [T]()
+                for doct in q.documents{
+                    let obj = try doct.decode(as: objectType.self)
+                    objs.append(obj)
                 }
-                
-                completion(objec)
-                
+                completion(objs)
             } catch{
                 //print(error)
             }
-            
         }
-        
     }
+    
     func update(){
      
         reference(to: .users).document("fbabaFf8vkqJz3AlgWLu").setData(["name": "mario", "phone": "123", "password": "qwerty"])

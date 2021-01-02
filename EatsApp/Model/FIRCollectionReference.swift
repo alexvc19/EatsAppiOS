@@ -9,6 +9,6 @@ import Foundation
 
 enum FIRCollectionReference: String{
     case users
-    case photos
     case categories
+    case photos
 }

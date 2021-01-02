@@ -35,7 +35,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     //fotos card "mas popular"
     var cardsPhotos:[String] = [
         "card1",
-        "card2",
+        "pedido",
     ]
     //card nombre de la comida
     var namesOfFood:[String]=[
@@ -81,6 +81,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         FIRFirestoreService.shared.read(from: .categories, returning: PhotosCategories.self) { (photosCategories) in
             self.photosCategories = photosCategories
+            
             DispatchQueue.main.async {
                 self.categoriesCollectionView.reloadData()
             }
@@ -155,6 +156,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             let photograp = photosCategories[indexPath.row]
             
             cell2?.categorieImageView.sd_setImage(with: URL(string: photograp.icon))
+            
             cell2?.nameCategorie.text = photograp.categorieName
             return cell2!
         }
@@ -177,6 +179,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             
             cellCard?.contentView.backgroundColor = .white
             cellCard?.contentView.layer.cornerRadius = 0
+            
             
             return cellCard!
             
