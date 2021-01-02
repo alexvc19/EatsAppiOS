@@ -72,7 +72,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             DispatchQueue.main.async {
                 self.PrincipalCollectionView.reloadData()
             }
-            print("error\(photos)")
+            //print("error\(photos)")
+            
             //UIPageControl del slide principal
             self.pageView?.currentPage = 0
             self.pageView?.numberOfPages = photos.count
@@ -118,6 +119,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
     
     //MARK: - CollectionView principal funciones datasorce y delegate
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if(collectionView == PrincipalCollectionView){
@@ -125,6 +127,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
         if(collectionView == cardCollectionView){
             return cardsPhotos.count
+        }
+        if(collectionView == categoriesCollectionView){
+            return photosCategories.count
         }
 
         return photosCategories.count
@@ -135,25 +140,25 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let cell = PrincipalCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? PrincipalCollectionCell
         
         if (collectionView == PrincipalCollectionView){
-            
             //coloca la imagen url de la base de datos en el ImageView
             let photo = photos[indexPath.row]
-            let img = photo.urlPhoto
-            let url: URL? = URL(string: img)
+            let url: URL? = photo.urlPhoto
             
             cell?.PrincipalimageView.sd_setImage(with: url)
             
         return cell!
     }
 
+        // Celdas de categorias
         if (collectionView == categoriesCollectionView){
             let cell2 = categoriesCollectionView.dequeueReusableCell(withReuseIdentifier:"cell2", for: indexPath) as? CategoriesCollectionViewCell
             let photograp = photosCategories[indexPath.row]
             
-            cell2?.categorieImageView.sd_setImage(with: URL(string: photograp.photoUrl))
+            cell2?.categorieImageView.sd_setImage(with: URL(string: photograp.icon))
             cell2?.nameCategorie.text = photograp.categorieName
             return cell2!
         }
+        // Celdas de cards horizontal
         if (collectionView == cardCollectionView){
             let cellCard = cardCollectionView.dequeueReusableCell(withReuseIdentifier: "cellCard", for: indexPath) as? CardCollectionViewCell
            

@@ -7,6 +7,8 @@
 
 import Foundation
 struct PhotosCategories: Decodable{
+    
     let categorieName: String
     let photoUrl: String
+    let icon: String
 }

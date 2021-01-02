@@ -49,7 +49,7 @@ class FIRFirestoreService{
                 completion(objects)
                 
             } catch{
-                print(error)
+                //print(error)
             }
             
         }
@@ -57,16 +57,16 @@ class FIRFirestoreService{
             guard let docum = docum else {return}
             
             do {
-                var objects = [T]()
+                var objec = [T]()
                 for doc in docum.documents{
                     let object = try doc.decode(as: objectType.self)
-                    objects.append(object)
+                    objec.append(object)
                 }
                 
-                completion(objects)
+                completion(objec)
                 
             } catch{
-                print(error)
+                //print(error)
             }
             
         }

@@ -8,5 +8,5 @@
 import Foundation
 
 struct Photos: Decodable {
-    let urlPhoto: String
+    let urlPhoto: URL
 }
