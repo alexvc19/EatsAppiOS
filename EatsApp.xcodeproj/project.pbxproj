@@ -32,6 +32,9 @@
 		4A36B96725857E8000ED3059 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A36B96625857E8000ED3059 /* CategoriesCollectionViewCell.swift */; };
 		4A4524BE25A13894004A480D /* LastOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4524BD25A13894004A480D /* LastOrdersViewController.swift */; };
 		4A4524C625A13B63004A480D /* LastOrdesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4524C525A13B63004A480D /* LastOrdesTableViewCell.swift */; };
+		4A4524D125A16EB3004A480D /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4524D025A16EB3004A480D /* OptionsView.swift */; };
+		4A4524D625A16EC8004A480D /* OptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4524D525A16EC8004A480D /* OptionsView.xib */; };
+		4A4524DB25A173F4004A480D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4524DA25A173F4004A480D /* AccountViewController.swift */; };
 		4A46ED81258DA756006CB62E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A46ED80258DA755006CB62E /* SceneDelegate.swift */; };
 		4A54D1B8258439CA00B64EE8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54D1B7258439CA00B64EE8 /* HomeViewController.swift */; };
 		4A54D1DD25848B4700B64EE8 /* PrincipalCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54D1DC25848B4700B64EE8 /* PrincipalCollectionCell.swift */; };
@@ -98,6 +101,9 @@
 		4A36B96625857E8000ED3059 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		4A4524BD25A13894004A480D /* LastOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastOrdersViewController.swift; sourceTree = "<group>"; };
 		4A4524C525A13B63004A480D /* LastOrdesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastOrdesTableViewCell.swift; sourceTree = "<group>"; };
+		4A4524D025A16EB3004A480D /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		4A4524D525A16EC8004A480D /* OptionsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionsView.xib; sourceTree = "<group>"; };
+		4A4524DA25A173F4004A480D /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		4A46ED80258DA755006CB62E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4A54D1B7258439CA00B64EE8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4A54D1DC25848B4700B64EE8 /* PrincipalCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalCollectionCell.swift; sourceTree = "<group>"; };
@@ -259,7 +265,10 @@
 		4A2B298E258AACAF0045EAD0 /* Acconunt */ = {
 			isa = PBXGroup;
 			children = (
+				4A4524D025A16EB3004A480D /* OptionsView.swift */,
+				4A4524D525A16EC8004A480D /* OptionsView.xib */,
 				4A2B298F258AACC70045EAD0 /* Account.storyboard */,
+				4A4524DA25A173F4004A480D /* AccountViewController.swift */,
 			);
 			path = Acconunt;
 			sourceTree = "<group>";
@@ -456,6 +465,7 @@
 				4A2B2997258ACF4A0045EAD0 /* Search.storyboard in Resources */,
 				4A2B2990258AACC70045EAD0 /* Account.storyboard in Resources */,
 				4A79010325948F600055852C /* Register.storyboard in Resources */,
+				4A4524D625A16EC8004A480D /* OptionsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +595,7 @@
 			files = (
 				4A23A410258DEDFC00A5F3A8 /* FIRCollectionReference.swift in Sources */,
 				4A23A415258DF0CD00A5F3A8 /* Encodable Extensions.swift in Sources */,
+				4A4524DB25A173F4004A480D /* AccountViewController.swift in Sources */,
 				4A23A41D258DF63F00A5F3A8 /* Snapshot Extensions.swift in Sources */,
 				4A4524C625A13B63004A480D /* LastOrdesTableViewCell.swift in Sources */,
 				4A7900FE25947ED30055852C /* PhotosCategories.swift in Sources */,
@@ -605,6 +616,7 @@
 				4A2B2972258AA40A0045EAD0 /* ViewController.swift in Sources */,
 				4ABB4B8B258C4F8200C8520E /* Photos.swift in Sources */,
 				4A54D1DD25848B4700B64EE8 /* PrincipalCollectionCell.swift in Sources */,
+				4A4524D125A16EB3004A480D /* OptionsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

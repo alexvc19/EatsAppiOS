@@ -60,6 +60,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //MARK: - Cards
         card1.names?.text = "Sushi"
         card1.waitTime?.text = waitTime
         card1.photo?.image = UIImage(named: "pedido")
