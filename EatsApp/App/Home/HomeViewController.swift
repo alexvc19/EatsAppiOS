@@ -102,7 +102,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
       
        
         //timer del slider principal
-        timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(slideToNext), userInfo: nil,repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 7.0, target: self, selector: #selector(slideToNext), userInfo: nil,repeats: true)
         }
     
     //funcion para controlar el timer del slider principal
