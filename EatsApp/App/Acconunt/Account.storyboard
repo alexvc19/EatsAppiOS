@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xhk-21-heS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xhk-21-heS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,16 +13,106 @@
         <!--Account-->
         <scene sceneID="3S0-Zn-n3s">
             <objects>
-                <viewController id="fBM-iR-GzI" sceneMemberID="viewController">
+                <viewController id="fBM-iR-GzI" customClass="AccountViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PEU-sW-F3Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="fzc-kE-GJK">
+                                <rect key="frame" x="15" y="59" width="70" height="70"/>
+                                <color key="backgroundColor" name="GrisClaro"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Nso-yS-hG9"/>
+                                    <constraint firstAttribute="width" constant="70" id="qaM-qz-qXP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cll-4x-706">
+                                <rect key="frame" x="95" y="67.5" width="107.5" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gs5-FR-PSP">
+                                <rect key="frame" x="128" y="93" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="nHq-sR-t0m">
+                                <rect key="frame" x="0.0" y="155" width="414" height="457"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUq-tf-ZoB" userLabel="HeaderView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="102"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="102" id="HD5-Tr-oHg"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEi-nq-S5u" customClass="OptionsView" customModule="EatsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="103" width="414" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="KYF-3P-2rh"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AvQ-o2-cY9" customClass="OptionsView" customModule="EatsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="174" width="414" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="Bpp-Is-XC4"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GUl-i5-obo" customClass="OptionsView" customModule="EatsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="245" width="414" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="IL9-CN-NCq"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FcP-YC-GOk" customClass="OptionsView" customModule="EatsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="316" width="414" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="yjS-DJ-Foy"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gV1-l8-zba" customClass="OptionsView" customModule="EatsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="387" width="414" height="70"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="LGI-TW-AcN"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Fxw-fV-mAZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nHq-sR-t0m" firstAttribute="top" secondItem="fzc-kE-GJK" secondAttribute="bottom" constant="26" id="8nF-f0-nJl"/>
+                            <constraint firstItem="fzc-kE-GJK" firstAttribute="leading" secondItem="PEU-sW-F3Y" secondAttribute="leading" constant="15" id="OuM-4W-egC"/>
+                            <constraint firstItem="Fxw-fV-mAZ" firstAttribute="trailing" secondItem="nHq-sR-t0m" secondAttribute="trailing" id="U1h-fM-TnZ"/>
+                            <constraint firstItem="cll-4x-706" firstAttribute="leading" secondItem="fzc-kE-GJK" secondAttribute="trailing" constant="10" id="d8L-UT-tTQ"/>
+                            <constraint firstItem="cll-4x-706" firstAttribute="centerY" secondItem="fzc-kE-GJK" secondAttribute="centerY" constant="-14.5" id="dpM-F8-ddV"/>
+                            <constraint firstItem="nHq-sR-t0m" firstAttribute="leading" secondItem="Fxw-fV-mAZ" secondAttribute="leading" id="dvj-RD-c5X"/>
+                            <constraint firstItem="fzc-kE-GJK" firstAttribute="top" secondItem="Fxw-fV-mAZ" secondAttribute="top" constant="15" id="jEt-z6-ylT"/>
+                            <constraint firstItem="Gs5-FR-PSP" firstAttribute="centerX" secondItem="cll-4x-706" secondAttribute="centerX" id="pRZ-bL-SYa"/>
+                            <constraint firstItem="Gs5-FR-PSP" firstAttribute="top" secondItem="cll-4x-706" secondAttribute="bottom" constant="1" id="pTi-dt-ivs"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cuenta" image="person" catalog="system" id="0Kw-2g-6CZ"/>
                     <navigationItem key="navigationItem" title="Account" id="woO-LJ-xW7"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addressView" destination="GUl-i5-obo" id="dJX-zE-OmK"/>
+                        <outlet property="closeSesionView" destination="gV1-l8-zba" id="dwh-Qp-6Xm"/>
+                        <outlet property="helpView" destination="FcP-YC-GOk" id="zLp-Gy-8ZK"/>
+                        <outlet property="infoView" destination="eEi-nq-S5u" id="qa7-gv-mkK"/>
+                        <outlet property="nameLabel" destination="cll-4x-706" id="r83-wc-tOu"/>
+                        <outlet property="payView" destination="AvQ-o2-cY9" id="806-fL-Cfp"/>
+                        <outlet property="pointsLabel" destination="Gs5-FR-PSP" id="kOm-D0-Lgn"/>
+                        <outlet property="userImage" destination="fzc-kE-GJK" id="Vsc-eT-yS8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4O8-o6-Lol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -29,11 +121,10 @@
         <!--Item-->
         <scene sceneID="X77-vV-MMC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xhk-21-heS" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="xhk-21-heS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="dY0-VH-etf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="W6F-sh-YTc">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -47,9 +138,19 @@
         </scene>
     </scenes>
     <resources>
+        <image name="default" width="512" height="512"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <namedColor name="GrisClaro">
+            <color red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
