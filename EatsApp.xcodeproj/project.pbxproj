@@ -30,6 +30,8 @@
 		4A2D429725956F11003E422F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2D429625956F11003E422F /* CardView.swift */; };
 		4A2DB48625873D260024163C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DB48525873D260024163C /* GoogleService-Info.plist */; };
 		4A36B96725857E8000ED3059 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A36B96625857E8000ED3059 /* CategoriesCollectionViewCell.swift */; };
+		4A4524BE25A13894004A480D /* LastOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4524BD25A13894004A480D /* LastOrdersViewController.swift */; };
+		4A4524C625A13B63004A480D /* LastOrdesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4524C525A13B63004A480D /* LastOrdesTableViewCell.swift */; };
 		4A46ED81258DA756006CB62E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A46ED80258DA755006CB62E /* SceneDelegate.swift */; };
 		4A54D1B8258439CA00B64EE8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54D1B7258439CA00B64EE8 /* HomeViewController.swift */; };
 		4A54D1DD25848B4700B64EE8 /* PrincipalCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54D1DC25848B4700B64EE8 /* PrincipalCollectionCell.swift */; };
@@ -94,6 +96,8 @@
 		4A2D429625956F11003E422F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4A2DB48525873D260024163C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A36B96625857E8000ED3059 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		4A4524BD25A13894004A480D /* LastOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastOrdersViewController.swift; sourceTree = "<group>"; };
+		4A4524C525A13B63004A480D /* LastOrdesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastOrdesTableViewCell.swift; sourceTree = "<group>"; };
 		4A46ED80258DA755006CB62E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4A54D1B7258439CA00B64EE8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4A54D1DC25848B4700B64EE8 /* PrincipalCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalCollectionCell.swift; sourceTree = "<group>"; };
@@ -264,6 +268,8 @@
 			isa = PBXGroup;
 			children = (
 				4A2B299E258ACF5D0045EAD0 /* Orders.storyboard */,
+				4A4524BD25A13894004A480D /* LastOrdersViewController.swift */,
+				4A4524C525A13B63004A480D /* LastOrdesTableViewCell.swift */,
 			);
 			path = Orders;
 			sourceTree = "<group>";
@@ -580,6 +586,7 @@
 				4A23A410258DEDFC00A5F3A8 /* FIRCollectionReference.swift in Sources */,
 				4A23A415258DF0CD00A5F3A8 /* Encodable Extensions.swift in Sources */,
 				4A23A41D258DF63F00A5F3A8 /* Snapshot Extensions.swift in Sources */,
+				4A4524C625A13B63004A480D /* LastOrdesTableViewCell.swift in Sources */,
 				4A7900FE25947ED30055852C /* PhotosCategories.swift in Sources */,
 				4ACB5138259FBCA1000E0857 /* SearchViewController.swift in Sources */,
 				4A279E852582F0830096F79A /* LogInViewController.swift in Sources */,
@@ -593,6 +600,7 @@
 				4ACB513D259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift in Sources */,
 				4A46ED81258DA756006CB62E /* SceneDelegate.swift in Sources */,
 				4A79010B25948FD10055852C /* RegisterViewController.swift in Sources */,
+				4A4524BE25A13894004A480D /* LastOrdersViewController.swift in Sources */,
 				4A2D429725956F11003E422F /* CardView.swift in Sources */,
 				4A2B2972258AA40A0045EAD0 /* ViewController.swift in Sources */,
 				4ABB4B8B258C4F8200C8520E /* Photos.swift in Sources */,
