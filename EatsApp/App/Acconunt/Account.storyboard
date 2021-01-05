@@ -43,9 +43,36 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUq-tf-ZoB" userLabel="HeaderView">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="102"/>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="points" translatesAutoresizingMaskIntoConstraints="NO" id="Rkl-91-AW9">
+                                                <rect key="frame" x="56" y="11" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="2e2-PH-Z7A"/>
+                                                    <constraint firstAttribute="width" constant="80" id="Gho-vn-YAS"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programa de lealtad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iga-0T-0Kw">
+                                                <rect key="frame" x="143" y="31" width="172.5" height="21"/>
+                                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                <color key="textColor" name="Amarillo"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premios a nuestros mejores clientes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sft-vD-lgS">
+                                                <rect key="frame" x="143" y="55" width="226" height="16.5"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
+                                            <constraint firstItem="Sft-vD-lgS" firstAttribute="top" secondItem="Iga-0T-0Kw" secondAttribute="bottom" constant="3" id="3gQ-Kg-Er3"/>
                                             <constraint firstAttribute="height" constant="102" id="HD5-Tr-oHg"/>
+                                            <constraint firstItem="Rkl-91-AW9" firstAttribute="top" secondItem="Iga-0T-0Kw" secondAttribute="bottom" constant="-41" id="NwW-DN-WP2"/>
+                                            <constraint firstItem="Rkl-91-AW9" firstAttribute="leading" secondItem="CUq-tf-ZoB" secondAttribute="leading" constant="56" id="PHY-Us-5fj"/>
+                                            <constraint firstItem="Sft-vD-lgS" firstAttribute="leading" secondItem="Rkl-91-AW9" secondAttribute="trailing" constant="7" id="RZI-rf-OQm"/>
+                                            <constraint firstItem="Rkl-91-AW9" firstAttribute="centerY" secondItem="CUq-tf-ZoB" secondAttribute="centerY" id="aH0-ar-Wiw"/>
+                                            <constraint firstItem="Iga-0T-0Kw" firstAttribute="leading" secondItem="Rkl-91-AW9" secondAttribute="trailing" constant="7" id="vDz-Sz-zoD"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEi-nq-S5u" customClass="OptionsView" customModule="EatsApp" customModuleProvider="target">
@@ -84,7 +111,14 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QB8-eh-EOM">
+                                <rect key="frame" x="126" y="639" width="162" height="30"/>
+                                <state key="normal" title="Terminos y condiciones">
+                                    <color key="titleColor" name="Rojo"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fxw-fV-mAZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -96,6 +130,8 @@
                             <constraint firstItem="cll-4x-706" firstAttribute="centerY" secondItem="fzc-kE-GJK" secondAttribute="centerY" constant="-14.5" id="dpM-F8-ddV"/>
                             <constraint firstItem="nHq-sR-t0m" firstAttribute="leading" secondItem="Fxw-fV-mAZ" secondAttribute="leading" id="dvj-RD-c5X"/>
                             <constraint firstItem="fzc-kE-GJK" firstAttribute="top" secondItem="Fxw-fV-mAZ" secondAttribute="top" constant="15" id="jEt-z6-ylT"/>
+                            <constraint firstItem="QB8-eh-EOM" firstAttribute="top" secondItem="nHq-sR-t0m" secondAttribute="bottom" constant="27" id="mqm-cI-05X"/>
+                            <constraint firstItem="QB8-eh-EOM" firstAttribute="centerX" secondItem="PEU-sW-F3Y" secondAttribute="centerX" id="n9q-x1-bUU"/>
                             <constraint firstItem="Gs5-FR-PSP" firstAttribute="centerX" secondItem="cll-4x-706" secondAttribute="centerX" id="pRZ-bL-SYa"/>
                             <constraint firstItem="Gs5-FR-PSP" firstAttribute="top" secondItem="cll-4x-706" secondAttribute="bottom" constant="1" id="pTi-dt-ivs"/>
                         </constraints>
@@ -106,11 +142,13 @@
                     <connections>
                         <outlet property="addressView" destination="GUl-i5-obo" id="dJX-zE-OmK"/>
                         <outlet property="closeSesionView" destination="gV1-l8-zba" id="dwh-Qp-6Xm"/>
+                        <outlet property="headerView" destination="CUq-tf-ZoB" id="ac8-p5-4tv"/>
                         <outlet property="helpView" destination="FcP-YC-GOk" id="zLp-Gy-8ZK"/>
                         <outlet property="infoView" destination="eEi-nq-S5u" id="qa7-gv-mkK"/>
                         <outlet property="nameLabel" destination="cll-4x-706" id="r83-wc-tOu"/>
                         <outlet property="payView" destination="AvQ-o2-cY9" id="806-fL-Cfp"/>
                         <outlet property="pointsLabel" destination="Gs5-FR-PSP" id="kOm-D0-Lgn"/>
+                        <outlet property="stack" destination="nHq-sR-t0m" id="TQJ-AD-pcH"/>
                         <outlet property="userImage" destination="fzc-kE-GJK" id="Vsc-eT-yS8"/>
                     </connections>
                 </viewController>
@@ -140,17 +178,21 @@
     <resources>
         <image name="default" width="512" height="512"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="points" width="160" height="160"/>
+        <namedColor name="Amarillo">
+            <color red="0.94900000095367432" green="0.63499999046325684" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="GrisClaro">
             <color red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Rojo">
+            <color red="1" green="0.36100000143051147" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

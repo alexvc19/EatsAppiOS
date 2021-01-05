@@ -36,9 +36,16 @@ class RegisterViewController: UIViewController {
         passwordTextfield.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
         passwordTextfield.layer.cornerRadius = 5
         
-        
+        let tapGesture = UITapGestureRecognizer(target: self, action:     #selector(tapGestureHandler))
+            view.addGestureRecognizer(tapGesture)
+
     }
     
-
+    @objc func tapGestureHandler() {
+        nameTexfield.endEditing(true)
+        phoneTextfield.endEditing(true)
+        emailTextfield.endEditing(true)
+        passwordTextfield.endEditing(true)
+      }
     
 }

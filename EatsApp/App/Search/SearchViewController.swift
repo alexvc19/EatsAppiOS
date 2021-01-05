@@ -9,6 +9,7 @@ import UIKit
 
 class SearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
+    @IBOutlet weak var  searchTextField: UITextField!
     @IBOutlet weak var collectionViewCategories: UICollectionView!
 
     var photosCategories = [PhotosCategories]()
@@ -39,8 +40,13 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
                 self.collectionViewCategories.reloadData()
             }
         }
+        let tapGesture = UITapGestureRecognizer(target: self, action:     #selector(tapGestureHandler))
+            view.addGestureRecognizer(tapGesture)
     }
-    
+    @objc func tapGestureHandler() {
+        searchTextField.endEditing(true)
+       
+      }
 
     /*
     // MARK: - Navigation
