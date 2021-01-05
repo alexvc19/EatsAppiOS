@@ -115,6 +115,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionViewCategories" destination="sS5-MW-51Q" id="lK0-mk-Ylc"/>
+                        <outlet property="searchTextField" destination="2Gm-1M-PQm" id="5lZ-Ww-oeq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KcP-th-ZzJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
