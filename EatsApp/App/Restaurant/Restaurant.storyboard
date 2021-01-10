@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hc9-ah-wdz">
-                                <rect key="frame" x="0.0" y="-47" width="414" height="943"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hc9-ah-wdz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="hP9-yf-SLL">
@@ -40,8 +40,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Hc9-ah-wdz" firstAttribute="trailing" secondItem="fSN-dS-r8V" secondAttribute="trailing" id="43Z-gB-96Z"/>
-                            <constraint firstItem="Hc9-ah-wdz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gQx-7t-OqX" secondAttribute="top" constant="-47" id="6Gp-da-hjS"/>
-                            <constraint firstItem="Hc9-ah-wdz" firstAttribute="top" relation="lessThanOrEqual" secondItem="gQx-7t-OqX" secondAttribute="topMargin" constant="-91" id="FeF-mu-eCH"/>
+                            <constraint firstItem="Hc9-ah-wdz" firstAttribute="top" secondItem="gQx-7t-OqX" secondAttribute="top" id="XyC-mp-GBu"/>
                             <constraint firstAttribute="bottom" secondItem="Hc9-ah-wdz" secondAttribute="bottom" id="YiE-fV-FT6"/>
                             <constraint firstItem="Hc9-ah-wdz" firstAttribute="leading" secondItem="fSN-dS-r8V" secondAttribute="leading" id="an2-sT-QP4"/>
                         </constraints>

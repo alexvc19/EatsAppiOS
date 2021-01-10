@@ -3,29 +3,4 @@
    uuid = "4EE318DD-8E64-466D-AB06-BA709C02A647"
    type = "0"
    version = "2.0">
-   <Breakpoints>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
-         <BreakpointContent
-            uuid = "F4EC5069-1EC5-4BAF-A89C-E3FFC423EF08"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            symbolName = "UICollectionViewFlowLayoutBreakForInvalidSizes"
-            moduleName = "">
-            <Locations>
-               <Location
-                  uuid = "F4EC5069-1EC5-4BAF-A89C-E3FFC423EF08 - 6a6cfc8d24631f32"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "UICollectionViewFlowLayoutBreakForInvalidSizes"
-                  moduleName = "UIKitCore"
-                  usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "0">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-   </Breakpoints>
 </Bucket>
