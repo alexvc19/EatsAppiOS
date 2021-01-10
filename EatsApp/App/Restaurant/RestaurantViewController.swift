@@ -44,10 +44,9 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let header = HeaderRestaurant(frame: CGRect(x:0,y: -47,width: view.frame.size.width, height: 516))
+        let header = HeaderRestaurant(frame: CGRect(x:0,y: -47,width: view.frame.size.width, height: 478))
         let footer = UIView(frame: CGRect(x:0,y: 0,width: view.frame.size.width, height: 300))
         
-        header.backgroundColor = .orange
         footer.backgroundColor = .red
         
         tableView.tableHeaderView = header

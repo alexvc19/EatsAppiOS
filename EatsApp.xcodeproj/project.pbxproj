@@ -12,6 +12,8 @@
 		4A23A410258DEDFC00A5F3A8 /* FIRCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23A40F258DEDFC00A5F3A8 /* FIRCollectionReference.swift */; };
 		4A23A415258DF0CD00A5F3A8 /* Encodable Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23A414258DF0CD00A5F3A8 /* Encodable Extensions.swift */; };
 		4A23A41D258DF63F00A5F3A8 /* Snapshot Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23A41C258DF63F00A5F3A8 /* Snapshot Extensions.swift */; };
+		4A23B03825AACECB00FA066A /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23B03625AACECB00FA066A /* MenuCollectionViewCell.swift */; };
+		4A23B03925AACECB00FA066A /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A23B03725AACECB00FA066A /* MenuCollectionViewCell.xib */; };
 		4A279E292582E5B30096F79A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A279E282582E5B30096F79A /* AppDelegate.swift */; };
 		4A279E302582E5B30096F79A /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A279E2E2582E5B30096F79A /* Home.storyboard */; };
 		4A279E322582E5B70096F79A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A279E312582E5B70096F79A /* Assets.xcassets */; };
@@ -79,6 +81,8 @@
 		4A23A40F258DEDFC00A5F3A8 /* FIRCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRCollectionReference.swift; sourceTree = "<group>"; };
 		4A23A414258DF0CD00A5F3A8 /* Encodable Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable Extensions.swift"; sourceTree = "<group>"; };
 		4A23A41C258DF63F00A5F3A8 /* Snapshot Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Snapshot Extensions.swift"; sourceTree = "<group>"; };
+		4A23B03625AACECB00FA066A /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		4A23B03725AACECB00FA066A /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		4A279E252582E5B30096F79A /* EatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A279E282582E5B30096F79A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A279E2F2582E5B30096F79A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
@@ -194,6 +198,15 @@
 				4A7900FD25947ED30055852C /* PhotosCategories.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4A23B03D25AAD1E300FA066A /* MenuCells */ = {
+			isa = PBXGroup;
+			children = (
+				4A23B03625AACECB00FA066A /* MenuCollectionViewCell.swift */,
+				4A23B03725AACECB00FA066A /* MenuCollectionViewCell.xib */,
+			);
+			path = MenuCells;
 			sourceTree = "<group>";
 		};
 		4A279E1C2582E5B30096F79A = {
@@ -347,6 +360,7 @@
 		4A9B8AB325AA71AD00874BBF /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
+				4A23B03D25AAD1E300FA066A /* MenuCells */,
 				4A80FF5325AAB5A20019C4F5 /* RestaurantCells */,
 				4A9B8AB425AA71EE00874BBF /* Restaurant.storyboard */,
 				4A9B8ABC25AA740400874BBF /* RestaurantViewController.swift */,
@@ -497,6 +511,7 @@
 				4A2B299F258ACF5D0045EAD0 /* Orders.storyboard in Resources */,
 				4A80FF5825AAB6400019C4F5 /* HeaderRestaurant.xib in Resources */,
 				4A279E322582E5B70096F79A /* Assets.xcassets in Resources */,
+				4A23B03925AACECB00FA066A /* MenuCollectionViewCell.xib in Resources */,
 				4A9B8AB525AA71EE00874BBF /* Restaurant.storyboard in Resources */,
 				4A279E302582E5B30096F79A /* Home.storyboard in Resources */,
 				4A57DE06259AACCE00560186 /* CardView.xib in Resources */,
@@ -633,6 +648,7 @@
 			files = (
 				4A23A410258DEDFC00A5F3A8 /* FIRCollectionReference.swift in Sources */,
 				4A23A415258DF0CD00A5F3A8 /* Encodable Extensions.swift in Sources */,
+				4A23B03825AACECB00FA066A /* MenuCollectionViewCell.swift in Sources */,
 				4A4524DB25A173F4004A480D /* AccountViewController.swift in Sources */,
 				4A23A41D258DF63F00A5F3A8 /* Snapshot Extensions.swift in Sources */,
 				4A4524C625A13B63004A480D /* LastOrdesTableViewCell.swift in Sources */,

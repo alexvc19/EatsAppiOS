@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="menucell" reuseIdentifier="menucell" id="gTV-IL-0wX" customClass="MenuCollectionViewCell" customModule="EatsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="82" height="109"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="82" height="109"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNc-Wi-ec0">
+                        <rect key="frame" x="0.0" y="0.0" width="82" height="109"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="points" translatesAutoresizingMaskIntoConstraints="NO" id="SO5-bS-RNC">
+                                <rect key="frame" x="0.0" y="0.0" width="82" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="82" id="Mgo-Gc-mCW"/>
+                                    <constraint firstAttribute="height" constant="82" id="mD2-qd-hJ8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5t-1A-K4y">
+                                <rect key="frame" x="16" y="92" width="50" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <color key="textColor" name="Amarillo"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="J5t-1A-K4y" firstAttribute="centerX" secondItem="UNc-Wi-ec0" secondAttribute="centerX" id="BS4-bE-l92"/>
+                            <constraint firstItem="SO5-bS-RNC" firstAttribute="leading" secondItem="UNc-Wi-ec0" secondAttribute="leading" id="BpE-mo-UFI"/>
+                            <constraint firstItem="J5t-1A-K4y" firstAttribute="top" secondItem="SO5-bS-RNC" secondAttribute="bottom" constant="10" id="Ios-3l-Tka"/>
+                            <constraint firstAttribute="trailing" secondItem="SO5-bS-RNC" secondAttribute="trailing" id="J9S-Dz-Tg2"/>
+                            <constraint firstItem="SO5-bS-RNC" firstAttribute="top" secondItem="UNc-Wi-ec0" secondAttribute="top" id="SuV-Ge-PlR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="UNc-Wi-ec0" secondAttribute="bottom" id="R7D-s4-O7G"/>
+                <constraint firstItem="UNc-Wi-ec0" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="V5V-xA-frK"/>
+                <constraint firstItem="UNc-Wi-ec0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="XJz-sd-8YK"/>
+                <constraint firstAttribute="trailing" secondItem="UNc-Wi-ec0" secondAttribute="trailing" id="zNJ-Nm-kwB"/>
+            </constraints>
+            <size key="customSize" width="83" height="125"/>
+            <connections>
+                <outlet property="menuImageView" destination="SO5-bS-RNC" id="TOR-nx-MWk"/>
+                <outlet property="nameLabel" destination="J5t-1A-K4y" id="zL4-a5-FZ1"/>
+            </connections>
+            <point key="canvasLocation" x="100.00000000000001" y="76.674107142857139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="points" width="160" height="160"/>
+        <namedColor name="Amarillo">
+            <color red="0.94900000095367432" green="0.63499999046325684" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
