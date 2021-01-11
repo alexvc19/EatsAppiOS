@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Restaurant View Controller-->
+        <!--Restaurante-->
         <scene sceneID="1ap-O3-sst">
             <objects>
                 <viewController id="Aer-Nu-MTG" customClass="RestaurantViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -95,7 +95,9 @@
                             <constraint firstItem="Hc9-ah-wdz" firstAttribute="top" secondItem="fSN-dS-r8V" secondAttribute="top" id="uxD-SX-4uI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3Sm-bn-b9J"/>
+                    <navigationItem key="navigationItem" title="Restaurante" leftItemsSupplementBackButton="YES" id="3Sm-bn-b9J">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="SiL-wE-5UD"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Hc9-ah-wdz" id="7BM-vn-oqm"/>
                     </connections>
@@ -112,7 +114,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Zz-lQ-VVQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="Amarillo"/>
+                        <color key="barTintColor" name="GrisClaro"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -126,11 +131,11 @@
     </scenes>
     <resources>
         <image name="Example" width="225" height="225"/>
-        <namedColor name="Amarillo">
-            <color red="0.94900000095367432" green="0.63499999046325684" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Gris">
             <color red="0.54900002479553223" green="0.54900002479553223" blue="0.54900002479553223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GrisClaro">
+            <color red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

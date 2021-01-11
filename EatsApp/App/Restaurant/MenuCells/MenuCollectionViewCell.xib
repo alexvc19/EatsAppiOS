@@ -28,6 +28,11 @@
                                     <constraint firstAttribute="width" constant="82" id="Mgo-Gc-mCW"/>
                                     <constraint firstAttribute="height" constant="82" id="mD2-qd-hJ8"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5t-1A-K4y">
                                 <rect key="frame" x="16" y="92" width="50" height="16.5"/>
