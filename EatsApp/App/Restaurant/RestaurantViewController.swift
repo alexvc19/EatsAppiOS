@@ -28,12 +28,39 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         ["$120.00","$120.00","$120.00","$120.00"],
     ]
     
+    var foodTitles = [
+       "Promos",
+        "Sushis",
+        "Suhsi especial"
+    ]
+    
     //MARK: tableview delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
     //MARK: tableview datasource
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let headerframe = tableView.frame
+        
+        let labe : UILabel = UILabel()
+        
+        labe.frame = CGRect(x: 20, y: 20, width: headerframe.size.width, height: 20)
+        labe.text = foodTitles[section]
+        labe.textColor = UIColor(named: "Amarillo")
+        labe.font = UIFont(name: "Helvetica-Bold", size: 18.0)
+    
+        
+        let headerView:UIView = UIView(frame: CGRect(x: 0, y: 0, width: headerframe.size.width, height: headerframe.size.height))
+        
+        headerView.addSubview(labe)
+        
+        return headerView
+        
+    }
+    
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 20.0
     }
