@@ -40,6 +40,7 @@ class HeaderRestaurant: UIView, UICollectionViewDelegate {
     
     private func commonInit(){
         let viewFromXib = Bundle.main.loadNibNamed("HeaderRestaurant", owner: self, options: nil)![0] as! UIView
+    
         viewFromXib.frame = self.bounds
         addSubview(viewFromXib)
         initCollectionView()
@@ -59,7 +60,7 @@ extension HeaderRestaurant: UICollectionViewDataSource{
             fatalError("cant dequeue cell")
         }
         cell.nameLabel?.text = "hola"
-        cell.menuImageView?.image = UIImage(named: "points")
+        
         return cell
     }
 }

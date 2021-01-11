@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A133FBE25ABAED600DF8E39 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A133FBD25ABAED600DF8E39 /* FoodTableViewCell.swift */; };
 		4A23A406258DE58600A5F3A8 /* FIRFirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23A405258DE58600A5F3A8 /* FIRFirestoreService.swift */; };
 		4A23A40B258DE75A00A5F3A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23A40A258DE75A00A5F3A8 /* User.swift */; };
 		4A23A410258DEDFC00A5F3A8 /* FIRCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23A40F258DEDFC00A5F3A8 /* FIRCollectionReference.swift */; };
@@ -76,6 +77,7 @@
 /* Begin PBXFileReference section */
 		33E530F06872FCDCD041C1EB /* Pods-EatsApp-EatsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp-EatsAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-EatsApp-EatsAppUITests/Pods-EatsApp-EatsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		47DDE463AB1CFEBABA24F4F5 /* Pods-EatsApp-EatsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp-EatsAppUITests.release.xcconfig"; path = "Target Support Files/Pods-EatsApp-EatsAppUITests/Pods-EatsApp-EatsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4A133FBD25ABAED600DF8E39 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		4A23A405258DE58600A5F3A8 /* FIRFirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRFirestoreService.swift; sourceTree = "<group>"; };
 		4A23A40A258DE75A00A5F3A8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4A23A40F258DEDFC00A5F3A8 /* FIRCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRCollectionReference.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 				4A80FF5325AAB5A20019C4F5 /* RestaurantCells */,
 				4A9B8AB425AA71EE00874BBF /* Restaurant.storyboard */,
 				4A9B8ABC25AA740400874BBF /* RestaurantViewController.swift */,
+				4A133FBD25ABAED600DF8E39 /* FoodTableViewCell.swift */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -663,6 +666,7 @@
 				4A2B2989258AA80B0045EAD0 /* TabBarViewController.swift in Sources */,
 				4A54D1B8258439CA00B64EE8 /* HomeViewController.swift in Sources */,
 				4A80FF5D25AABBA10019C4F5 /* HeaderRestaurant.swift in Sources */,
+				4A133FBE25ABAED600DF8E39 /* FoodTableViewCell.swift in Sources */,
 				4ACB513D259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift in Sources */,
 				4A46ED81258DA756006CB62E /* SceneDelegate.swift in Sources */,
 				4A79010B25948FD10055852C /* RegisterViewController.swift in Sources */,

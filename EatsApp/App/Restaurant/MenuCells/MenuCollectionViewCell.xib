@@ -22,14 +22,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNc-Wi-ec0">
                         <rect key="frame" x="0.0" y="0.0" width="82" height="109"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="points" translatesAutoresizingMaskIntoConstraints="NO" id="SO5-bS-RNC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Example" translatesAutoresizingMaskIntoConstraints="NO" id="SO5-bS-RNC">
                                 <rect key="frame" x="0.0" y="0.0" width="82" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="82" id="Mgo-Gc-mCW"/>
                                     <constraint firstAttribute="height" constant="82" id="mD2-qd-hJ8"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5t-1A-K4y">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5t-1A-K4y">
                                 <rect key="frame" x="16" y="92" width="50" height="16.5"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                 <color key="textColor" name="Amarillo"/>
@@ -43,6 +43,7 @@
                             <constraint firstItem="J5t-1A-K4y" firstAttribute="top" secondItem="SO5-bS-RNC" secondAttribute="bottom" constant="10" id="Ios-3l-Tka"/>
                             <constraint firstAttribute="trailing" secondItem="SO5-bS-RNC" secondAttribute="trailing" id="J9S-Dz-Tg2"/>
                             <constraint firstItem="SO5-bS-RNC" firstAttribute="top" secondItem="UNc-Wi-ec0" secondAttribute="top" id="SuV-Ge-PlR"/>
+                            <constraint firstItem="J5t-1A-K4y" firstAttribute="centerX" secondItem="SO5-bS-RNC" secondAttribute="centerX" id="hGT-Zm-EXs"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -63,7 +64,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="points" width="160" height="160"/>
+        <image name="Example" width="225" height="225"/>
         <namedColor name="Amarillo">
             <color red="0.94900000095367432" green="0.63499999046325684" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
