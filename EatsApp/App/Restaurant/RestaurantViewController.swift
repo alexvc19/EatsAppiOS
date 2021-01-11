@@ -11,10 +11,21 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var tableView: UITableView!
     
-    let data = [
-        ["Apples", "Oranges"],
-        ["one", "two"],
-        ["1", "2","3"]
+    let foodNames = [
+        //primera seccion
+        ["Sushi enpanizado", "Sushi california"],
+        //segunda seccion
+        ["Sushi salmon", "Sushi kegiko roll", "Sashimi"],
+        //tercera seccion
+        ["Temaki", "Gunkan","Nigiri","Uramaki"]
+    ]
+    
+    let foodPrice = [
+        ["2 x $120.00","2 x $120.00"],
+        
+        ["$120.00","$120.00","$120.00"],
+        
+        ["$120.00","$120.00","$120.00","$120.00"],
     ]
     
     //MARK: tableview delegate
@@ -28,15 +39,16 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return data.count
+        return foodNames.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data[section].count
+        return foodNames[section].count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier:"cell", for: indexPath)
-        cell.textLabel?.text = data[indexPath.section][indexPath.row]
-        cell.backgroundColor = .cyan
+        let cell = tableView.dequeueReusableCell(withIdentifier:"cell", for: indexPath) as! FoodTableViewCell
+        cell.nameFoodLabel?.text = foodNames[indexPath.section][indexPath.row]
+        cell.priceFoodLabel?.text = foodPrice[indexPath.section][indexPath.row]
+    
         return cell
     }
 
@@ -44,7 +56,7 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let header = HeaderRestaurant(frame: CGRect(x:0,y: -47,width: view.frame.size.width, height: 478))
+        let header = HeaderRestaurant(frame: CGRect(x:0,y: -47,width: view.frame.size.width, height: 493))
         let footer = UIView(frame: CGRect(x:0,y: 0,width: view.frame.size.width, height: 300))
         
         footer.backgroundColor = .red
