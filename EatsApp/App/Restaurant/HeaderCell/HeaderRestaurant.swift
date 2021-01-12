@@ -59,7 +59,7 @@ extension HeaderRestaurant: UICollectionViewDataSource{
             
             fatalError("cant dequeue cell")
         }
-        cell.nameLabel?.text = "hola"
+        cell.nameLabel?.text = "Nombre"
         
         return cell
     }

@@ -34,47 +34,56 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         "Suhsi especial"
     ]
     
+    var foodDescription = [
+        ["Sushi empanizado con la proteina que desees", "Sushi de alga con la proteina que desees"],
+        ["Sushi con salmon por fuera", "Sushi de res con anguila", "Sushi de surimi con vegetales"],
+        ["Sushi con salmon por fuera", "Sushi de res con anguila", "Sushi de surimi con vegetales","Sushi de surimi con vegetales"],
+        
+    ]
+    
     //MARK: tableview delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    //MARK: tableview datasource
-    
+    //Titulos de las secciones
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let headerframe = tableView.frame
+        let title : UILabel = UILabel()
         
-        let labe : UILabel = UILabel()
-        
-        labe.frame = CGRect(x: 20, y: 20, width: headerframe.size.width, height: 20)
-        labe.text = foodTitles[section]
-        labe.textColor = UIColor(named: "Amarillo")
-        labe.font = UIFont(name: "Helvetica-Bold", size: 18.0)
-    
+        title.frame = CGRect(x: 20, y: 20, width: headerframe.size.width, height: 20)
+        title.text = foodTitles[section]
+        title.textColor = UIColor(named: "Amarillo")
+        title.font = UIFont(name: "Helvetica-Bold", size: 18.0)
         
         let headerView:UIView = UIView(frame: CGRect(x: 0, y: 0, width: headerframe.size.width, height: headerframe.size.height))
         
-        headerView.addSubview(labe)
+        headerView.addSubview(title)
         
         return headerView
-        
     }
-    
+    //Altura del seccion header
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20.0
+        return 40.0
     }
     
+    //Numero de secciones
     func numberOfSections(in tableView: UITableView) -> Int {
         return foodNames.count
     }
+    
+    //Numero de celdas
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foodNames[section].count
     }
+    //MARK: tableview datasource
+    //Data en las celdas
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:"cell", for: indexPath) as! FoodTableViewCell
         cell.nameFoodLabel?.text = foodNames[indexPath.section][indexPath.row]
         cell.priceFoodLabel?.text = foodPrice[indexPath.section][indexPath.row]
+        cell.descriptionLabel?.text = foodDescription[indexPath.section][indexPath.row]
     
         return cell
     }

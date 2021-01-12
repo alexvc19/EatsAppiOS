@@ -31,8 +31,8 @@
                         <constraint firstAttribute="height" constant="190" id="rcT-FK-kgP"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N49-VV-LcJ">
-                    <rect key="frame" x="20" y="197" width="63" height="28"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Restaurante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N49-VV-LcJ">
+                    <rect key="frame" x="20" y="197" width="139" height="28"/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
