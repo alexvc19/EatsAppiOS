@@ -337,13 +337,13 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		4A80FF5325AAB5A20019C4F5 /* RestaurantCells */ = {
+		4A80FF5325AAB5A20019C4F5 /* HeaderCell */ = {
 			isa = PBXGroup;
 			children = (
 				4A80FF5725AAB6400019C4F5 /* HeaderRestaurant.xib */,
 				4A80FF5C25AABBA10019C4F5 /* HeaderRestaurant.swift */,
 			);
-			path = RestaurantCells;
+			path = HeaderCell;
 			sourceTree = "<group>";
 		};
 		4A9B8AAC25AA693E00874BBF /* NavigationApp */ = {
@@ -363,7 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				4A23B03D25AAD1E300FA066A /* MenuCells */,
-				4A80FF5325AAB5A20019C4F5 /* RestaurantCells */,
+				4A80FF5325AAB5A20019C4F5 /* HeaderCell */,
 				4A9B8AB425AA71EE00874BBF /* Restaurant.storyboard */,
 				4A9B8ABC25AA740400874BBF /* RestaurantViewController.swift */,
 				4A133FBD25ABAED600DF8E39 /* FoodTableViewCell.swift */,
