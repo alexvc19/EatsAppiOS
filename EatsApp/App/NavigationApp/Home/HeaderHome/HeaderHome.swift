@@ -72,7 +72,7 @@ extension HeaderHome: UICollectionViewDataSource{
     
         }
     
-        cell.photoImageView.image = UIImage(named: "pedido")
+        cell.photoImageView.image = UIImage(named: "pizza1")
         return cell
     }
 }

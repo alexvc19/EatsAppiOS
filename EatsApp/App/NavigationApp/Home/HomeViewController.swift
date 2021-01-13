@@ -23,8 +23,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     //fotos card "mas popular"
     var secciones:[String] = [
-        "favorito",
-        "pedido",
+        "Mas popular",
+        "Tus Favoritos",
+        "Ofertas de hoy"
     ]
     //card nombre de la comida
     var namesOfFood:[String]=[
@@ -47,8 +48,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         title.frame = CGRect(x: 20, y: 20, width: headerframe.size.width, height: 20)
         title.text = secciones[section]
-        title.textColor = UIColor(named: "Amarillo")
-        title.font = UIFont(name: "Helvetica-Bold", size: 18.0)
+        title.textColor = UIColor.black
+        title.font = UIFont(name: "Helvetica-Bold", size: 21.0)
         
         let headerView:UIView = UIView(frame: CGRect(x: 0, y: 0, width: headerframe.size.width, height: headerframe.size.height))
         
@@ -70,7 +71,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     //MARK: - TableView DataSorce
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let  cell = tableView.dequeueReusableCell(withIdentifier: "cellCard", for: indexPath) as! CardCollectionHTableViewCell
+        let  cell = tableView.dequeueReusableCell(withIdentifier: "cellCard", for: indexPath) as! CardCollectionTableViewCell
         
         return cell
     }
@@ -84,7 +85,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         //Header TableView
         let header = HeaderHome(frame: CGRect(x: 0, y: 0, width:view.frame.width, height: 320))
-        header.backgroundColor = .cyan
         
         tableView.tableHeaderView = header
         
@@ -92,7 +92,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let tapGesture = UITapGestureRecognizer(target: self, action:     #selector(tapGestureHandler))
             view.addGestureRecognizer(tapGesture)
         
-        tableView.register(UINib(nibName: "CardCollectionHTableViewCell", bundle: nil), forCellReuseIdentifier: "cellCard")
+        tableView.register(UINib(nibName: "CardCollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "cellCard")
     
     }
     //MARK: - Funcion para cerrar el keyboard
