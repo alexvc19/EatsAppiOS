@@ -18,6 +18,11 @@ class HeaderHome: UIView, UICollectionViewDelegate {
     private func initCollectionView() {
        
         sliderCollectionView.register(UINib(nibName: "SliderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: slider)
+        categoriesCollectionView.register(UINib(nibName: "CategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: categ)
+        
+        categoriesCollectionView.dataSource = self
+        categoriesCollectionView.delegate = self
+        
         sliderCollectionView.dataSource = self
         sliderCollectionView.delegate = self
     }
@@ -45,13 +50,26 @@ class HeaderHome: UIView, UICollectionViewDelegate {
 extension HeaderHome: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        if collectionView == categoriesCollectionView {
+            return 8
+        }
         return 4
+
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = sliderCollectionView.dequeueReusableCell(withReuseIdentifier: slider, for: indexPath) as? SliderCollectionViewCell else {
             fatalError("cant dequeue cell")
+        }
+        
+        if (collectionView == categoriesCollectionView){
+            let celld = categoriesCollectionView.dequeueReusableCell(withReuseIdentifier: categ, for: indexPath) as! CategoriesCollectionViewCell
+            
+            celld.name.text = "Category"
+            return celld
+    
         }
     
         cell.photoImageView.image = UIImage(named: "pedido")
