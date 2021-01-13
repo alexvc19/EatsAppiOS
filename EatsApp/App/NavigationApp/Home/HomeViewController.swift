@@ -38,7 +38,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var waitTime = "30 - 40 minutos"
     
-    //MARK: - TABLEVIEW
+    //MARK: TABLEVIEW
+    //MARK: - TableView Delegate
+    // Sections Title
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerframe = tableView.frame
         let title : UILabel = UILabel()
@@ -54,21 +56,22 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         return headerView
     }
-    
     //Altura del seccion header
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40.0
+        return 45.0
     }
+    //Numero de secciones
     func numberOfSections(in tableView: UITableView) -> Int {
         return secciones.count
     }
+    //Numero de celdas en cada seccion
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 1
     }
-    
+    //MARK: - TableView DataSorce
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let  cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-            cell.textLabel?.text = "Test"
+        let  cell = tableView.dequeueReusableCell(withIdentifier: "cellCard", for: indexPath) as! CardCollectionHTableViewCell
+        
         return cell
     }
     
@@ -80,7 +83,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         
         //Header TableView
-        let header = HeaderHome(frame: CGRect(x: 0, y: 0, width:view.frame.width, height: 339))
+        let header = HeaderHome(frame: CGRect(x: 0, y: 0, width:view.frame.width, height: 320))
         header.backgroundColor = .cyan
         
         tableView.tableHeaderView = header
@@ -89,6 +92,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let tapGesture = UITapGestureRecognizer(target: self, action:     #selector(tapGestureHandler))
             view.addGestureRecognizer(tapGesture)
         
+        tableView.register(UINib(nibName: "CardCollectionHTableViewCell", bundle: nil), forCellReuseIdentifier: "cellCard")
     
     }
     //MARK: - Funcion para cerrar el keyboard

@@ -336,14 +336,14 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		4A4F3F3F25AE798E00B3F95F /* TableCells */ = {
+		4A4F3F3F25AE798E00B3F95F /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
 				4A4F3F4F25AE818700B3F95F /* CollectionsCells */,
 				4A4F3F4A25AE802700B3F95F /* CardCollectionHTableViewCell.xib */,
 				4A4F3F4025AE7A5D00B3F95F /* CardCollectionHTableViewCell.swift */,
 			);
-			path = TableCells;
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		4A4F3F4F25AE818700B3F95F /* CollectionsCells */ = {
@@ -358,20 +358,22 @@
 		4A54D1B22584395500B64EE8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4A7C910B25AE537700455A73 /* HomeTableHeaderCell */,
+				4A7C910B25AE537700455A73 /* HeaderHome */,
+				4A4F3F3F25AE798E00B3F95F /* TableViewCells */,
 				4A279E2E2582E5B30096F79A /* Home.storyboard */,
 				4A54D1B7258439CA00B64EE8 /* HomeViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		4A7C910B25AE537700455A73 /* HomeTableHeaderCell */ = {
+		4A7C910B25AE537700455A73 /* HeaderHome */ = {
 			isa = PBXGroup;
 			children = (
-				4A4F3F3F25AE798E00B3F95F /* TableCells */,
-				4A7C913C25AE755B00455A73 /* HeaderHome */,
+				4A7C911925AE557700455A73 /* CollectionCells */,
+				4A7C910F25AE540100455A73 /* HeaderHome.swift */,
+				4A7C911425AE542800455A73 /* HeaderHome.xib */,
 			);
-			path = HomeTableHeaderCell;
+			path = HeaderHome;
 			sourceTree = "<group>";
 		};
 		4A7C911925AE557700455A73 /* CollectionCells */ = {
@@ -383,16 +385,6 @@
 				4A7C912D25AE563E00455A73 /* CategoriesCollectionViewCell.xib */,
 			);
 			path = CollectionCells;
-			sourceTree = "<group>";
-		};
-		4A7C913C25AE755B00455A73 /* HeaderHome */ = {
-			isa = PBXGroup;
-			children = (
-				4A7C911925AE557700455A73 /* CollectionCells */,
-				4A7C910F25AE540100455A73 /* HeaderHome.swift */,
-				4A7C911425AE542800455A73 /* HeaderHome.xib */,
-			);
-			path = HeaderHome;
 			sourceTree = "<group>";
 		};
 		4A80FF5325AAB5A20019C4F5 /* HeaderRestaurant */ = {
