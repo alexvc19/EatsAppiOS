@@ -41,7 +41,7 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         
     ]
     
-    //MARK: tableview delegate
+    //MARK: - tableview delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -77,7 +77,7 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foodNames[section].count
     }
-    //MARK: tableview datasource
+    //MARK: - tableview datasource
     //Data en las celdas
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:"cell", for: indexPath) as! FoodTableViewCell
@@ -88,7 +88,7 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
 
-    //MARK: VIEWDIDLOAD
+    //MARK: - VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         
