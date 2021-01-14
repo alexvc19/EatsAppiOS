@@ -38,7 +38,6 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         ["Sushi empanizado con la proteina que desees", "Sushi de alga con la proteina que desees"],
         ["Sushi con salmon por fuera", "Sushi de res con anguila", "Sushi de surimi con vegetales"],
         ["Sushi con salmon por fuera", "Sushi de res con anguila", "Sushi de surimi con vegetales","Sushi de surimi con vegetales"],
-        
     ]
     
     //MARK: tableview delegate
@@ -92,6 +91,7 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Header TableView
         let header = HeaderRestaurant(frame: CGRect(x:0,y: -47,width: view.frame.size.width, height: 493))
         let footer = UIView(frame: CGRect(x:0,y: 0,width: view.frame.size.width, height: 300))
         
