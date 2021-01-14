@@ -37,8 +37,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var users = [User]()
     var photosCategories = [PhotosCategories]()
     
-    var waitTime = "30 - 40 minutos"
-    
     //MARK: TABLEVIEW
     //MARK: - TableView Delegate
     // Sections Title
@@ -59,7 +57,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     //Altura del seccion header
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 45.0
+        return 55.0
     }
     //Numero de secciones
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -72,7 +70,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //MARK: - TableView DataSorce
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let  cell = tableView.dequeueReusableCell(withIdentifier: "cellCard", for: indexPath) as! CardCollectionTableViewCell
-        
         return cell
     }
     

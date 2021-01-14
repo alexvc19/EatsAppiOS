@@ -12,6 +12,8 @@ class CardCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource, 
 
     @IBOutlet weak var cardCollectionView: UICollectionView!
     
+    var waitTime = "30 - 40 minutos"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -32,19 +34,22 @@ class CardCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        let cell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: "card", for: indexPath) as! CardCollectionViewCell
+        
+        cell.priceDelivery.text = "$79.00"
+        cell.name.text = "FOOD"
+        cell.estimateTime.text = waitTime
+        
         cell.layer.borderColor = UIColor(named: "GrisClaro")?.cgColor
         cell.layer.borderWidth = 0.5
-        cell.name.text = "FOOD"
-        
         //shadows
-        cell.backgroundColor = .clear
-        cell.layer.masksToBounds = false
-        cell.layer.shadowOpacity = 0.22
-        cell.layer.shadowRadius = 3
-        cell.layer.shadowOffset = CGSize(width: 0, height: 5)
-        cell.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-        cell.contentView.backgroundColor = .white
-        cell.contentView.layer.cornerRadius = 0
+//        cell.backgroundColor = .clear
+//        cell.layer.masksToBounds = false
+//        cell.layer.shadowOpacity = 0.22
+//        cell.layer.shadowRadius = 3
+//        cell.layer.shadowOffset = CGSize(width: 0, height: 5)
+//        cell.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+//        cell.contentView.backgroundColor = .white
+//        cell.contentView.layer.cornerRadius = 0
         
         return cell
     }

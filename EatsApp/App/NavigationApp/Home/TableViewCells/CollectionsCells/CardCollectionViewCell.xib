@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,26 +29,44 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qe-vr-wqb">
-                                <rect key="frame" x="7" y="130" width="39.5" height="18.5"/>
+                                <rect key="frame" x="7" y="130" width="160" height="19"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHH-AY-9we">
-                                <rect key="frame" x="7" y="153.5" width="29.5" height="14"/>
+                                <rect key="frame" x="7" y="154" width="29.5" height="14"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="Gris"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUF-n9-OEW">
+                                <rect key="frame" x="263.5" y="154" width="29.5" height="14"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                <color key="textColor" name="Gris"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WqE-J5-nZf">
+                                <rect key="frame" x="218" y="130" width="75" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="gH5-ya-WP1"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="1Qe-vr-wqb" firstAttribute="leading" secondItem="dyV-TE-vaT" secondAttribute="leading" constant="7" id="751-zP-VF6"/>
+                            <constraint firstItem="WqE-J5-nZf" firstAttribute="top" secondItem="OUZ-YB-1RA" secondAttribute="bottom" constant="5" id="7Km-3A-zcx"/>
+                            <constraint firstAttribute="bottom" secondItem="BUF-n9-OEW" secondAttribute="bottom" constant="9" id="9OG-lR-mQj"/>
                             <constraint firstItem="sHH-AY-9we" firstAttribute="top" secondItem="1Qe-vr-wqb" secondAttribute="bottom" constant="5" id="Cb3-gi-dcI"/>
                             <constraint firstItem="1Qe-vr-wqb" firstAttribute="top" secondItem="OUZ-YB-1RA" secondAttribute="bottom" constant="5" id="E4U-iQ-oU6"/>
                             <constraint firstItem="sHH-AY-9we" firstAttribute="leading" secondItem="dyV-TE-vaT" secondAttribute="leading" constant="7" id="Et5-Pp-7jV"/>
                             <constraint firstItem="OUZ-YB-1RA" firstAttribute="top" secondItem="dyV-TE-vaT" secondAttribute="top" id="J0T-j9-uke"/>
+                            <constraint firstItem="WqE-J5-nZf" firstAttribute="width" secondItem="OUZ-YB-1RA" secondAttribute="height" multiplier="3:5" id="Was-ce-zdn"/>
+                            <constraint firstAttribute="trailing" secondItem="WqE-J5-nZf" secondAttribute="trailing" constant="7" id="Zva-3H-jfK"/>
                             <constraint firstItem="OUZ-YB-1RA" firstAttribute="leading" secondItem="dyV-TE-vaT" secondAttribute="leading" id="dFI-DH-YQ2"/>
+                            <constraint firstAttribute="trailing" secondItem="BUF-n9-OEW" secondAttribute="trailing" constant="7" id="gD1-Jn-Oke"/>
+                            <constraint firstItem="1Qe-vr-wqb" firstAttribute="width" secondItem="OUZ-YB-1RA" secondAttribute="height" multiplier="32:25" id="gvP-Zs-32A"/>
                             <constraint firstAttribute="trailing" secondItem="OUZ-YB-1RA" secondAttribute="trailing" id="ltw-TK-qKE"/>
                         </constraints>
                     </view>
@@ -62,15 +81,20 @@
             </constraints>
             <size key="customSize" width="149" height="93"/>
             <connections>
+                <outlet property="estimateTime" destination="BUF-n9-OEW" id="dfV-fG-sGW"/>
                 <outlet property="name" destination="1Qe-vr-wqb" id="GOq-W1-yJQ"/>
                 <outlet property="photoImageView" destination="OUZ-YB-1RA" id="UZd-LB-u7g"/>
                 <outlet property="priceDelivery" destination="sHH-AY-9we" id="1Uy-2X-ouS"/>
+                <outlet property="stackView" destination="WqE-J5-nZf" id="mFY-Gp-3wb"/>
             </connections>
             <point key="canvasLocation" x="179.71014492753625" y="98.772321428571431"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="pedido" width="708" height="250"/>
+        <namedColor name="Gris">
+            <color red="0.54900002479553223" green="0.54900002479553223" blue="0.54900002479553223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
