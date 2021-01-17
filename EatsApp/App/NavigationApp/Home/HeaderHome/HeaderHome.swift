@@ -15,6 +15,9 @@ class HeaderHome: UIView, UICollectionViewDelegate {
     var slider = "sliderCell"
     var categ = "categorieCell"
     
+    var photos = [Photos]()
+    var photosCategories = [PhotosCategories]()
+    
     private func initCollectionView() {
        
         sliderCollectionView.register(UINib(nibName: "SliderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: slider)
@@ -25,6 +28,25 @@ class HeaderHome: UIView, UICollectionViewDelegate {
         
         sliderCollectionView.dataSource = self
         sliderCollectionView.delegate = self
+        
+        
+        //MARK: - Consulta de firebase
+        //Consulta a la base de datos -> retorna collection photos
+        FIRFirestoreService.shared.read(from: .photos, returning: Photos.self) { (photos) in
+            self.photos = photos
+            
+            DispatchQueue.main.async {
+                self.sliderCollectionView.reloadData()
+            }
+        
+        }
+        FIRFirestoreService.shared.read(from: .categories, returning: PhotosCategories.self) { (photosCategories) in self.photosCategories = photosCategories
+            
+            DispatchQueue.main.async {
+                self.categoriesCollectionView.reloadData()
+            }
+            
+        }
     }
     
     override init(frame: CGRect){
@@ -47,14 +69,15 @@ class HeaderHome: UIView, UICollectionViewDelegate {
 
 
 }
+//MARK: - CollectionView DataSorce
 extension HeaderHome: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == categoriesCollectionView {
-            return 8
+            return photosCategories.count
         }
-        return 4
+        return photos.count
 
     }
     
@@ -67,12 +90,21 @@ extension HeaderHome: UICollectionViewDataSource{
         if (collectionView == categoriesCollectionView){
             let celld = categoriesCollectionView.dequeueReusableCell(withReuseIdentifier: categ, for: indexPath) as! CategoriesCollectionViewCell
             
-            celld.name.text = "Category"
+            let photograp = photosCategories[indexPath.row]
+            
+            celld.name.text = photograp.categorieName
+            celld.photoImageView.sd_setImage(with: URL(string:  photograp.icon))
+            
             return celld
     
         }
     
-        cell.photoImageView.image = UIImage(named: "pizza1")
+        let photo = photos[indexPath.row]
+        let url:URL? = photo.urlPhoto
+        
+        cell.photoImageView.sd_setImage(with: url)
+        
         return cell
     }
 }
+
