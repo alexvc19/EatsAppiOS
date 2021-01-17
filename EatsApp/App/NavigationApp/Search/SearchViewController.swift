@@ -44,7 +44,11 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
             view.addGestureRecognizer(tapGesture)
     }
     @objc func tapGestureHandler() {
+<<<<<<< HEAD:EatsApp/App/NavigationApp/Search/SearchViewController.swift
         searchTextField.endEditing(true)
+=======
+        
+>>>>>>> HomeScreen:EatsApp/App/Search/SearchViewController.swift
        
       }
 

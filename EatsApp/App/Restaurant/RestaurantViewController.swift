@@ -38,9 +38,16 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         ["Sushi empanizado con la proteina que desees", "Sushi de alga con la proteina que desees"],
         ["Sushi con salmon por fuera", "Sushi de res con anguila", "Sushi de surimi con vegetales"],
         ["Sushi con salmon por fuera", "Sushi de res con anguila", "Sushi de surimi con vegetales","Sushi de surimi con vegetales"],
+<<<<<<< HEAD
     ]
     
     //MARK: tableview delegate
+=======
+        
+    ]
+    
+    //MARK: - tableview delegate
+>>>>>>> HomeScreen
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -76,7 +83,11 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return foodNames[section].count
     }
+<<<<<<< HEAD
     //MARK: tableview datasource
+=======
+    //MARK: - tableview datasource
+>>>>>>> HomeScreen
     //Data en las celdas
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:"cell", for: indexPath) as! FoodTableViewCell
@@ -87,11 +98,18 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
 
+<<<<<<< HEAD
     //MARK: VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Header TableView
+=======
+    //MARK: - VIEWDIDLOAD
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+>>>>>>> HomeScreen
         let header = HeaderRestaurant(frame: CGRect(x:0,y: -47,width: view.frame.size.width, height: 493))
         let footer = UIView(frame: CGRect(x:0,y: 0,width: view.frame.size.width, height: 300))
         

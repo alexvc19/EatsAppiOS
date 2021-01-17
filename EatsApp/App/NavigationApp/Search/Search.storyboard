@@ -19,33 +19,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Buscar" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Gm-1M-PQm">
-                                <rect key="frame" x="47" y="57" width="320" height="45"/>
-                                <color key="backgroundColor" name="GrisClaro"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="qgt-gj-VTa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Principales categorias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mwm-3J-iq2">
-                                <rect key="frame" x="40" y="117" width="223" height="25"/>
+                                <rect key="frame" x="40" y="98" width="223" height="25"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sS5-MW-51Q">
-                                <rect key="frame" x="30" y="156" width="354" height="657"/>
+                                <rect key="frame" x="0.0" y="137" width="414" height="676"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="25" id="nrC-Oj-nND">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="35" minimumInteritemSpacing="0.0" id="nrC-Oj-nND">
                                     <size key="itemSize" width="150" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="40" minY="0.0" maxX="40" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="ARa-3H-8Dp" customClass="PrincipalCategoriesCollectionViewCell" customModule="EatsApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <rect key="frame" x="40" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="U7u-hq-gdb">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
@@ -99,15 +90,12 @@
                         <viewLayoutGuide key="safeArea" id="cEs-WW-f9L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2Gm-1M-PQm" firstAttribute="top" secondItem="cEs-WW-f9L" secondAttribute="top" constant="13" id="0jB-e5-omI"/>
                             <constraint firstItem="cEs-WW-f9L" firstAttribute="bottom" secondItem="sS5-MW-51Q" secondAttribute="bottom" id="22A-ha-IBN"/>
-                            <constraint firstItem="sS5-MW-51Q" firstAttribute="leading" secondItem="cEs-WW-f9L" secondAttribute="leading" constant="30" id="4SX-Qc-DBR"/>
-                            <constraint firstItem="cEs-WW-f9L" firstAttribute="trailing" secondItem="2Gm-1M-PQm" secondAttribute="trailing" constant="47" id="MlX-I9-5er"/>
+                            <constraint firstItem="sS5-MW-51Q" firstAttribute="leading" secondItem="cEs-WW-f9L" secondAttribute="leading" id="4SX-Qc-DBR"/>
                             <constraint firstItem="Mwm-3J-iq2" firstAttribute="leading" secondItem="cEs-WW-f9L" secondAttribute="leading" constant="40" id="Z8K-iH-FYu"/>
-                            <constraint firstItem="cEs-WW-f9L" firstAttribute="trailing" secondItem="sS5-MW-51Q" secondAttribute="trailing" constant="30" id="cGs-rw-2lu"/>
+                            <constraint firstItem="cEs-WW-f9L" firstAttribute="trailing" secondItem="sS5-MW-51Q" secondAttribute="trailing" id="cGs-rw-2lu"/>
+                            <constraint firstItem="Mwm-3J-iq2" firstAttribute="top" secondItem="cEs-WW-f9L" secondAttribute="top" constant="10" id="mwY-46-EPt"/>
                             <constraint firstItem="sS5-MW-51Q" firstAttribute="top" secondItem="Mwm-3J-iq2" secondAttribute="bottom" constant="14" id="oer-gO-zDI"/>
-                            <constraint firstItem="2Gm-1M-PQm" firstAttribute="leading" secondItem="cEs-WW-f9L" secondAttribute="leading" constant="47" id="pTO-rO-Xal"/>
-                            <constraint firstItem="Mwm-3J-iq2" firstAttribute="top" secondItem="2Gm-1M-PQm" secondAttribute="bottom" constant="15" id="wgl-qz-jN3"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Buscar" image="magnifyingglass" catalog="system" id="z0S-zQ-A7l"/>
@@ -125,10 +113,12 @@
         <!--Navigation Controller-->
         <scene sceneID="p1T-wT-QOr">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="o3x-2l-V5H" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o3x-2l-V5H" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qUi-Zd-fFm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="Amarillo"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -142,11 +132,11 @@
     </scenes>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <namedColor name="Amarillo">
+            <color red="0.94900000095367432" green="0.63499999046325684" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Difuminado">
             <color red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="GrisClaro">
-            <color red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
