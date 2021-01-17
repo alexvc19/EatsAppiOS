@@ -19,6 +19,7 @@ class HeaderHome: UIView, UICollectionViewDelegate {
     var categ = "categorieCell"
     
     var photos = [Photos]()
+    var photosCategories = [PhotosCategories]()
     
     private func initCollectionView() {
 
@@ -66,7 +67,7 @@ extension HeaderHome: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == categoriesCollectionView {
-            return 8
+            return photosCategories.count
         }
         return photos.count
 
@@ -80,8 +81,10 @@ extension HeaderHome: UICollectionViewDataSource{
         
         if (collectionView == categoriesCollectionView){
             let celld = categoriesCollectionView.dequeueReusableCell(withReuseIdentifier: categ, for: indexPath) as! CategoriesCollectionViewCell
-            
-            celld.name.text = "Category"
+   
+            let photograp = photosCategories[indexPath.row]
+            celld.photoImageView.sd_setImage(with: URL(string: photograp.icon))
+    
             return celld
     
         }
