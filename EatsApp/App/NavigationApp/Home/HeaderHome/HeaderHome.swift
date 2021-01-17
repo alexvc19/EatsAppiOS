@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseUI
+import FirebaseFirestoreSwift
 
 class HeaderHome: UIView, UICollectionViewDelegate {
 
@@ -15,16 +18,27 @@ class HeaderHome: UIView, UICollectionViewDelegate {
     var slider = "sliderCell"
     var categ = "categorieCell"
     
+    var photos = [Photos]()
+    
     private func initCollectionView() {
-       
+
         sliderCollectionView.register(UINib(nibName: "SliderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: slider)
         categoriesCollectionView.register(UINib(nibName: "CategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: categ)
-        
         categoriesCollectionView.dataSource = self
         categoriesCollectionView.delegate = self
         
         sliderCollectionView.dataSource = self
         sliderCollectionView.delegate = self
+        
+        //MARK: - Firebase Service
+        FIRFirestoreService.shared.read(from: .photos, returning: Photos.self) { (photos) in
+            self.photos = photos
+            
+            //CollectionView Reload data
+            DispatchQueue.main.async {
+                self.sliderCollectionView.reloadData()
+            }
+        }
     }
     
     override init(frame: CGRect){
@@ -54,7 +68,7 @@ extension HeaderHome: UICollectionViewDataSource{
         if collectionView == categoriesCollectionView {
             return 8
         }
-        return 4
+        return photos.count
 
     }
     
@@ -71,8 +85,12 @@ extension HeaderHome: UICollectionViewDataSource{
             return celld
     
         }
-    
-        cell.photoImageView.image = UIImage(named: "pizza1")
+        
+        let photo = photos[indexPath.row]
+        let url: URL? = photo.urlPhoto
+        
+        cell.photoImageView.sd_setImage(with: url)
+        
         return cell
     }
 }
