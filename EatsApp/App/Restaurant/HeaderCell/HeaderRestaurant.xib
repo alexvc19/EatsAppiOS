@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderRestaurant" customModule="EatsApp" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="ltz-rY-Zff"/>
+                <outlet property="estimateTimeLabel" destination="gec-GS-rtF" id="sfj-GX-jNS"/>
+                <outlet property="menuCollectionView" destination="E9p-Sm-FNJ" id="rXg-9I-Vq6"/>
+                <outlet property="resAddresLabel" destination="JOY-aA-fER" id="HRO-Ws-w6k"/>
+                <outlet property="resImageView" destination="KC2-BE-gSs" id="mD1-7F-dA7"/>
+                <outlet property="timeLabel" destination="pJA-JT-fsb" id="UcE-uc-Qry"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pedido" translatesAutoresizingMaskIntoConstraints="NO" id="KC2-BE-gSs">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="190" id="rcT-FK-kgP"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Restaurante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N49-VV-LcJ">
+                    <rect key="frame" x="20" y="197" width="139" height="28"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Informacion del restaurante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Xc-zz-aeD">
+                    <rect key="frame" x="20" y="268.5" width="237.5" height="21"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Tiempo estimado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gec-GS-rtF">
+                    <rect key="frame" x="20" y="230" width="122.5" height="18.5"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                    <color key="textColor" name="Gris"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pin" translatesAutoresizingMaskIntoConstraints="NO" id="a0e-3c-O33">
+                    <rect key="frame" x="20" y="294.5" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="htQ-an-jCa"/>
+                        <constraint firstAttribute="width" constant="15" id="uTb-6Y-Ltk"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Domicilio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOY-aA-fER">
+                    <rect key="frame" x="40" y="295" width="49" height="14"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJA-JT-fsb">
+                    <rect key="frame" x="40" y="314" width="39.5" height="16"/>
+                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaI-FX-bLM">
+                    <rect key="frame" x="20" y="350" width="47" height="21"/>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="E9p-Sm-FNJ">
+                    <rect key="frame" x="5" y="381" width="404" height="109"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="109" id="dLl-NQ-Y1e"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="25" minimumInteritemSpacing="10" id="QmX-xl-DoX">
+                        <size key="itemSize" width="0.0" height="0.0"/>
+                        <size key="estimatedItemSize" width="82" height="109"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Awe-BA-TTI"/>
+                        <outlet property="delegate" destination="-1" id="6PN-ak-Qw9"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="KC2-BE-gSs" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="3Rc-bL-AMP"/>
+                <constraint firstItem="N49-VV-LcJ" firstAttribute="top" secondItem="KC2-BE-gSs" secondAttribute="bottom" constant="7" id="4hN-dB-PN6"/>
+                <constraint firstItem="E9p-Sm-FNJ" firstAttribute="top" secondItem="NaI-FX-bLM" secondAttribute="bottom" constant="10" id="7dr-pE-Clz"/>
+                <constraint firstItem="3Xc-zz-aeD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="8eL-bR-iCI"/>
+                <constraint firstItem="JOY-aA-fER" firstAttribute="centerY" secondItem="a0e-3c-O33" secondAttribute="centerY" id="B1j-8t-kY3"/>
+                <constraint firstItem="JOY-aA-fER" firstAttribute="leading" secondItem="a0e-3c-O33" secondAttribute="trailing" constant="5" id="Cwc-pF-MOX"/>
+                <constraint firstItem="a0e-3c-O33" firstAttribute="top" secondItem="3Xc-zz-aeD" secondAttribute="bottom" constant="5" id="Ho4-VL-SXp"/>
+                <constraint firstItem="gec-GS-rtF" firstAttribute="top" secondItem="N49-VV-LcJ" secondAttribute="bottom" constant="5" id="QzD-0U-m2X"/>
+                <constraint firstItem="NaI-FX-bLM" firstAttribute="top" secondItem="pJA-JT-fsb" secondAttribute="bottom" constant="20" id="R8h-XD-P4g"/>
+                <constraint firstItem="3Xc-zz-aeD" firstAttribute="top" secondItem="gec-GS-rtF" secondAttribute="bottom" constant="20" id="SFc-Bl-6TX"/>
+                <constraint firstItem="E9p-Sm-FNJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="U8i-RD-oxd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="E9p-Sm-FNJ" secondAttribute="bottom" constant="10" id="V2k-Ni-s2u"/>
+                <constraint firstItem="E9p-Sm-FNJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZNI-mF-Yad"/>
+                <constraint firstItem="pJA-JT-fsb" firstAttribute="leading" secondItem="JOY-aA-fER" secondAttribute="leading" id="dLN-cX-CgV"/>
+                <constraint firstItem="gec-GS-rtF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="gVK-g3-nsK"/>
+                <constraint firstItem="N49-VV-LcJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="hKh-V8-tQx"/>
+                <constraint firstItem="KC2-BE-gSs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jb5-dk-wYc"/>
+                <constraint firstItem="KC2-BE-gSs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kCt-29-hEa"/>
+                <constraint firstItem="NaI-FX-bLM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="una-Eo-VPD"/>
+                <constraint firstItem="pJA-JT-fsb" firstAttribute="top" secondItem="JOY-aA-fER" secondAttribute="bottom" constant="5" id="vXP-0S-NMa"/>
+                <constraint firstItem="a0e-3c-O33" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="zZJ-Yi-0s4"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="52.232142857142854"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Pin" width="48" height="60"/>
+        <image name="pedido" width="708" height="250"/>
+        <namedColor name="Gris">
+            <color red="0.54900002479553223" green="0.54900002479553223" blue="0.54900002479553223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

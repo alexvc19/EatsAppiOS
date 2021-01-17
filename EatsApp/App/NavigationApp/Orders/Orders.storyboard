@@ -10,7 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+<<<<<<< HEAD
+        <!--Orders-->
+=======
         <!--Tus pedidos-->
+>>>>>>> HomeScreen
         <scene sceneID="pKe-AR-U8o">
             <objects>
                 <viewController id="WHt-Gu-eBz" customClass="LastOrdersViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,14 +22,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< HEAD
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tus pedidos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMP-Pm-PZB">
+                                <rect key="frame" x="146" y="59" width="122.5" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anteriores pedidos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDs-M4-LTd">
+                                <rect key="frame" x="20" y="98.5" width="146" height="18.5"/>
+=======
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anteriores pedidos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDs-M4-LTd">
                                 <rect key="frame" x="20" y="98" width="146" height="18.5"/>
+>>>>>>> HomeScreen
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="laG-Vn-9uC">
+<<<<<<< HEAD
+                                <rect key="frame" x="0.0" y="137" width="414" height="676"/>
+=======
                                 <rect key="frame" x="0.0" y="136.5" width="414" height="676.5"/>
+>>>>>>> HomeScreen
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableCell" rowHeight="90" id="ZSG-Pq-qA3" customClass="LastOrdesTableViewCell" customModule="EatsApp" customModuleProvider="target">
@@ -89,16 +108,30 @@
                         <viewLayoutGuide key="safeArea" id="eIj-gd-Q5U"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+<<<<<<< HEAD
+                            <constraint firstItem="hDs-M4-LTd" firstAttribute="top" secondItem="MMP-Pm-PZB" secondAttribute="bottom" constant="15" id="AZv-DA-oIr"/>
+                            <constraint firstItem="MMP-Pm-PZB" firstAttribute="top" secondItem="eIj-gd-Q5U" secondAttribute="top" constant="15" id="Dce-IU-evx"/>
                             <constraint firstItem="hDs-M4-LTd" firstAttribute="leading" secondItem="eIj-gd-Q5U" secondAttribute="leading" constant="20" id="Ek9-5O-s90"/>
+                            <constraint firstItem="MMP-Pm-PZB" firstAttribute="centerX" secondItem="kRr-4V-AHX" secondAttribute="centerX" id="LWZ-sO-oU5"/>
+=======
+                            <constraint firstItem="hDs-M4-LTd" firstAttribute="leading" secondItem="eIj-gd-Q5U" secondAttribute="leading" constant="20" id="Ek9-5O-s90"/>
+>>>>>>> HomeScreen
                             <constraint firstItem="laG-Vn-9uC" firstAttribute="trailing" secondItem="eIj-gd-Q5U" secondAttribute="trailing" id="Mx9-7q-Ozh"/>
                             <constraint firstItem="laG-Vn-9uC" firstAttribute="leading" secondItem="eIj-gd-Q5U" secondAttribute="leading" id="P9u-1C-4in"/>
                             <constraint firstItem="eIj-gd-Q5U" firstAttribute="bottom" secondItem="laG-Vn-9uC" secondAttribute="bottom" id="jqa-4w-BFc"/>
                             <constraint firstItem="laG-Vn-9uC" firstAttribute="top" secondItem="hDs-M4-LTd" secondAttribute="bottom" constant="20" id="qei-R6-phg"/>
+<<<<<<< HEAD
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pedidos" image="newspaper.fill" catalog="system" id="Yqe-7Q-siQ"/>
+                    <navigationItem key="navigationItem" title="Orders" id="V2d-rT-9Zd"/>
+=======
                             <constraint firstItem="hDs-M4-LTd" firstAttribute="top" secondItem="eIj-gd-Q5U" secondAttribute="top" constant="10" id="rpv-Tp-Koh"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pedidos" image="newspaper.fill" catalog="system" id="Yqe-7Q-siQ"/>
                     <navigationItem key="navigationItem" title="Tus pedidos" id="V2d-rT-9Zd"/>
+>>>>>>> HomeScreen
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="lastOrdersTableView" destination="laG-Vn-9uC" id="Cee-rX-UFD"/>
@@ -111,12 +144,19 @@
         <!--Navigation Controller-->
         <scene sceneID="kXj-uc-yqr">
             <objects>
+<<<<<<< HEAD
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="MXk-cz-rJc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KFT-Jq-rKJ">
+                        <autoresizingMask key="autoresizingMask"/>
+=======
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MXk-cz-rJc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KFT-Jq-rKJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" name="Amarillo"/>
+>>>>>>> HomeScreen
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -130,9 +170,12 @@
     </scenes>
     <resources>
         <image name="newspaper.fill" catalog="system" width="128" height="111"/>
+<<<<<<< HEAD
+=======
         <namedColor name="Amarillo">
             <color red="0.94900000095367432" green="0.63499999046325684" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+>>>>>>> HomeScreen
         <namedColor name="GrisClaro">
             <color red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

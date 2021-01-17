@@ -9,6 +9,7 @@ import UIKit
 
 class SearchViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
+    @IBOutlet weak var  searchTextField: UITextField!
     @IBOutlet weak var collectionViewCategories: UICollectionView!
 
     var photosCategories = [PhotosCategories]()
@@ -43,7 +44,11 @@ class SearchViewController: UIViewController, UICollectionViewDelegate, UICollec
             view.addGestureRecognizer(tapGesture)
     }
     @objc func tapGestureHandler() {
+<<<<<<< HEAD:EatsApp/App/NavigationApp/Search/SearchViewController.swift
+        searchTextField.endEditing(true)
+=======
         
+>>>>>>> HomeScreen:EatsApp/App/Search/SearchViewController.swift
        
       }
 
