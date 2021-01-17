@@ -129,6 +129,19 @@ xcuserdata
 ## Gcc Patch
 /*.gcno
 
+*/xcuserdata/*
+*xcworkspace/xcuserdata/*
+
+### Firebase ###
+.idea
+**/node_modules/*
+**/.firebaserc
+
+### Firebase Patch ###
+.runtimeconfig.json
+.firebase/
+
+
 ### Xcode Patch ###
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
