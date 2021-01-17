@@ -25,6 +25,7 @@ class HeaderHome: UIView, UICollectionViewDelegate {
 
         sliderCollectionView.register(UINib(nibName: "SliderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: slider)
         categoriesCollectionView.register(UINib(nibName: "CategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: categ)
+        
         categoriesCollectionView.dataSource = self
         categoriesCollectionView.delegate = self
         
@@ -38,6 +39,14 @@ class HeaderHome: UIView, UICollectionViewDelegate {
             //CollectionView Reload data
             DispatchQueue.main.async {
                 self.sliderCollectionView.reloadData()
+            }
+        }
+        
+        FIRFirestoreService.shared.read(from: .categories, returning: PhotosCategories.self) { (photosCategories) in
+            self.photosCategories = photosCategories
+            
+            DispatchQueue.main.async {
+                self.categoriesCollectionView.reloadData()
             }
         }
     }
