@@ -40,16 +40,16 @@ class CardCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource, 
         cell.estimateTime.text = waitTime
         
         cell.layer.borderColor = UIColor(named: "GrisClaro")?.cgColor
-        cell.layer.borderWidth = 0.5
+        cell.layer.borderWidth = 1
         //shadows
-//        cell.backgroundColor = .clear
-//        cell.layer.masksToBounds = false
-//        cell.layer.shadowOpacity = 0.22
-//        cell.layer.shadowRadius = 3
-//        cell.layer.shadowOffset = CGSize(width: 0, height: 5)
-//        cell.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
-//        cell.contentView.backgroundColor = .white
-//        cell.contentView.layer.cornerRadius = 0
+        cell.backgroundColor = .clear
+        cell.layer.masksToBounds = false
+        cell.layer.shadowOpacity = 0.22
+        cell.layer.shadowRadius = 3
+        cell.layer.shadowOffset = CGSize(width: 0, height: 5)
+        cell.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        cell.contentView.backgroundColor = .white
+        cell.contentView.layer.cornerRadius = 0
         
         return cell
     }

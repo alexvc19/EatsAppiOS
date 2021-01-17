@@ -57,7 +57,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     //Altura del seccion header
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 55.0
+        return 45.0
     }
     //Numero de secciones
     func numberOfSections(in tableView: UITableView) -> Int {
