@@ -4,9 +4,12 @@
 //
 //  Created by Alejandro Velasco on 10/12/20.
 //
-
 import UIKit
 import FlagPhoneNumber
+import FirebaseFirestore
+import FirebaseUI
+//import FirebaseFirestoreSwift
+import FirebaseStorage
 
 class LogInViewController: UIViewController {
 
@@ -19,14 +22,58 @@ class LogInViewController: UIViewController {
     
     var listController: FPNCountryListViewController = FPNCountryListViewController(style: .grouped)
     
+    let db = Firestore.firestore()
     
     @IBAction func RegisterButton(_ sender: Any) {
         
     }
     @IBAction func signUpButtonAction(_ sender: Any) {
         
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "Main")
-         self.navigationController?.show(vc, sender: nil)
+        let phone = phoneNumberTextField.text
+        let password = pass.text
+        
+        //Consulta de la base de datos cloudFirestore
+        db.collection("users")
+            .whereField("phone", isEqualTo: phone as Any)
+            .whereField("password", isEqualTo: password as Any)
+            .getDocuments() { (querySnapshot, err) in
+            if let querySnapshot = querySnapshot {
+            
+                for document in querySnapshot.documents {
+                    
+                    print("\(document.documentID) => \(document.data())")
+                    
+                   let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "Main")
+                    self.navigationController?.show(vc, sender: nil)
+
+                }
+                
+                //valida que existen los datos
+                if (querySnapshot.isEmpty == true) {
+                    
+                    let alertController = UIAlertController(title: "Error", message: "El numero de telefono o la contraseña no son validos", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
+
+            } else{
+                
+                print("Error getting documents:")
+            
+            }
+                // valida que los textfields no esten vacios
+                if((phone == "") && password == ""){
+                    print("No hay numero ni contraseña en el textfield")
+                    
+                    let alertController = UIAlertController(title: "Error", message: "El numero de telefono o la contraseña no son validos", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                }
+        }
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -132,4 +179,3 @@ extension LogInViewController: FPNTextFieldDelegate {
         self.present(navigationViewController, animated: true, completion: nil)
     }
 }
-
