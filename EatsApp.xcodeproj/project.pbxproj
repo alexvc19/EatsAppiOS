@@ -27,6 +27,8 @@
 		4A2B2997258ACF4A0045EAD0 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2B2996258ACF4A0045EAD0 /* Search.storyboard */; };
 		4A2B299F258ACF5D0045EAD0 /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2B299E258ACF5D0045EAD0 /* Orders.storyboard */; };
 		4A2DB48625873D260024163C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DB48525873D260024163C /* GoogleService-Info.plist */; };
+		4A4168D825BA022D00C47063 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4168D725BA022D00C47063 /* TermsViewController.swift */; };
+		4A4168DD25BA025600C47063 /* TermsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4168DC25BA025600C47063 /* TermsViewController.storyboard */; };
 		4A4524BE25A13894004A480D /* LastOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4524BD25A13894004A480D /* LastOrdersViewController.swift */; };
 		4A4524C625A13B63004A480D /* LastOrdesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4524C525A13B63004A480D /* LastOrdesTableViewCell.swift */; };
 		4A4524DB25A173F4004A480D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4524DA25A173F4004A480D /* AccountViewController.swift */; };
@@ -102,6 +104,8 @@
 		4A2B2996258ACF4A0045EAD0 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		4A2B299E258ACF5D0045EAD0 /* Orders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Orders.storyboard; sourceTree = "<group>"; };
 		4A2DB48525873D260024163C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4A4168D725BA022D00C47063 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
+		4A4168DC25BA025600C47063 /* TermsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsViewController.storyboard; sourceTree = "<group>"; };
 		4A4524BD25A13894004A480D /* LastOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastOrdersViewController.swift; sourceTree = "<group>"; };
 		4A4524C525A13B63004A480D /* LastOrdesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastOrdesTableViewCell.swift; sourceTree = "<group>"; };
 		4A4524DA25A173F4004A480D /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -316,9 +320,19 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		4A4168D625BA01EB00C47063 /* Terms */ = {
+			isa = PBXGroup;
+			children = (
+				4A4168D725BA022D00C47063 /* TermsViewController.swift */,
+				4A4168DC25BA025600C47063 /* TermsViewController.storyboard */,
+			);
+			path = Terms;
+			sourceTree = "<group>";
+		};
 		4A46ED88258DB321006CB62E /* App */ = {
 			isa = PBXGroup;
 			children = (
+				4A4168D625BA01EB00C47063 /* Terms */,
 				4A9B8AB325AA71AD00874BBF /* Restaurant */,
 				4A279E5B2582E6F00096F79A /* Login */,
 				4A9B8AAC25AA693E00874BBF /* NavigationApp */,
@@ -531,6 +545,7 @@
 				4A279E782582EF9F0096F79A /* LogIn.storyboard in Resources */,
 				4A7C911525AE542800455A73 /* HeaderHome.xib in Resources */,
 				4A7C912F25AE563E00455A73 /* CategoriesCollectionViewCell.xib in Resources */,
+				4A4168DD25BA025600C47063 /* TermsViewController.storyboard in Resources */,
 				4A279E352582E5B70096F79A /* LaunchScreen.storyboard in Resources */,
 				4A2DB48625873D260024163C /* GoogleService-Info.plist in Resources */,
 				4A2B2981258AA5FA0045EAD0 /* Main.storyboard in Resources */,
@@ -696,6 +711,7 @@
 				4A2B2972258AA40A0045EAD0 /* ViewController.swift in Sources */,
 				4A9B8ABD25AA740400874BBF /* RestaurantViewController.swift in Sources */,
 				4A1260DD25B933DD003D0BEA /* HeaderAccount.swift in Sources */,
+				4A4168D825BA022D00C47063 /* TermsViewController.swift in Sources */,
 				4A7C911025AE540100455A73 /* HeaderHome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

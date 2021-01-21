@@ -40,12 +40,36 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         return cell
     }
     
+    @objc func buttonAction(sender: UIButton!) {
+        
+    let vc = UIStoryboard.init(name: "TermsViewController", bundle: Bundle.main).instantiateViewController(withIdentifier: "TermsViewController")
+    self.navigationController?.showDetailViewController(vc, sender: nil)
+      print("Button tapped")
+    }
+    
+    //MARK: - VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //MARK: - Header
         let header = HeaderAccount(frame: CGRect(x: 0, y: 0, width:view.frame.width, height: 207))
         
         accountTableView.tableHeaderView = header
+        
+        //MARK: - Footer
+        let footer = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 45.0))
+        
+        //terms and conditions button
+        let boton = UIButton(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
+        boton.setTitle("Terminos y condiciones", for: .normal)
+        boton.titleLabel?.font = UIFont(name: "Helvetica", size: 18)
+        boton.setTitleColor(UIColor(named: "Rojo"),for: .normal)
+        boton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        boton.center = footer.center
+        footer.addSubview(boton)
+        
+        footer.layer.backgroundColor = UIColor(named: "GrisClaro")?.cgColor
+        accountTableView.tableFooterView = footer
        
     }
 }
