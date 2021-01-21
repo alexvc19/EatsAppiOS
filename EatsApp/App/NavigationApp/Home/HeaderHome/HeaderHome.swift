@@ -93,6 +93,7 @@ extension HeaderHome: UICollectionViewDataSource{
    
             let photograp = photosCategories[indexPath.row]
             celld.photoImageView.sd_setImage(with: URL(string: photograp.icon))
+            celld.name.text = photograp.categorieName
     
             return celld
     
