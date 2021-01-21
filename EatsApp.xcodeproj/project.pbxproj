@@ -36,6 +36,7 @@
 		4A4F3F5D25AE81E600B3F95F /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F3F5B25AE81E600B3F95F /* CardCollectionViewCell.swift */; };
 		4A4F3F5E25AE81E600B3F95F /* CardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4F3F5C25AE81E600B3F95F /* CardCollectionViewCell.xib */; };
 		4A54D1B8258439CA00B64EE8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54D1B7258439CA00B64EE8 /* HomeViewController.swift */; };
+		4A68FD7225B960DC00F541DE /* OptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68FD7125B960DB00F541DE /* OptionsTableViewCell.swift */; };
 		4A79010325948F600055852C /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A79010225948F600055852C /* Register.storyboard */; };
 		4A79010B25948FD10055852C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79010A25948FD10055852C /* RegisterViewController.swift */; };
 		4A7C911025AE540100455A73 /* HeaderHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7C910F25AE540100455A73 /* HeaderHome.swift */; };
@@ -110,6 +111,7 @@
 		4A4F3F5B25AE81E600B3F95F /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		4A4F3F5C25AE81E600B3F95F /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		4A54D1B7258439CA00B64EE8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4A68FD7125B960DB00F541DE /* OptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTableViewCell.swift; sourceTree = "<group>"; };
 		4A75A3292144AE9B99B9AC90 /* Pods-EatsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp.debug.xcconfig"; path = "Target Support Files/Pods-EatsApp/Pods-EatsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4A79010225948F600055852C /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		4A79010A25948FD10055852C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				4A1260DB25B93379003D0BEA /* HeaderAccount */,
 				4A2B298F258AACC70045EAD0 /* Account.storyboard */,
 				4A4524DA25A173F4004A480D /* AccountViewController.swift */,
+				4A68FD7125B960DB00F541DE /* OptionsTableViewCell.swift */,
 			);
 			path = Acconunt;
 			sourceTree = "<group>";
@@ -685,6 +688,7 @@
 				4A80FF5D25AABBA10019C4F5 /* HeaderRestaurant.swift in Sources */,
 				4A133FBE25ABAED600DF8E39 /* FoodTableViewCell.swift in Sources */,
 				4A4F3F5D25AE81E600B3F95F /* CardCollectionViewCell.swift in Sources */,
+				4A68FD7225B960DC00F541DE /* OptionsTableViewCell.swift in Sources */,
 				4ACB513D259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift in Sources */,
 				4A46ED81258DA756006CB62E /* SceneDelegate.swift in Sources */,
 				4A79010B25948FD10055852C /* RegisterViewController.swift in Sources */,

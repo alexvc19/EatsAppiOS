@@ -11,13 +11,32 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet weak var accountTableView: UITableView!
     
+    let icons = [
+        "person.crop.rectangle.fill",
+        "creditcard.fill",
+        "mappin.circle.fill",
+        "questionmark",
+        "arrow.right"
+    ]
+    
+    let optionsNames = [
+        "Informacion personal",
+        "Formas de pago",
+        "Direcciones",
+        "Ayuda",
+        "Cerrar sesion"
+    ]
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return icons.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = accountTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "test"
+        let cell = accountTableView.dequeueReusableCell(withIdentifier: "optionscell", for: indexPath) as! OptionsTableViewCell
+        
+        cell.optionIconImageView.image = UIImage(systemName: icons[indexPath.row])
+        cell.optionLabel.text = optionsNames[indexPath.row]
+        
         return cell
     }
     
