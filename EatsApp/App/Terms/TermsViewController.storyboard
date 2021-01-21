@@ -23,8 +23,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="swH-aL-7Ns">
-                                <rect key="frame" x="10" y="115" width="394" height="717"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="swH-aL-7Ns">
+                                <rect key="frame" x="20" y="115" width="374" height="717"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -35,12 +35,12 @@
                         <viewLayoutGuide key="safeArea" id="oyX-8n-fmc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="oyX-8n-fmc" firstAttribute="trailing" secondItem="swH-aL-7Ns" secondAttribute="trailing" constant="10" id="KRv-G7-cLw"/>
+                            <constraint firstItem="oyX-8n-fmc" firstAttribute="trailing" secondItem="swH-aL-7Ns" secondAttribute="trailing" constant="20" id="KRv-G7-cLw"/>
                             <constraint firstItem="oyX-8n-fmc" firstAttribute="bottom" secondItem="swH-aL-7Ns" secondAttribute="bottom" constant="30" id="S5d-6p-ufE"/>
                             <constraint firstItem="4hj-iJ-D2f" firstAttribute="top" secondItem="oyX-8n-fmc" secondAttribute="top" constant="30" id="hmu-F9-hal"/>
                             <constraint firstItem="4hj-iJ-D2f" firstAttribute="centerX" secondItem="kWc-Hi-IWj" secondAttribute="centerX" id="jXo-em-FV4"/>
                             <constraint firstItem="swH-aL-7Ns" firstAttribute="top" secondItem="4hj-iJ-D2f" secondAttribute="bottom" constant="20" id="nCU-LU-l9D"/>
-                            <constraint firstItem="swH-aL-7Ns" firstAttribute="leading" secondItem="oyX-8n-fmc" secondAttribute="leading" constant="10" id="stE-xE-OXs"/>
+                            <constraint firstItem="swH-aL-7Ns" firstAttribute="leading" secondItem="oyX-8n-fmc" secondAttribute="leading" constant="20" id="stE-xE-OXs"/>
                         </constraints>
                     </view>
                     <connections>

@@ -292,6 +292,7 @@
 		4A2B298E258AACAF0045EAD0 /* Acconunt */ = {
 			isa = PBXGroup;
 			children = (
+				4A4168E125BA09D100C47063 /* Options */,
 				4A1260DB25B93379003D0BEA /* HeaderAccount */,
 				4A2B298F258AACC70045EAD0 /* Account.storyboard */,
 				4A4524DA25A173F4004A480D /* AccountViewController.swift */,
@@ -327,6 +328,29 @@
 				4A4168DC25BA025600C47063 /* TermsViewController.storyboard */,
 			);
 			path = Terms;
+			sourceTree = "<group>";
+		};
+		4A4168E125BA09D100C47063 /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				4A4168E325BA0A0200C47063 /* PayMethods */,
+				4A4168E225BA09F100C47063 /* InfoPersonal */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		4A4168E225BA09F100C47063 /* InfoPersonal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InfoPersonal;
+			sourceTree = "<group>";
+		};
+		4A4168E325BA0A0200C47063 /* PayMethods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PayMethods;
 			sourceTree = "<group>";
 		};
 		4A46ED88258DB321006CB62E /* App */ = {

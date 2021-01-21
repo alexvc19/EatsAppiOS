@@ -27,6 +27,12 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         "Cerrar sesion"
     ]
     
+    //MARK: - TableView
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedOption = self.optionsNames[indexPath.row]
+        print(selectedOption)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return icons.count
     }
