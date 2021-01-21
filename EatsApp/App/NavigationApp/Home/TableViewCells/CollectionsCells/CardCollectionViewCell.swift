@@ -30,11 +30,11 @@ class CardCollectionViewCell: UICollectionViewCell {
         let iv4 = UIImageView(image: UIImage(systemName: star))
         let iv5 = UIImageView(image: UIImage(systemName: borderStart))
         
-        iv1.tintColor = .yellow
-        iv2.tintColor = .yellow
-        iv3.tintColor = .yellow
-        iv4.tintColor = .yellow
-        iv5.tintColor = .yellow
+        iv1.tintColor = UIColor(named: "AmarilloClaro")
+        iv2.tintColor = UIColor(named: "AmarilloClaro")
+        iv3.tintColor = UIColor(named: "AmarilloClaro")
+        iv4.tintColor = UIColor(named: "AmarilloClaro")
+        iv5.tintColor = UIColor(named: "AmarilloClaro")
         
         stackView.addArrangedSubview(iv1)
         stackView.addArrangedSubview(iv2)
