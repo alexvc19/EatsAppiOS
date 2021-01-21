@@ -29,6 +29,10 @@
 		4A2DB48625873D260024163C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A2DB48525873D260024163C /* GoogleService-Info.plist */; };
 		4A4168D825BA022D00C47063 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4168D725BA022D00C47063 /* TermsViewController.swift */; };
 		4A4168DD25BA025600C47063 /* TermsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4168DC25BA025600C47063 /* TermsViewController.storyboard */; };
+		4A4168E825BA0F1A00C47063 /* PayMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4168E725BA0F1A00C47063 /* PayMethodsViewController.swift */; };
+		4A4168ED25BA0F3800C47063 /* InfoPersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4168EC25BA0F3800C47063 /* InfoPersonalViewController.swift */; };
+		4A4168F225BA0F6300C47063 /* PayMethods.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4168F125BA0F6300C47063 /* PayMethods.storyboard */; };
+		4A4168F725BA0F7900C47063 /* InfoPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4168F625BA0F7900C47063 /* InfoPersonal.storyboard */; };
 		4A4524BE25A13894004A480D /* LastOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4524BD25A13894004A480D /* LastOrdersViewController.swift */; };
 		4A4524C625A13B63004A480D /* LastOrdesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4524C525A13B63004A480D /* LastOrdesTableViewCell.swift */; };
 		4A4524DB25A173F4004A480D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4524DA25A173F4004A480D /* AccountViewController.swift */; };
@@ -106,6 +110,10 @@
 		4A2DB48525873D260024163C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4A4168D725BA022D00C47063 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		4A4168DC25BA025600C47063 /* TermsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsViewController.storyboard; sourceTree = "<group>"; };
+		4A4168E725BA0F1A00C47063 /* PayMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayMethodsViewController.swift; sourceTree = "<group>"; };
+		4A4168EC25BA0F3800C47063 /* InfoPersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPersonalViewController.swift; sourceTree = "<group>"; };
+		4A4168F125BA0F6300C47063 /* PayMethods.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PayMethods.storyboard; sourceTree = "<group>"; };
+		4A4168F625BA0F7900C47063 /* InfoPersonal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoPersonal.storyboard; sourceTree = "<group>"; };
 		4A4524BD25A13894004A480D /* LastOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastOrdersViewController.swift; sourceTree = "<group>"; };
 		4A4524C525A13B63004A480D /* LastOrdesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastOrdesTableViewCell.swift; sourceTree = "<group>"; };
 		4A4524DA25A173F4004A480D /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -342,6 +350,8 @@
 		4A4168E225BA09F100C47063 /* InfoPersonal */ = {
 			isa = PBXGroup;
 			children = (
+				4A4168EC25BA0F3800C47063 /* InfoPersonalViewController.swift */,
+				4A4168F625BA0F7900C47063 /* InfoPersonal.storyboard */,
 			);
 			path = InfoPersonal;
 			sourceTree = "<group>";
@@ -349,6 +359,8 @@
 		4A4168E325BA0A0200C47063 /* PayMethods */ = {
 			isa = PBXGroup;
 			children = (
+				4A4168E725BA0F1A00C47063 /* PayMethodsViewController.swift */,
+				4A4168F125BA0F6300C47063 /* PayMethods.storyboard */,
 			);
 			path = PayMethods;
 			sourceTree = "<group>";
@@ -568,9 +580,11 @@
 			files = (
 				4A279E782582EF9F0096F79A /* LogIn.storyboard in Resources */,
 				4A7C911525AE542800455A73 /* HeaderHome.xib in Resources */,
+				4A4168F225BA0F6300C47063 /* PayMethods.storyboard in Resources */,
 				4A7C912F25AE563E00455A73 /* CategoriesCollectionViewCell.xib in Resources */,
 				4A4168DD25BA025600C47063 /* TermsViewController.storyboard in Resources */,
 				4A279E352582E5B70096F79A /* LaunchScreen.storyboard in Resources */,
+				4A4168F725BA0F7900C47063 /* InfoPersonal.storyboard in Resources */,
 				4A2DB48625873D260024163C /* GoogleService-Info.plist in Resources */,
 				4A2B2981258AA5FA0045EAD0 /* Main.storyboard in Resources */,
 				4A2B299F258ACF5D0045EAD0 /* Orders.storyboard in Resources */,
@@ -713,6 +727,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A4168ED25BA0F3800C47063 /* InfoPersonalViewController.swift in Sources */,
 				4A23B03825AACECB00FA066A /* MenuCollectionViewCell.swift in Sources */,
 				4A4524DB25A173F4004A480D /* AccountViewController.swift in Sources */,
 				4A4524C625A13B63004A480D /* LastOrdesTableViewCell.swift in Sources */,
@@ -722,6 +737,7 @@
 				4A4F3F4225AE7A5D00B3F95F /* CardCollectionTableViewCell.swift in Sources */,
 				4A279E292582E5B30096F79A /* AppDelegate.swift in Sources */,
 				4A2B2989258AA80B0045EAD0 /* TabBarViewController.swift in Sources */,
+				4A4168E825BA0F1A00C47063 /* PayMethodsViewController.swift in Sources */,
 				4A7C912725AE562900455A73 /* SliderCollectionViewCell.swift in Sources */,
 				4A54D1B8258439CA00B64EE8 /* HomeViewController.swift in Sources */,
 				4A80FF5D25AABBA10019C4F5 /* HeaderRestaurant.swift in Sources */,

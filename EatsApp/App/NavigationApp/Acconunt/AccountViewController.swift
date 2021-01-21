@@ -27,6 +27,11 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         "Cerrar sesion"
     ]
     
+    let storyBoardsIds = [
+        "InfoPersonalViewController",
+        "PayMethodsViewController",
+    ]
+    
     //MARK: - TableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedOption = self.optionsNames[indexPath.row]
