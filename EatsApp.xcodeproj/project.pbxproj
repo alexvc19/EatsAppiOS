@@ -33,6 +33,7 @@
 		4A4168ED25BA0F3800C47063 /* InfoPersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4168EC25BA0F3800C47063 /* InfoPersonalViewController.swift */; };
 		4A4168F225BA0F6300C47063 /* PayMethods.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4168F125BA0F6300C47063 /* PayMethods.storyboard */; };
 		4A4168F725BA0F7900C47063 /* InfoPersonal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4168F625BA0F7900C47063 /* InfoPersonal.storyboard */; };
+		4A41690225BA3EB100C47063 /* PaymentMethodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A41690125BA3EB100C47063 /* PaymentMethodTableViewCell.swift */; };
 		4A4524BE25A13894004A480D /* LastOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4524BD25A13894004A480D /* LastOrdersViewController.swift */; };
 		4A4524C625A13B63004A480D /* LastOrdesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4524C525A13B63004A480D /* LastOrdesTableViewCell.swift */; };
 		4A4524DB25A173F4004A480D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4524DA25A173F4004A480D /* AccountViewController.swift */; };
@@ -114,6 +115,7 @@
 		4A4168EC25BA0F3800C47063 /* InfoPersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPersonalViewController.swift; sourceTree = "<group>"; };
 		4A4168F125BA0F6300C47063 /* PayMethods.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PayMethods.storyboard; sourceTree = "<group>"; };
 		4A4168F625BA0F7900C47063 /* InfoPersonal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoPersonal.storyboard; sourceTree = "<group>"; };
+		4A41690125BA3EB100C47063 /* PaymentMethodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodTableViewCell.swift; sourceTree = "<group>"; };
 		4A4524BD25A13894004A480D /* LastOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastOrdersViewController.swift; sourceTree = "<group>"; };
 		4A4524C525A13B63004A480D /* LastOrdesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastOrdesTableViewCell.swift; sourceTree = "<group>"; };
 		4A4524DA25A173F4004A480D /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				4A4168E725BA0F1A00C47063 /* PayMethodsViewController.swift */,
+				4A41690125BA3EB100C47063 /* PaymentMethodTableViewCell.swift */,
 				4A4168F125BA0F6300C47063 /* PayMethods.storyboard */,
 			);
 			path = PayMethods;
@@ -748,6 +751,7 @@
 				4A46ED81258DA756006CB62E /* SceneDelegate.swift in Sources */,
 				4A79010B25948FD10055852C /* RegisterViewController.swift in Sources */,
 				4A4524BE25A13894004A480D /* LastOrdersViewController.swift in Sources */,
+				4A41690225BA3EB100C47063 /* PaymentMethodTableViewCell.swift in Sources */,
 				4A2B2972258AA40A0045EAD0 /* ViewController.swift in Sources */,
 				4A9B8ABD25AA740400874BBF /* RestaurantViewController.swift in Sources */,
 				4A1260DD25B933DD003D0BEA /* HeaderAccount.swift in Sources */,

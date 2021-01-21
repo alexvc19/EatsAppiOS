@@ -1,7 +1,88 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nN1-kZ-pnl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--PaymetsMethods-->
+        <scene sceneID="UL8-d7-hZe">
+            <objects>
+                <viewController storyboardIdentifier="PayMethodsViewController" title="PaymetsMethods" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nN1-kZ-pnl" customClass="PayMethodsViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cXT-vP-MhH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="91" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j0E-wi-e59">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="methodpay" rowHeight="91" id="Gh7-VX-Wxe" customClass="PaymentMethodTableViewCell" customModule="EatsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="91"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gh7-VX-Wxe" id="Ltu-2D-LjK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vje-rC-pVo">
+                                                    <rect key="frame" x="40" y="20" width="51" height="51"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="51" id="8zX-oG-L63"/>
+                                                        <constraint firstAttribute="width" constant="51" id="lY9-GV-Jla"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NuJ-Ih-hH8">
+                                                    <rect key="frame" x="106" y="35" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NuJ-Ih-hH8" firstAttribute="leading" secondItem="Vje-rC-pVo" secondAttribute="trailing" constant="15" id="C1k-zS-nKC"/>
+                                                <constraint firstAttribute="bottom" secondItem="Vje-rC-pVo" secondAttribute="bottom" constant="20" id="Fo6-wm-e9N"/>
+                                                <constraint firstItem="Vje-rC-pVo" firstAttribute="leading" secondItem="Ltu-2D-LjK" secondAttribute="leadingMargin" constant="20" id="GIA-Y1-PcT"/>
+                                                <constraint firstItem="Vje-rC-pVo" firstAttribute="top" secondItem="Ltu-2D-LjK" secondAttribute="top" constant="20" id="TYI-CN-gsz"/>
+                                                <constraint firstItem="NuJ-Ih-hH8" firstAttribute="centerY" secondItem="Vje-rC-pVo" secondAttribute="centerY" id="vrg-Hb-EjK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="payMethodImageView" destination="Vje-rC-pVo" id="CKP-VW-ZRi"/>
+                                            <outlet property="payMethodLabel" destination="NuJ-Ih-hH8" id="lgT-Wz-Cme"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="nN1-kZ-pnl" id="0bu-uN-j2V"/>
+                                    <outlet property="delegate" destination="nN1-kZ-pnl" id="964-pb-DcU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AVI-qO-kGo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="j0E-wi-e59" firstAttribute="bottom" secondItem="AVI-qO-kGo" secondAttribute="bottom" id="E7k-98-whD"/>
+                            <constraint firstItem="j0E-wi-e59" firstAttribute="leading" secondItem="AVI-qO-kGo" secondAttribute="leading" id="dR8-8A-1qh"/>
+                            <constraint firstItem="j0E-wi-e59" firstAttribute="top" secondItem="AVI-qO-kGo" secondAttribute="top" id="fhG-vf-9fd"/>
+                            <constraint firstItem="j0E-wi-e59" firstAttribute="trailing" secondItem="AVI-qO-kGo" secondAttribute="trailing" id="rSo-dU-5oR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="paymentsTableView" destination="j0E-wi-e59" id="WwE-ff-fpR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fl1-GY-XBh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-326.08695652173918" y="47.544642857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
