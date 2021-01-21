@@ -16,9 +16,6 @@ target 'EatsApp' do
     # Pods for testing
   end
 
-pod 'Firebase/Firestore'
-pod 'FirebaseUI/Storage'
-pod 'FirebaseFirestoreSwift'
 pod "FlagPhoneNumber"
 
 end

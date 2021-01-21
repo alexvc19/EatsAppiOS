@@ -6,16 +6,12 @@
 //
 
 import UIKit
-import FirebaseFirestore
-import FirebaseUI
-import FirebaseFirestoreSwift
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var pageView: UIPageControl!
     @IBOutlet weak var tableView: UITableView!
-    
-    let db = Firestore.firestore()
+
     //variable del timer
     var timer: Timer?
     //variable del PageControl
@@ -32,10 +28,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         "Pollo Frito",
         "Sushi"
     ]
-    
-    var photos = [Photos]()
-    var users = [User]()
-    var photosCategories = [PhotosCategories]()
     
     //MARK: TABLEVIEW
     //MARK: - TableView Delegate
