@@ -76,13 +76,15 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return options.count
     }
-    
+    //MARK: DataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = accountTableView.dequeueReusableCell(withIdentifier: "optionscell") as! OptionsTableViewCell? else {
             fatalError()
         }
+        let iconColor = UIImage(systemName: options[indexPath.row].icon)
         
-        cell.optionIconImageView.image = UIImage(systemName: options[indexPath.row].icon)
+        cell.optionIconImageView.tintColor = .black
+        cell.optionIconImageView.image = iconColor
         cell.optionLabel.text = options[indexPath.row].name
         //cell.selectionStyle = .none
         
