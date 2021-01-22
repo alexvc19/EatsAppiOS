@@ -12,7 +12,7 @@
         <!--PaymetsMethods-->
         <scene sceneID="UL8-d7-hZe">
             <objects>
-                <viewController storyboardIdentifier="PayMethodsViewController" title="PaymetsMethods" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nN1-kZ-pnl" customClass="PayMethodsViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PayMethods" title="PaymetsMethods" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nN1-kZ-pnl" customClass="PayMethodsViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cXT-vP-MhH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

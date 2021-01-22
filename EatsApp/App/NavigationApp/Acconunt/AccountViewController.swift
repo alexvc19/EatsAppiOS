@@ -7,46 +7,84 @@
 
 import UIKit
 
+struct Options {
+    var name: String
+    var icon: String
+}
+
 class AccountViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     @IBOutlet weak var accountTableView: UITableView!
     
-    let icons = [
-        "person.crop.rectangle.fill",
-        "creditcard.fill",
-        "mappin.circle.fill",
-        "questionmark",
-        "arrow.right"
+    let options = [
+        Options(name: "Informacion personal", icon:  "person.crop.rectangle.fill"),
+        Options(name:"Formas de pago", icon: "creditcard.fill"),
+        Options(name:"Direcciones", icon: "mappin.circle.fill"),
+        Options(name: "Ayuda", icon:"questionmark"),
+        Options(name: "Cerrar sesion", icon: "arrow.right"),
+
     ]
     
-    let optionsNames = [
-        "Informacion personal",
-        "Formas de pago",
-        "Direcciones",
-        "Ayuda",
-        "Cerrar sesion"
-    ]
-    
-    let storyBoardsIds = [
-        "InfoPersonalViewController",
-        "PayMethodsViewController",
+    let storyBoardName = [
+        "InfoPersonal",
+        "PayMethods",
+        "Address",
+        "Help",
+        "Close",
     ]
     
     //MARK: - TableView
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedOption = self.optionsNames[indexPath.row]
-        print(selectedOption)
+        
+        accountTableView.deselectRow(at: indexPath, animated: false)
+        
+            
+        let selectedOption = self.storyBoardName[indexPath.row]
+            
+        switch  selectedOption{
+        case storyBoardName[0]:
+            let vc = UIStoryboard.init(name: selectedOption, bundle: Bundle.main).instantiateViewController(withIdentifier: selectedOption)
+            self.navigationController?.show(vc, sender: nil)
+            
+        case storyBoardName[1]:
+            let vc = UIStoryboard.init(name: selectedOption, bundle: Bundle.main).instantiateViewController(withIdentifier: selectedOption)
+            self.navigationController?.show(vc, sender: nil)
+            
+        case storyBoardName[2]:
+            let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+        case storyBoardName[3]:
+            let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+        case storyBoardName[4]:
+            let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            
+        default:
+            print("No fount")
+        }
+        
+           
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return icons.count
+        return options.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = accountTableView.dequeueReusableCell(withIdentifier: "optionscell", for: indexPath) as! OptionsTableViewCell
+        guard let cell = accountTableView.dequeueReusableCell(withIdentifier: "optionscell") as! OptionsTableViewCell? else {
+            fatalError()
+        }
         
-        cell.optionIconImageView.image = UIImage(systemName: icons[indexPath.row])
-        cell.optionLabel.text = optionsNames[indexPath.row]
+        cell.optionIconImageView.image = UIImage(systemName: options[indexPath.row].icon)
+        cell.optionLabel.text = options[indexPath.row].name
+        //cell.selectionStyle = .none
         
         return cell
     }
@@ -84,5 +122,4 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
        
     }
 }
-
 
