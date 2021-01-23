@@ -10,6 +10,13 @@
 		4A1260DD25B933DD003D0BEA /* HeaderAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1260DC25B933DD003D0BEA /* HeaderAccount.swift */; };
 		4A1260E525B93404003D0BEA /* HeaderAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1260E425B93404003D0BEA /* HeaderAccount.xib */; };
 		4A133FBE25ABAED600DF8E39 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A133FBD25ABAED600DF8E39 /* FoodTableViewCell.swift */; };
+		4A21073925BC2B0C00A6ED7A /* Encodable Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21073225BC2B0B00A6ED7A /* Encodable Extensions.swift */; };
+		4A21073A25BC2B0C00A6ED7A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21073325BC2B0B00A6ED7A /* User.swift */; };
+		4A21073B25BC2B0C00A6ED7A /* FIRFirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21073425BC2B0B00A6ED7A /* FIRFirestoreService.swift */; };
+		4A21073C25BC2B0C00A6ED7A /* FIRCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21073525BC2B0B00A6ED7A /* FIRCollectionReference.swift */; };
+		4A21073D25BC2B0C00A6ED7A /* PhotosCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21073625BC2B0B00A6ED7A /* PhotosCategories.swift */; };
+		4A21073E25BC2B0C00A6ED7A /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21073725BC2B0B00A6ED7A /* Photos.swift */; };
+		4A21073F25BC2B0C00A6ED7A /* Snapshot Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21073825BC2B0C00A6ED7A /* Snapshot Extensions.swift */; };
 		4A23B03825AACECB00FA066A /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23B03625AACECB00FA066A /* MenuCollectionViewCell.swift */; };
 		4A23B03925AACECB00FA066A /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A23B03725AACECB00FA066A /* MenuCollectionViewCell.xib */; };
 		4A279E292582E5B30096F79A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A279E282582E5B30096F79A /* AppDelegate.swift */; };
@@ -91,6 +98,13 @@
 		4A1260DC25B933DD003D0BEA /* HeaderAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAccount.swift; sourceTree = "<group>"; };
 		4A1260E425B93404003D0BEA /* HeaderAccount.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderAccount.xib; sourceTree = "<group>"; };
 		4A133FBD25ABAED600DF8E39 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		4A21073225BC2B0B00A6ED7A /* Encodable Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Encodable Extensions.swift"; path = "../../../../Documents/model/Encodable Extensions.swift"; sourceTree = "<group>"; };
+		4A21073325BC2B0B00A6ED7A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../../../../Documents/model/User.swift; sourceTree = "<group>"; };
+		4A21073425BC2B0B00A6ED7A /* FIRFirestoreService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FIRFirestoreService.swift; path = ../../../../Documents/model/FIRFirestoreService.swift; sourceTree = "<group>"; };
+		4A21073525BC2B0B00A6ED7A /* FIRCollectionReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FIRCollectionReference.swift; path = ../../../../Documents/model/FIRCollectionReference.swift; sourceTree = "<group>"; };
+		4A21073625BC2B0B00A6ED7A /* PhotosCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotosCategories.swift; path = ../../../../Documents/model/PhotosCategories.swift; sourceTree = "<group>"; };
+		4A21073725BC2B0B00A6ED7A /* Photos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Photos.swift; path = ../../../../Documents/model/Photos.swift; sourceTree = "<group>"; };
+		4A21073825BC2B0C00A6ED7A /* Snapshot Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Snapshot Extensions.swift"; path = "../../../../Documents/model/Snapshot Extensions.swift"; sourceTree = "<group>"; };
 		4A23B03625AACECB00FA066A /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		4A23B03725AACECB00FA066A /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		4A279E252582E5B30096F79A /* EatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,13 +236,13 @@
 		4A1D07AB258B243300D2D62E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4A68FD0925B956AC00F541DE /* Encodable Extensions.swift */,
-				4A68FD0825B956AC00F541DE /* FIRCollectionReference.swift */,
-				4A68FD0A25B956AC00F541DE /* FIRFirestoreService.swift */,
-				4A68FD0B25B956AC00F541DE /* Photos.swift */,
-				4A68FD0725B956AC00F541DE /* PhotosCategories.swift */,
-				4A68FD0C25B956AC00F541DE /* Snapshot Extensions.swift */,
-				4A68FD0625B956AC00F541DE /* User.swift */,
+				4A21073225BC2B0B00A6ED7A /* Encodable Extensions.swift */,
+				4A21073525BC2B0B00A6ED7A /* FIRCollectionReference.swift */,
+				4A21073425BC2B0B00A6ED7A /* FIRFirestoreService.swift */,
+				4A21073725BC2B0B00A6ED7A /* Photos.swift */,
+				4A21073625BC2B0B00A6ED7A /* PhotosCategories.swift */,
+				4A21073825BC2B0C00A6ED7A /* Snapshot Extensions.swift */,
+				4A21073325BC2B0B00A6ED7A /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -770,22 +784,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A21073E25BC2B0C00A6ED7A /* Photos.swift in Sources */,
 				4A4168ED25BA0F3800C47063 /* InfoPersonalViewController.swift in Sources */,
 				4A23B03825AACECB00FA066A /* MenuCollectionViewCell.swift in Sources */,
 				4A2EE0FA25BBDD6C0034C37E /* LocationTableViewCell.swift in Sources */,
 				4A4524DB25A173F4004A480D /* AccountViewController.swift in Sources */,
-				4A68FD1325B956AD00F541DE /* Snapshot Extensions.swift in Sources */,
+				4A21073A25BC2B0C00A6ED7A /* User.swift in Sources */,
 				4A4524C625A13B63004A480D /* LastOrdesTableViewCell.swift in Sources */,
-				4A68FD1125B956AC00F541DE /* FIRFirestoreService.swift in Sources */,
 				4A7C912E25AE563E00455A73 /* CategoriesCollectionViewCell.swift in Sources */,
 				4ACB5138259FBCA1000E0857 /* SearchViewController.swift in Sources */,
 				4A279E852582F0830096F79A /* LogInViewController.swift in Sources */,
 				4A2EE0ED25BBD3BF0034C37E /* LocationsViewController.swift in Sources */,
 				4A4F3F4225AE7A5D00B3F95F /* CardCollectionTableViewCell.swift in Sources */,
-				4A68FD1025B956AC00F541DE /* Encodable Extensions.swift in Sources */,
 				4A279E292582E5B30096F79A /* AppDelegate.swift in Sources */,
 				4A2B2989258AA80B0045EAD0 /* TabBarViewController.swift in Sources */,
+				4A21073B25BC2B0C00A6ED7A /* FIRFirestoreService.swift in Sources */,
 				4A4168E825BA0F1A00C47063 /* PayMethodsViewController.swift in Sources */,
+				4A21073D25BC2B0C00A6ED7A /* PhotosCategories.swift in Sources */,
 				4A7C912725AE562900455A73 /* SliderCollectionViewCell.swift in Sources */,
 				4A54D1B8258439CA00B64EE8 /* HomeViewController.swift in Sources */,
 				4A80FF5D25AABBA10019C4F5 /* HeaderRestaurant.swift in Sources */,
@@ -796,16 +811,16 @@
 				4ACB513D259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift in Sources */,
 				4A46ED81258DA756006CB62E /* SceneDelegate.swift in Sources */,
 				4A79010B25948FD10055852C /* RegisterViewController.swift in Sources */,
-				4A68FD1225B956AC00F541DE /* Photos.swift in Sources */,
 				4A4524BE25A13894004A480D /* LastOrdersViewController.swift in Sources */,
 				4A41690225BA3EB100C47063 /* PaymentMethodTableViewCell.swift in Sources */,
 				4A2B2972258AA40A0045EAD0 /* ViewController.swift in Sources */,
 				4A9B8ABD25AA740400874BBF /* RestaurantViewController.swift in Sources */,
-				4A68FD0E25B956AC00F541DE /* PhotosCategories.swift in Sources */,
+				4A21073F25BC2B0C00A6ED7A /* Snapshot Extensions.swift in Sources */,
+				4A21073C25BC2B0C00A6ED7A /* FIRCollectionReference.swift in Sources */,
 				4A1260DD25B933DD003D0BEA /* HeaderAccount.swift in Sources */,
 				4A4168D825BA022D00C47063 /* TermsViewController.swift in Sources */,
+				4A21073925BC2B0C00A6ED7A /* Encodable Extensions.swift in Sources */,
 				4A7C911025AE540100455A73 /* HeaderHome.swift in Sources */,
-				4A68FD0D25B956AC00F541DE /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
