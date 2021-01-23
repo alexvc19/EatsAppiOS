@@ -30,6 +30,8 @@
 		4A2EE0ED25BBD3BF0034C37E /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2EE0EC25BBD3BF0034C37E /* LocationsViewController.swift */; };
 		4A2EE0F525BBD3F10034C37E /* Locations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2EE0F425BBD3F10034C37E /* Locations.storyboard */; };
 		4A2EE0FA25BBDD6C0034C37E /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2EE0F925BBDD6C0034C37E /* LocationTableViewCell.swift */; };
+		4A2EE10025BBFBB40034C37E /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2EE0FF25BBFBB40034C37E /* HelpViewController.swift */; };
+		4A2EE10825BBFBC70034C37E /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2EE10725BBFBC70034C37E /* Help.storyboard */; };
 		4A4168D825BA022D00C47063 /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4168D725BA022D00C47063 /* TermsViewController.swift */; };
 		4A4168DD25BA025600C47063 /* TermsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4168DC25BA025600C47063 /* TermsViewController.storyboard */; };
 		4A4168E825BA0F1A00C47063 /* PayMethodsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4168E725BA0F1A00C47063 /* PayMethodsViewController.swift */; };
@@ -115,6 +117,8 @@
 		4A2EE0EC25BBD3BF0034C37E /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		4A2EE0F425BBD3F10034C37E /* Locations.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Locations.storyboard; sourceTree = "<group>"; };
 		4A2EE0F925BBDD6C0034C37E /* LocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTableViewCell.swift; sourceTree = "<group>"; };
+		4A2EE0FF25BBFBB40034C37E /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		4A2EE10725BBFBC70034C37E /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
 		4A4168D725BA022D00C47063 /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		4A4168DC25BA025600C47063 /* TermsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TermsViewController.storyboard; sourceTree = "<group>"; };
 		4A4168E725BA0F1A00C47063 /* PayMethodsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayMethodsViewController.swift; sourceTree = "<group>"; };
@@ -347,6 +351,15 @@
 			path = Locations;
 			sourceTree = "<group>";
 		};
+		4A2EE0FE25BBFB450034C37E /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				4A2EE0FF25BBFBB40034C37E /* HelpViewController.swift */,
+				4A2EE10725BBFBC70034C37E /* Help.storyboard */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
 		4A4168D625BA01EB00C47063 /* Terms */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +372,7 @@
 		4A4168E125BA09D100C47063 /* Options */ = {
 			isa = PBXGroup;
 			children = (
+				4A2EE0FE25BBFB450034C37E /* Help */,
 				4A2EE0EA25BBD2280034C37E /* Locations */,
 				4A4168E325BA0A0200C47063 /* PayMethods */,
 				4A4168E225BA09F100C47063 /* InfoPersonal */,
@@ -605,6 +619,7 @@
 				4A2EE0F525BBD3F10034C37E /* Locations.storyboard in Resources */,
 				4A4168DD25BA025600C47063 /* TermsViewController.storyboard in Resources */,
 				4A279E352582E5B70096F79A /* LaunchScreen.storyboard in Resources */,
+				4A2EE10825BBFBC70034C37E /* Help.storyboard in Resources */,
 				4A4168F725BA0F7900C47063 /* InfoPersonal.storyboard in Resources */,
 				4A2DB48625873D260024163C /* GoogleService-Info.plist in Resources */,
 				4A2B2981258AA5FA0045EAD0 /* Main.storyboard in Resources */,
@@ -767,6 +782,7 @@
 				4A133FBE25ABAED600DF8E39 /* FoodTableViewCell.swift in Sources */,
 				4A4F3F5D25AE81E600B3F95F /* CardCollectionViewCell.swift in Sources */,
 				4A68FD7225B960DC00F541DE /* OptionsTableViewCell.swift in Sources */,
+				4A2EE10025BBFBB40034C37E /* HelpViewController.swift in Sources */,
 				4ACB513D259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift in Sources */,
 				4A46ED81258DA756006CB62E /* SceneDelegate.swift in Sources */,
 				4A79010B25948FD10055852C /* RegisterViewController.swift in Sources */,

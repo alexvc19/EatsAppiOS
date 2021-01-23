@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +12,7 @@
         <!--Account-->
         <scene sceneID="3S0-Zn-n3s">
             <objects>
-                <viewController id="fBM-iR-GzI" customClass="AccountViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="fBM-iR-GzI" customClass="AccountViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PEU-sW-F3Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,6 +86,7 @@
         <!--Item-->
         <scene sceneID="X77-vV-MMC">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3qO-nJ-KTi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xhk-21-heS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="dY0-VH-etf"/>
                     <toolbarItems/>
@@ -100,7 +100,6 @@
                         <segue destination="fBM-iR-GzI" kind="relationship" relationship="rootViewController" id="keb-Rn-q48"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3qO-nJ-KTi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="64.955357142857139"/>
         </scene>

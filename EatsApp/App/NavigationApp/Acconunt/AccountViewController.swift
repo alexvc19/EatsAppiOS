@@ -55,9 +55,8 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
             self.navigationController?.show(vc, sender: nil)
             
         case storyBoardName[3]:
-            let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            let vc = UIStoryboard.init(name: selectedOption, bundle: Bundle.main).instantiateViewController(withIdentifier: selectedOption)
+            self.navigationController?.show(vc, sender: nil)
             
         case storyBoardName[4]:
             let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertController.Style.alert)
@@ -91,7 +90,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         
         let vc = UIStoryboard.init(name: "TermsViewController", bundle: Bundle.main).instantiateViewController(withIdentifier: "TermsViewController")
         self.navigationController?.showDetailViewController(vc, sender: nil)
-        print("Button tapped")
+        
     }
     
     //MARK: - VIEWDIDLOAD
