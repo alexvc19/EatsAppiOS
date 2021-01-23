@@ -14,12 +14,22 @@ struct userAddres {
 
 class LocationsViewController: UIViewController, UITableViewDataSource, UITabBarDelegate, UITableViewDelegate {
     
+    @IBOutlet weak var locationsTableView: UITableView!
+    @IBOutlet weak var addLocation: UITextField!{
+        didSet{
+            addLocation.layer.borderWidth = 0.5
+            addLocation.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
+            addLocation.layer.cornerRadius = 6
+            let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 10.0, height: 2.0))
+            addLocation.leftView = leftView
+            addLocation.leftViewMode = .always
+        }
+    }
+    
     let user = [
         userAddres(street: "Zaragoza #21 centro 28000", location: "Colima, col"),
         userAddres(street: "Calle 25", location: "Tecoman, col")
     ]
-    
-    @IBOutlet weak var locationsTableView: UITableView!
     
     //MARK: - DELEGATE
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,9 +65,11 @@ class LocationsViewController: UIViewController, UITableViewDataSource, UITabBar
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.locationsTableView.delegate = self
-        self.locationsTableView.dataSource = self
-        
+        let tapGesture = UITapGestureRecognizer(target: self, action:     #selector(tapGestureHandler))
+        view.addGestureRecognizer(tapGesture)
     }
 
+    @objc func tapGestureHandler() {
+        addLocation.endEditing(true)
+    }
 }

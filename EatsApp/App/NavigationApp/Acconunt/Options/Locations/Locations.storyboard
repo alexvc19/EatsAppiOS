@@ -12,13 +12,13 @@
         <!--Locations View Controller-->
         <scene sceneID="dMB-EL-9hW">
             <objects>
-                <viewController storyboardIdentifier="Locations" id="bRY-Mm-24C" customClass="LocationsViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Locations" hidesBottomBarWhenPushed="YES" id="bRY-Mm-24C" customClass="LocationsViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yoe-cD-5BX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="64M-J1-dfV">
-                                <rect key="frame" x="0.0" y="98" width="414" height="798"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="788"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="locCell" id="GVh-Gy-leX" customClass="LocationTableViewCell" customModule="EatsApp" customModuleProvider="target">
@@ -75,8 +75,11 @@
                                     <outlet property="delegate" destination="bRY-Mm-24C" id="Grz-44-fEb"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Agregar direccion" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SEG-tH-7AQ">
-                                <rect key="frame" x="20" y="54" width="374" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Agregar direccion" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SEG-tH-7AQ">
+                                <rect key="frame" x="20" y="54" width="374" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="mAs-5y-GUd"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -94,6 +97,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addLocation" destination="SEG-tH-7AQ" id="V8f-BJ-Atc"/>
                         <outlet property="locationsTableView" destination="64M-J1-dfV" id="Qxj-dv-H0q"/>
                     </connections>
                 </viewController>
