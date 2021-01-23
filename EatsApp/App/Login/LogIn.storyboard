@@ -25,13 +25,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="649"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPv-Sd-lCm">
-                                                <rect key="frame" x="20" y="185" width="130" height="28"/>
+                                                <rect key="frame" x="20" y="172" width="130" height="28"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MBu-QL-X5F" customClass="FPNTextField" customModule="FlagPhoneNumber">
-                                                <rect key="frame" x="20" y="223" width="374" height="40"/>
+                                                <rect key="frame" x="20" y="210" width="374" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="uec-dw-GeZ"/>
                                                 </constraints>
@@ -44,7 +44,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="7SJ-Hv-hUc">
-                                                <rect key="frame" x="20" y="278" width="374" height="40"/>
+                                                <rect key="frame" x="20" y="265" width="374" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="RmL-dl-19O"/>
                                                 </constraints>
@@ -53,13 +53,13 @@
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Olvidaste tu contraseña?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xP2-1c-1UM">
-                                                <rect key="frame" x="226" y="333" width="168" height="17"/>
+                                                <rect key="frame" x="226" y="320" width="168" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" name="Rojo"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DN-2W-cPB">
-                                                <rect key="frame" x="54" y="365" width="306" height="43"/>
+                                                <rect key="frame" x="54" y="352" width="306" height="43"/>
                                                 <color key="backgroundColor" name="Rojo"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="43" id="H38-rK-wsb"/>
@@ -77,13 +77,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQ0-ip-32c">
-                                                <rect key="frame" x="193.5" y="413" width="27" height="28"/>
+                                                <rect key="frame" x="193.5" y="400" width="27" height="28"/>
                                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c5-hv-966">
-                                                <rect key="frame" x="54" y="446" width="306" height="43"/>
+                                                <rect key="frame" x="54" y="433" width="306" height="43"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="43" id="LHO-RU-vbL"/>
                                                 </constraints>
@@ -93,13 +93,13 @@
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Aun no tienes cuenta?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LR-AT-Gio">
-                                                <rect key="frame" x="132" y="549" width="150" height="17"/>
+                                                <rect key="frame" x="132" y="536" width="150" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" name="Rojo"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Llc-Ic-DsK">
-                                                <rect key="frame" x="54" y="576" width="306" height="43"/>
+                                                <rect key="frame" x="54" y="563" width="306" height="43"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="306" id="Ega-jM-wBQ"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="306" id="fEd-WD-ci8"/>
@@ -115,7 +115,7 @@
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logotype" translatesAutoresizingMaskIntoConstraints="NO" id="Z9B-Fv-4fO">
-                                                <rect key="frame" x="115" y="0.0" width="185" height="185"/>
+                                                <rect key="frame" x="115" y="0.0" width="185" height="172"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="185" id="GDP-KL-5Br"/>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="185" id="tDt-29-cXa"/>
@@ -228,7 +228,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logotype" width="250" height="250"/>
+        <image name="Logotype" width="172" height="172"/>
         <namedColor name="Amarillo">
             <color red="0.94900000095367432" green="0.63499999046325684" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
