@@ -29,7 +29,7 @@ class PayMethodsViewController: UIViewController, UITableViewDataSource, UITabBa
     //MARK: - TableView DataSorce
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-      let cell = paymentsTableView.dequeueReusableCell(withIdentifier: "methodpay", for: indexPath) as! PaymentMethodTableViewCell
+        let cell = paymentsTableView.dequeueReusableCell(withIdentifier: "methodpay", for: indexPath) as! PaymentMethodTableViewCell
         
         cell.payMethodLabel.text = methodsPayNames[indexPath.row]
         cell.payMethodImageView.image = UIImage(systemName: methodsPayIcons[indexPath.row])
@@ -40,8 +40,8 @@ class PayMethodsViewController: UIViewController, UITableViewDataSource, UITabBa
     //MARK:- VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let header = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 40.0))
+        
+        let header = UIView(frame: CGRect(x: 0, y: 10, width: self.view.frame.width, height: 40.0))
         
         let titleStoryeboard = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 25))
         titleStoryeboard.text = "Metodos de pago"

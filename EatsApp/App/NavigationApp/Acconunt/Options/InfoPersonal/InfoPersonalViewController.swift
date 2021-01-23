@@ -8,7 +8,7 @@
 import UIKit
 
 class InfoPersonalViewController: UIViewController {
-
+    
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userPointsLabel: UILabel!
@@ -64,7 +64,7 @@ class InfoPersonalViewController: UIViewController {
         
         // Cerrar el keyboard
         let tapGesture = UITapGestureRecognizer(target: self, action:     #selector(tapGestureHandler))
-            view.addGestureRecognizer(tapGesture)
+        view.addGestureRecognizer(tapGesture)
         
     }
     //MARK: - Funcion para cerrar el keyboard
@@ -76,31 +76,31 @@ class InfoPersonalViewController: UIViewController {
         actualPasswordTextfield.endEditing(true)
         newPasswordTextField.endEditing(true)
         confirmNewPasswordTextfield.endEditing(true)
-       
-      }
+        
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         registerNotifications()
     }
-
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         scrollView.contentInset.bottom = 0
     }
-
+    
     private func registerNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-
+    
     @objc private func keyboardWillShow(notification: NSNotification){
         guard let keyboardFrame = notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
         scrollView.contentInset.bottom = view.convert(keyboardFrame.cgRectValue, from: nil).size.height
     }
-
+    
     @objc private func keyboardWillHide(notification: NSNotification){
         scrollView.contentInset.bottom = 0
     }
-
+    
 }

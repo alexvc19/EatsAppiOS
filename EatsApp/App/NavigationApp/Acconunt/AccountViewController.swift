@@ -22,13 +22,13 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         Options(name:"Direcciones", icon: "mappin.circle.fill"),
         Options(name: "Ayuda", icon:"questionmark"),
         Options(name: "Cerrar sesion", icon: "arrow.right"),
-
+        
     ]
     
     let storyBoardName = [
         "InfoPersonal",
         "PayMethods",
-        "Address",
+        "Locations",
         "Help",
         "Close",
     ]
@@ -39,9 +39,8 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         
         accountTableView.deselectRow(at: indexPath, animated: false)
         
-            
         let selectedOption = self.storyBoardName[indexPath.row]
-            
+        
         switch  selectedOption{
         case storyBoardName[0]:
             let vc = UIStoryboard.init(name: selectedOption, bundle: Bundle.main).instantiateViewController(withIdentifier: selectedOption)
@@ -52,9 +51,8 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
             self.navigationController?.show(vc, sender: nil)
             
         case storyBoardName[2]:
-            let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Click", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            let vc = UIStoryboard.init(name: selectedOption, bundle: Bundle.main).instantiateViewController(withIdentifier: selectedOption)
+            self.navigationController?.show(vc, sender: nil)
             
         case storyBoardName[3]:
             let alert = UIAlertController(title: "Alert", message: "Message", preferredStyle: UIAlertController.Style.alert)
@@ -70,7 +68,6 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
             print("No fount")
         }
         
-           
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -86,16 +83,15 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.optionIconImageView.tintColor = .black
         cell.optionIconImageView.image = iconColor
         cell.optionLabel.text = options[indexPath.row].name
-        //cell.selectionStyle = .none
         
         return cell
     }
     
     @objc func buttonAction(sender: UIButton!) {
         
-    let vc = UIStoryboard.init(name: "TermsViewController", bundle: Bundle.main).instantiateViewController(withIdentifier: "TermsViewController")
-    self.navigationController?.showDetailViewController(vc, sender: nil)
-      print("Button tapped")
+        let vc = UIStoryboard.init(name: "TermsViewController", bundle: Bundle.main).instantiateViewController(withIdentifier: "TermsViewController")
+        self.navigationController?.showDetailViewController(vc, sender: nil)
+        print("Button tapped")
     }
     
     //MARK: - VIEWDIDLOAD
@@ -119,9 +115,8 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
         boton.center = footer.center
         footer.addSubview(boton)
         
-        footer.layer.backgroundColor = UIColor(named: "GrisClaro")?.cgColor
         accountTableView.tableFooterView = footer
-       
+        
     }
 }
 

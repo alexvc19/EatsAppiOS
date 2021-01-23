@@ -8,7 +8,7 @@
 import UIKit
 
 class PaymentMethodTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var payMethodImageView: UIImageView!
     @IBOutlet weak var payMethodLabel: UILabel!
     
@@ -18,11 +18,11 @@ class PaymentMethodTableViewCell: UITableViewCell {
         payMethodImageView.image = UIImage(named: "Logotype")
         payMethodLabel.text = "Method pay"
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-
+        
+        
     }
-
+    
 }
