@@ -10,6 +10,7 @@ import UIKit
 struct userAddres {
     var street: String
     var location: String
+    var principal: Bool
 }
 
 class LocationsViewController: UIViewController, UITableViewDataSource, UITabBarDelegate, UITableViewDelegate {
@@ -26,50 +27,67 @@ class LocationsViewController: UIViewController, UITableViewDataSource, UITabBar
         }
     }
     
-    let user = [
-        userAddres(street: "Zaragoza #21 centro 28000", location: "Colima, col"),
-        userAddres(street: "Calle 25", location: "Tecoman, col")
+    
+    var checkmarks: Int = 0
+    
+    var user = [
+        userAddres(street: "Zaragoza #21 centro 28000", location: "Colima, col", principal: true),
+        userAddres(street: "Calle 25", location: "Tecoman, col", principal: false)
     ]
+    
     
     //MARK: - DELEGATE
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return user.count
     }
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        
-        if  locationsTableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark{
-            locationsTableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
-        }
-        
-    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if locationsTableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.none{
-            locationsTableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+        
+        
+        if let cell = locationsTableView.cellForRow(at: indexPath as IndexPath) {
+            if cell.accessoryType == .none{
+                cell.accessoryType = .checkmark
+            }
+            
         }
+        
+        UserDefaults.standard.set(checkmarks, forKey: "selectedRows")
+        
     }
-
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath){
+        
+        if let cell = locationsTableView.cellForRow(at: indexPath as IndexPath) {
+            if cell.accessoryType == .checkmark{
+                cell.accessoryType = .none
+                checkmarks = 0
+            }
+        }
+        UserDefaults.standard.set(checkmarks, forKey: "selectedRows")
+    }
+    
     //MARK: - DATA SOURCE
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = locationsTableView.dequeueReusableCell(withIdentifier: "locCell") as? LocationTableViewCell else {
             fatalError()
         }
+        
+        if user[indexPath.row].principal == true{
+            locationsTableView.selectRow(at: indexPath, animated: true, scrollPosition: .top)
+            cell.accessoryType = .checkmark
+        }
+        
         cell.locationLabel.text = user[indexPath.row].location
         cell.addressLabel.text = user[indexPath.row].street
         
         return cell
     }
-   
+    
     
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let tapGesture = UITapGestureRecognizer(target: self, action:     #selector(tapGestureHandler))
-        view.addGestureRecognizer(tapGesture)
-    }
-
-    @objc func tapGestureHandler() {
-        addLocation.endEditing(true)
+        
     }
 }
