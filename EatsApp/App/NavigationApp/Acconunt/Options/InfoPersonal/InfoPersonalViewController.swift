@@ -13,48 +13,84 @@ class InfoPersonalViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userPointsLabel: UILabel!
     
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!{
+        didSet{
+            nameTextField.layer.borderWidth = 0.5
+            nameTextField.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
+            nameTextField.layer.cornerRadius = 6
+            let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 10.0, height: 2.0))
+            nameTextField.leftView = leftView
+            nameTextField.leftViewMode = .always
+        }
+    }
     @IBOutlet weak var lastNameTextField: UITextField!
-    @IBOutlet weak var emailTextfield: UITextField!
-    @IBOutlet weak var phoneNumberTextfield: UITextField!
-    @IBOutlet weak var actualPasswordTextfield: UITextField!
-    @IBOutlet weak var newPasswordTextField: UITextField!
-    @IBOutlet weak var confirmNewPasswordTextfield: UITextField!
+    {
+        didSet{
+            lastNameTextField.layer.borderWidth = 0.5
+            lastNameTextField.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
+            lastNameTextField.layer.cornerRadius = 6
+            let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 10.0, height: 2.0))
+            lastNameTextField.leftView = leftView
+            lastNameTextField.leftViewMode = .always
+        }
+    }
+    @IBOutlet weak var emailTextfield: UITextField!{
+        didSet{
+            emailTextfield.layer.borderWidth = 0.5
+            emailTextfield.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
+            emailTextfield.layer.cornerRadius = 6
+            let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 10.0, height: 2.0))
+            emailTextfield.leftView = leftView
+            emailTextfield.leftViewMode = .always
+        }
+    }
+    @IBOutlet weak var phoneNumberTextfield: UITextField!{
+        didSet{
+            phoneNumberTextfield.layer.borderWidth = 0.5
+            phoneNumberTextfield.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
+            phoneNumberTextfield.layer.cornerRadius = 6
+            let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 10.0, height: 2.0))
+            phoneNumberTextfield.leftView = leftView
+            phoneNumberTextfield.leftViewMode = .always
+        }
+    }
+    @IBOutlet weak var actualPasswordTextfield: UITextField!{
+        didSet{
+            actualPasswordTextfield.layer.borderWidth = 0.5
+            actualPasswordTextfield.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
+            actualPasswordTextfield.layer.cornerRadius = 6
+            let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 10.0, height: 2.0))
+            actualPasswordTextfield.leftView = leftView
+            actualPasswordTextfield.leftViewMode = .always
+        }
+    }
+    @IBOutlet weak var newPasswordTextField: UITextField!{
+        didSet{
+            newPasswordTextField.layer.borderWidth = 0.5
+            newPasswordTextField.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
+            newPasswordTextField.layer.cornerRadius = 6
+            let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 10.0, height: 2.0))
+            newPasswordTextField.leftView = leftView
+            newPasswordTextField.leftViewMode = .always
+        }
+    }
+    @IBOutlet weak var confirmNewPasswordTextfield: UITextField!{
+        didSet{
+            confirmNewPasswordTextfield.layer.borderWidth = 0.5
+            confirmNewPasswordTextfield.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
+            confirmNewPasswordTextfield.layer.cornerRadius = 6
+            let leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 10.0, height: 2.0))
+            confirmNewPasswordTextfield.leftView = leftView
+            confirmNewPasswordTextfield.leftViewMode = .always
+        }
+    }
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    //MARK: - VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //TextFields
-        nameTextField.layer.borderWidth = 0.5
-        nameTextField.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
-        nameTextField.layer.cornerRadius = 5
-        
-        lastNameTextField.layer.borderWidth = 0.5
-        lastNameTextField.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
-        lastNameTextField.layer.cornerRadius = 5
-        
-        emailTextfield.layer.borderWidth = 0.5
-        emailTextfield.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
-        emailTextfield.layer.cornerRadius = 5
-        
-        
-        phoneNumberTextfield.layer.borderWidth = 0.5
-        phoneNumberTextfield.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
-        phoneNumberTextfield.layer.cornerRadius = 5
-        
-        actualPasswordTextfield.layer.borderWidth = 0.5
-        actualPasswordTextfield.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
-        actualPasswordTextfield.layer.cornerRadius = 5
-        
-        newPasswordTextField.layer.borderWidth = 0.5
-        newPasswordTextField.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
-        newPasswordTextField.layer.cornerRadius = 5
-        
-        confirmNewPasswordTextfield.layer.borderWidth = 0.5
-        confirmNewPasswordTextfield.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
-        confirmNewPasswordTextfield.layer.cornerRadius = 5
         
         //ImageView
         userImageView.layer.cornerRadius = (userImageView.frame.size.width ) / 2
@@ -79,6 +115,7 @@ class InfoPersonalViewController: UIViewController {
         
     }
     
+    //MARK: - Keyboard enfoque
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         registerNotifications()

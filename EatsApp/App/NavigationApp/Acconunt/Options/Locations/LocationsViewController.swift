@@ -10,7 +10,7 @@ import UIKit
 struct userAddres {
     var street: String
     var location: String
-    var principal: Bool
+    var principal: Bool?
 }
 
 class LocationsViewController: UIViewController, UITableViewDataSource, UITabBarDelegate, UITableViewDelegate {
@@ -27,8 +27,7 @@ class LocationsViewController: UIViewController, UITableViewDataSource, UITabBar
         }
     }
     
-    
-    var checkmarks: Int = 0
+    var checkmarks = [Int : Bool]()
     
     var user = [
         userAddres(street: "Zaragoza #21 centro 28000", location: "Colima, col", principal: true),
@@ -43,15 +42,14 @@ class LocationsViewController: UIViewController, UITableViewDataSource, UITabBar
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
         if let cell = locationsTableView.cellForRow(at: indexPath as IndexPath) {
             if cell.accessoryType == .none{
                 cell.accessoryType = .checkmark
+               
+            }else{
+               
             }
-            
         }
-        
-        UserDefaults.standard.set(checkmarks, forKey: "selectedRows")
         
     }
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath){
@@ -59,10 +57,10 @@ class LocationsViewController: UIViewController, UITableViewDataSource, UITabBar
         if let cell = locationsTableView.cellForRow(at: indexPath as IndexPath) {
             if cell.accessoryType == .checkmark{
                 cell.accessoryType = .none
-                checkmarks = 0
             }
         }
-        UserDefaults.standard.set(checkmarks, forKey: "selectedRows")
+        
+       
     }
     
     //MARK: - DATA SOURCE
@@ -75,6 +73,9 @@ class LocationsViewController: UIViewController, UITableViewDataSource, UITabBar
         if user[indexPath.row].principal == true{
             locationsTableView.selectRow(at: indexPath, animated: true, scrollPosition: .top)
             cell.accessoryType = .checkmark
+        }else{
+
+            cell.accessoryType = .none
         }
         
         cell.locationLabel.text = user[indexPath.row].location
@@ -87,7 +88,7 @@ class LocationsViewController: UIViewController, UITableViewDataSource, UITabBar
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+       
     }
 }
+
