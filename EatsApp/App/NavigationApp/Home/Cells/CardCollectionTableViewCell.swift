@@ -14,6 +14,11 @@ class CardCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource, 
     
     var waitTime = "30 - 40 minutos"
     
+    var restaurantID = "Restaurant"
+        
+    let objViewController = UIApplication.topViewController()!
+    
+    //MARK: - Init view
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -22,16 +27,16 @@ class CardCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource, 
         cardCollectionView.delegate = self
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    //MARK:- CollectionView delegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = UIStoryboard.init(name: restaurantID, bundle: Bundle.main).instantiateViewController(withIdentifier: restaurantID)
+        objViewController.navigationController?.show(vc, sender: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
     }
-    
+    //MARK:- CollectionView DataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        let cell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: "card", for: indexPath) as! CardCollectionViewCell
         
@@ -54,4 +59,22 @@ class CardCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource, 
         return cell
     }
 
+}
+//Usando el siguiente código puede obtener el controlador de vista superior y usando ese controlador de vista puede realizar su operación de empuje
+extension UIApplication {
+    class func topViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        
+        if let nav = base as? UINavigationController {
+            return topViewController(base: nav.visibleViewController)
+        }
+        if let tab = base as? UITabBarController {
+            if let selected = tab.selectedViewController {
+                return topViewController(base: selected)
+            }
+        }
+        if let presented = base?.presentedViewController {
+            return topViewController(base: presented)
+        }
+        return base
+    }
 }

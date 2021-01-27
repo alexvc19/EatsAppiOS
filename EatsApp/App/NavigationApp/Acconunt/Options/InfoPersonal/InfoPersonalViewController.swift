@@ -13,6 +13,9 @@ class InfoPersonalViewController: UIViewController {
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userPointsLabel: UILabel!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    // MARK: - TexFields layers
     @IBOutlet weak var nameTextField: UITextField!{
         didSet{
             nameTextField.layer.borderWidth = 0.5
@@ -85,8 +88,6 @@ class InfoPersonalViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    
     //MARK: - VIEWDIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,7 +100,7 @@ class InfoPersonalViewController: UIViewController {
         userImageView.layer.borderColor = UIColor(named: "Rojo")?.cgColor
         
         // Cerrar el keyboard
-        let tapGesture = UITapGestureRecognizer(target: self, action:     #selector(tapGestureHandler))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapGestureHandler))
         view.addGestureRecognizer(tapGesture)
         
     }

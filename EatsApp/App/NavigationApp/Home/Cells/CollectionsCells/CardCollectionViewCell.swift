@@ -22,8 +22,6 @@ class CardCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
-        
         let iv1 = UIImageView(image: UIImage(systemName: star))
         let iv2 = UIImageView(image: UIImage(systemName: star))
         let iv3 = UIImageView(image: UIImage(systemName: star))

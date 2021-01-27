@@ -99,12 +99,7 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         
         tableView.tableHeaderView = header
         tableView.tableFooterView = footer
-        
-        let backBTN = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: navigationController, action: nil)
-        backBTN.tintColor = UIColor(named: "Amarillo")
-        backBTN.title = "Back"
-        navigationItem.leftBarButtonItem = backBTN
-        navigationController?.interactivePopGestureRecognizer?.delegate = self
+       
     }
     
 }

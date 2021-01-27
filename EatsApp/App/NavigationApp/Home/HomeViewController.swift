@@ -36,7 +36,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let headerframe = tableView.frame
         let title : UILabel = UILabel()
         
-        title.frame = CGRect(x: 20, y: 20, width: headerframe.size.width, height: 20)
+        title.frame = CGRect(x: 20, y: 20, width: headerframe.size.width, height: 27)
         title.text = secciones[section]
         title.textColor = UIColor.black
         title.font = UIFont(name: "Helvetica-Bold", size: 21.0)
@@ -76,17 +76,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let header = HeaderHome(frame: CGRect(x: 0, y: 0, width:view.frame.width, height: 320))
         
         tableView.tableHeaderView = header
-        
-        // Cerrar el keyboard
-        let tapGesture = UITapGestureRecognizer(target: self, action:     #selector(tapGestureHandler))
-            view.addGestureRecognizer(tapGesture)
-        
         tableView.register(UINib(nibName: "CardCollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "cellCard")
     
-    }
-    //MARK: - Funcion para cerrar el keyboard
-    @objc func tapGestureHandler() {
-//        ubicationTextF.endEditing(true)
-       
-      }
+    }   
 }

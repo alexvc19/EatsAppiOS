@@ -432,7 +432,7 @@
 		4A54D1B22584395500B64EE8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4A7C910B25AE537700455A73 /* HeaderHome */,
+				4A7C910B25AE537700455A73 /* HeaderCell */,
 				4A4F3F3F25AE798E00B3F95F /* Cells */,
 				4A279E2E2582E5B30096F79A /* Home.storyboard */,
 				4A54D1B7258439CA00B64EE8 /* HomeViewController.swift */,
@@ -440,14 +440,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		4A7C910B25AE537700455A73 /* HeaderHome */ = {
+		4A7C910B25AE537700455A73 /* HeaderCell */ = {
 			isa = PBXGroup;
 			children = (
 				4A7C911925AE557700455A73 /* Cells */,
 				4A7C910F25AE540100455A73 /* HeaderHome.swift */,
 				4A7C911425AE542800455A73 /* HeaderHome.xib */,
 			);
-			path = HeaderHome;
+			path = HeaderCell;
 			sourceTree = "<group>";
 		};
 		4A7C911925AE557700455A73 /* Cells */ = {
