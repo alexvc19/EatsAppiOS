@@ -9,10 +9,27 @@ import UIKit
 
 class CategoriesViewController: UIViewController {
 
+    @IBOutlet weak var categoriesTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
 
+}
+extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = categoriesTableView.dequeueReusableCell(withIdentifier: "restaurantCell", for: indexPath)
+        
+        cell.textLabel?.text = "Table cell test"
+        
+        return cell
+    }
+    
+    
 }

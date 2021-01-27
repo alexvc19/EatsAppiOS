@@ -15,9 +15,12 @@ class HeaderHome: UIView, UICollectionViewDelegate {
     var slider = "sliderCell"
     var categ = "categorieCell"
     
+    let objViewController = UIApplication.topViewController()!
+    
     private func initCollectionView() {
        
         sliderCollectionView.register(UINib(nibName: "SliderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: slider)
+        
         categoriesCollectionView.register(UINib(nibName: "CategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: categ)
         
         categoriesCollectionView.dataSource = self
@@ -49,6 +52,16 @@ class HeaderHome: UIView, UICollectionViewDelegate {
 }
 extension HeaderHome: UICollectionViewDataSource{
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == categoriesCollectionView {
+            
+            let categoriesID = "Categories"
+            let vc = UIStoryboard.init(name: categoriesID, bundle: Bundle.main).instantiateViewController(withIdentifier: categoriesID)
+            objViewController.navigationController?.show(vc, sender: nil)
+        }
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == categoriesCollectionView {
@@ -76,3 +89,4 @@ extension HeaderHome: UICollectionViewDataSource{
         return cell
     }
 }
+

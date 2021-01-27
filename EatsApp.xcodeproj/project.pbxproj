@@ -531,10 +531,18 @@
 		4AAC3AFE25C13AC00026F610 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				4AAC3B2925C148900026F610 /* CollectionCell */,
 				4AAC3B1C25C13E720026F610 /* RestaurantsTableViewCell.swift */,
 				4AAC3B1D25C13E720026F610 /* RestaurantsTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		4AAC3B2925C148900026F610 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionCell;
 			sourceTree = "<group>";
 		};
 		4AC97131258D8B03008A73FB /* Register */ = {
