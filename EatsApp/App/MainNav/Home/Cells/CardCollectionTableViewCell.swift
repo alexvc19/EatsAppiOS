@@ -22,7 +22,7 @@ class CardCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource, 
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        cardCollectionView.register(UINib(nibName: "CardCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "card")
+        cardCollectionView.register(UINib(nibName: "CardViewCell", bundle: nil), forCellWithReuseIdentifier: "card")
         cardCollectionView.dataSource = self
         cardCollectionView.delegate = self
     }
@@ -38,7 +38,7 @@ class CardCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource, 
     }
     //MARK:- CollectionView DataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       let cell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: "card", for: indexPath) as! CardCollectionViewCell
+       let cell = cardCollectionView.dequeueReusableCell(withReuseIdentifier: "card", for: indexPath) as! CardViewCell
         
         cell.priceDelivery.text = "$79.00"
         cell.name.text = "FOOD"

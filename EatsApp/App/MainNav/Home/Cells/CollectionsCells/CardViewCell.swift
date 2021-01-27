@@ -7,7 +7,8 @@
 
 import UIKit
 
-class CardCollectionViewCell: UICollectionViewCell {
+@IBDesignable
+class CardViewCell: UICollectionViewCell {
 
     @IBOutlet weak var photoImageView:UIImageView!
     @IBOutlet weak var name: UILabel!
