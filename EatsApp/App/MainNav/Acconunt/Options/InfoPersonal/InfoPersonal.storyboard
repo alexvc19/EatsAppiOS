@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A63-HC-dkq">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g74-me-Bs9">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="794"/>
@@ -207,7 +207,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="g74-me-Bs9" secondAttribute="trailing" id="A19-ja-Drb"/>
-                                    <constraint firstAttribute="bottom" secondItem="g74-me-Bs9" secondAttribute="bottom" constant="24" id="LRK-oO-MUY"/>
+                                    <constraint firstAttribute="bottom" secondItem="g74-me-Bs9" secondAttribute="bottom" constant="58" id="LRK-oO-MUY"/>
                                     <constraint firstItem="g74-me-Bs9" firstAttribute="top" secondItem="A63-HC-dkq" secondAttribute="top" id="eX4-iR-DaX"/>
                                     <constraint firstItem="g74-me-Bs9" firstAttribute="leading" secondItem="A63-HC-dkq" secondAttribute="leading" id="f90-K4-L5l"/>
                                     <constraint firstItem="g74-me-Bs9" firstAttribute="width" secondItem="A63-HC-dkq" secondAttribute="width" id="roa-n0-1ll"/>
@@ -219,7 +219,7 @@
                         <constraints>
                             <constraint firstItem="g74-me-Bs9" firstAttribute="height" secondItem="8FL-2K-MRm" secondAttribute="height" multiplier="0.912946" priority="250" constant="-23.99961600000006" id="7ki-zW-MA1"/>
                             <constraint firstItem="A63-HC-dkq" firstAttribute="trailing" secondItem="PUH-tO-Tg2" secondAttribute="trailing" id="BhP-YC-GRR"/>
-                            <constraint firstItem="A63-HC-dkq" firstAttribute="bottom" secondItem="PUH-tO-Tg2" secondAttribute="bottom" id="bqq-rh-nbU"/>
+                            <constraint firstItem="A63-HC-dkq" firstAttribute="bottom" secondItem="PUH-tO-Tg2" secondAttribute="bottom" constant="34" id="bqq-rh-nbU"/>
                             <constraint firstItem="A63-HC-dkq" firstAttribute="leading" secondItem="PUH-tO-Tg2" secondAttribute="leading" id="crv-c7-V4E"/>
                             <constraint firstItem="A63-HC-dkq" firstAttribute="top" secondItem="PUH-tO-Tg2" secondAttribute="top" id="xiL-n8-0Qr"/>
                         </constraints>

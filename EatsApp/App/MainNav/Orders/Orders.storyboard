@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tus pedidos-->
+        <!--Orders-->
         <scene sceneID="pKe-AR-U8o">
             <objects>
                 <viewController id="WHt-Gu-eBz" customClass="LastOrdersViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,7 +98,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pedidos" image="newspaper.fill" catalog="system" id="Yqe-7Q-siQ"/>
-                    <navigationItem key="navigationItem" title="Tus pedidos" id="V2d-rT-9Zd"/>
+                    <navigationItem key="navigationItem" title="Orders" id="V2d-rT-9Zd"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="lastOrdersTableView" destination="laG-Vn-9uC" id="Cee-rX-UFD"/>

@@ -12,7 +12,7 @@
         <!--Categories View Controller-->
         <scene sceneID="O4e-S3-4hF">
             <objects>
-                <viewController storyboardIdentifier="Categories" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bmf-bq-Xht" customClass="CategoriesViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Categories" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bmf-bq-Xht" customClass="CategoriesViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HgQ-Eq-1Xz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

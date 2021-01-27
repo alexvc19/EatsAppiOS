@@ -13,7 +13,7 @@
         <!--Help View Controller-->
         <scene sceneID="HPL-dw-Igk">
             <objects>
-                <viewController storyboardIdentifier="Help" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XJ6-e4-X1Q" customClass="HelpViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Help" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XJ6-e4-X1Q" customClass="HelpViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SK9-pP-tKc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
