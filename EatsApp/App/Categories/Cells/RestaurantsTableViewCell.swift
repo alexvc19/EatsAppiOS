@@ -7,6 +7,11 @@
 
 import UIKit
 
+struct Menu {
+    var name: String
+    var price: String
+}
+
 class RestaurantsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var photoImageView: UIImageView!
@@ -35,8 +40,6 @@ class RestaurantsTableViewCell: UITableViewCell {
         cardView.layer.shadowOffset = CGSize(width: 0, height: 5)
         cardView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
         cardView.backgroundColor = UIColor.white
-        
-        //
         
     }
 

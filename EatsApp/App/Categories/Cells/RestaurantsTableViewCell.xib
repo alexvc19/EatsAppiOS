@@ -28,12 +28,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edp-tq-vUM">
-                                <rect key="frame" x="10" y="166" width="181" height="14"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
-                                <color key="textColor" name="Gris"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKh-2h-v8y">
                                 <rect key="frame" x="344.5" y="166" width="29.5" height="14"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
@@ -52,6 +46,18 @@
                                     <constraint firstAttribute="height" constant="138" id="v3N-ZT-gwA"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Costo de envio:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9Q-vw-j6k">
+                                <rect key="frame" x="10" y="166" width="83.5" height="14"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                <color key="textColor" name="Gris"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edp-tq-vUM">
+                                <rect key="frame" x="98.5" y="166" width="29.5" height="14"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                <color key="textColor" name="Gris"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="linkColor"/>
@@ -60,30 +66,31 @@
                             <constraint firstAttribute="trailing" secondItem="vKh-2h-v8y" secondAttribute="trailing" constant="10" id="AyL-2i-kX0"/>
                             <constraint firstItem="hMF-u3-dKP" firstAttribute="top" secondItem="HMa-0T-eAq" secondAttribute="bottom" constant="7" id="Gis-DP-QSn"/>
                             <constraint firstItem="vKh-2h-v8y" firstAttribute="top" secondItem="Kpj-I5-6F3" secondAttribute="bottom" constant="6" id="ITB-Mj-wuy"/>
+                            <constraint firstItem="edp-tq-vUM" firstAttribute="centerY" secondItem="a9Q-vw-j6k" secondAttribute="centerY" id="Imj-RA-oCz"/>
                             <constraint firstItem="Kpj-I5-6F3" firstAttribute="width" secondItem="HMa-0T-eAq" secondAttribute="height" multiplier="47:46" id="PgC-Pb-iaL"/>
                             <constraint firstAttribute="trailing" secondItem="Kpj-I5-6F3" secondAttribute="trailing" constant="10" id="Pgc-Fo-XiF"/>
-                            <constraint firstItem="HMa-0T-eAq" firstAttribute="leading" secondItem="edp-tq-vUM" secondAttribute="trailing" constant="-191" id="SHR-bv-tRY"/>
                             <constraint firstAttribute="trailing" secondItem="HMa-0T-eAq" secondAttribute="trailing" id="VDg-Xz-L0D"/>
                             <constraint firstAttribute="height" constant="190" id="XUs-nD-vyC"/>
                             <constraint firstItem="HMa-0T-eAq" firstAttribute="top" secondItem="unG-cd-r5N" secondAttribute="top" id="bp0-d0-q3C"/>
+                            <constraint firstItem="a9Q-vw-j6k" firstAttribute="leading" secondItem="unG-cd-r5N" secondAttribute="leading" constant="10" id="hZa-7Y-OwX"/>
                             <constraint firstItem="hMF-u3-dKP" firstAttribute="width" secondItem="HMa-0T-eAq" secondAttribute="height" multiplier="193:138" id="hpH-bx-Kyy"/>
-                            <constraint firstItem="edp-tq-vUM" firstAttribute="leading" secondItem="unG-cd-r5N" secondAttribute="leading" constant="10" id="mvw-Pb-RNb"/>
-                            <constraint firstItem="edp-tq-vUM" firstAttribute="top" secondItem="vKh-2h-v8y" secondAttribute="top" id="vPx-CH-abP"/>
+                            <constraint firstItem="a9Q-vw-j6k" firstAttribute="top" secondItem="vKh-2h-v8y" secondAttribute="top" id="mTa-LA-89k"/>
+                            <constraint firstItem="edp-tq-vUM" firstAttribute="leading" secondItem="a9Q-vw-j6k" secondAttribute="trailing" constant="5" id="upj-xE-eEr"/>
                             <constraint firstItem="HMa-0T-eAq" firstAttribute="leading" secondItem="unG-cd-r5N" secondAttribute="leading" id="vVr-G8-lUV"/>
                             <constraint firstItem="hMF-u3-dKP" firstAttribute="leading" secondItem="unG-cd-r5N" secondAttribute="leading" constant="10" id="z0Q-UE-sIi"/>
                         </constraints>
                     </view>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-ng-IQD">
-                        <rect key="frame" x="0.0" y="200" width="414" height="80"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-ng-IQD">
+                        <rect key="frame" x="0.0" y="200" width="414" height="85"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="80" id="erf-gw-CXs"/>
+                            <constraint firstAttribute="height" constant="85" id="erf-gw-CXs"/>
                         </constraints>
-                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="6hK-Ij-6rg">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="15" minimumInteritemSpacing="0.0" id="6hK-Ij-6rg">
                             <size key="itemSize" width="214" height="67"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="13" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="15" minY="0.0" maxX="0.0" maxY="12"/>
                         </collectionViewFlowLayout>
                         <connections>
                             <outlet property="dataSource" destination="-1" id="62C-Sg-s3q"/>

@@ -7,18 +7,25 @@
 
 import UIKit
 
+struct ResData {
+    var name: String
+    var deliveryCost: String
+    var estimateTime: String
+    
+}
+
 class CategoriesViewController: UIViewController {
 
     @IBOutlet weak var categoriesTableView: UITableView!
     
     var cellNib = "restaurantCell"
     
-    let restNames = [
-        "Okuma",
-        "TuSushi",
-        "Sushido",
-        "Megumi",
-        "Estilo oriental"
+    let restaurats = [
+        ResData(name: "Okuma", deliveryCost: "$20.00", estimateTime: "30 - 40 minutos"),
+        ResData(name: "TuSushi", deliveryCost: "$30.00", estimateTime: "30 - 40 minutos"),
+        ResData(name: "Sushido", deliveryCost: "$25.00", estimateTime: "30 - 40 minutos"),
+        ResData(name: "Megumi", deliveryCost: "$18.00", estimateTime: "30 - 40 minutos"),
+        ResData(name: "Estilo oriental", deliveryCost: "$23.00", estimateTime: "30 - 40 minutos")
     ]
     
     override func viewDidLoad() {
@@ -38,7 +45,7 @@ class CategoriesViewController: UIViewController {
 extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return restNames.count
+        return restaurats.count
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10
@@ -61,9 +68,10 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
         DispatchQueue.main.async {
             cell.photoImageView.roundCorners([.topLeft, .topRight], radius: 5)
         }
-        cell.restaurantNameLabel?.text = restNames[indexPath.section]
-        cell.estimateTimeLabel?.text = "20 - 30 minutos"
-        cell.deliveryCost?.text = "$30.00"
+        cell.selectionStyle = .none
+        cell.restaurantNameLabel?.text = restaurats[indexPath.section].name
+        cell.estimateTimeLabel?.text = restaurats[indexPath.section].estimateTime
+        cell.deliveryCost?.text = restaurats[indexPath.section].deliveryCost
         
         return cell
     }
