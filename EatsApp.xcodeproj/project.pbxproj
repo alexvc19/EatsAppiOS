@@ -483,11 +483,11 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
-		4A950BEF25C2342E001812F7 /* CollectionCells */ = {
+		4A950C0B25C2490C001812F7 /* MenuCell */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = CollectionCells;
+			path = MenuCell;
 			sourceTree = "<group>";
 		};
 		4A9B8AAC25AA693E00874BBF /* MainNav */ = {
@@ -529,7 +529,6 @@
 		4AAC3AFD25C13AB60026F610 /* Header */ = {
 			isa = PBXGroup;
 			children = (
-				4A950BEF25C2342E001812F7 /* CollectionCells */,
 				4A950BD125C2332C001812F7 /* CategoriesHeaderView.swift */,
 				4A950BD025C2332C001812F7 /* CategoriesHeaderView.xib */,
 			);
@@ -539,18 +538,11 @@
 		4AAC3AFE25C13AC00026F610 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				4AAC3B2925C148900026F610 /* CollectionCell */,
+				4A950C0B25C2490C001812F7 /* MenuCell */,
 				4AAC3B1C25C13E720026F610 /* RestaurantsTableViewCell.swift */,
 				4AAC3B1D25C13E720026F610 /* RestaurantsTableViewCell.xib */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		4AAC3B2925C148900026F610 /* CollectionCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CollectionCell;
 			sourceTree = "<group>";
 		};
 		4AC97131258D8B03008A73FB /* Register */ = {
