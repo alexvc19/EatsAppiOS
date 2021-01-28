@@ -73,14 +73,20 @@
                         </constraints>
                     </view>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-ng-IQD">
-                        <rect key="frame" x="0.0" y="205" width="384" height="72"/>
+                        <rect key="frame" x="0.0" y="205" width="384" height="75"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6hK-Ij-6rg">
-                            <size key="itemSize" width="128" height="128"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="75" id="yc0-Dd-41g"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="6hK-Ij-6rg">
+                            <size key="itemSize" width="214" height="67"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="-1" id="62C-Sg-s3q"/>
+                        </connections>
                     </collectionView>
                 </subviews>
                 <constraints>
@@ -89,7 +95,6 @@
                     <constraint firstItem="unG-cd-r5N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="BIA-gl-JcI"/>
                     <constraint firstItem="C5u-ng-IQD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="P2M-m1-ZQ4"/>
                     <constraint firstAttribute="trailing" secondItem="C5u-ng-IQD" secondAttribute="trailing" id="Sm8-Sr-dBu"/>
-                    <constraint firstAttribute="bottom" secondItem="C5u-ng-IQD" secondAttribute="bottom" constant="10" id="iGS-uh-O6J"/>
                     <constraint firstAttribute="trailing" secondItem="unG-cd-r5N" secondAttribute="trailing" id="iJu-xd-3li"/>
                 </constraints>
             </tableViewCellContentView>
@@ -97,6 +102,7 @@
             <connections>
                 <outlet property="deliveryCost" destination="edp-tq-vUM" id="2Ac-dL-nGq"/>
                 <outlet property="estimateTimeLabel" destination="vKh-2h-v8y" id="wib-5j-wRF"/>
+                <outlet property="menuCardCollectionView" destination="C5u-ng-IQD" id="gja-eo-Jnz"/>
                 <outlet property="photoImageView" destination="HMa-0T-eAq" id="nrM-dk-zlr"/>
                 <outlet property="restaurantNameLabel" destination="hMF-u3-dKP" id="1LC-Sw-t9L"/>
             </connections>

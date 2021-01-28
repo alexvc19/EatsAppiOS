@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cardMenuCell" reuseIdentifier="cardMenuCell" id="gTV-IL-0wX" customClass="CardMenuCollectionViewCell" customModule="EatsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="214" height="67"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="214" height="67"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Clb-4o-P3F">
+                        <rect key="frame" x="0.0" y="0.0" width="214" height="67"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFg-hK-pvP">
+                                <rect key="frame" x="10" y="13" width="34.5" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                <color key="textColor" name="Amarillo"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Example" translatesAutoresizingMaskIntoConstraints="NO" id="rKB-7g-ZJN">
+                                <rect key="frame" x="153" y="8" width="51" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="9BG-lM-YUa"/>
+                                    <constraint firstAttribute="height" constant="51" id="T0U-v3-xyg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHA-4v-W9a">
+                                <rect key="frame" x="10" y="39.5" width="29.5" height="14"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AFg-hK-pvP" firstAttribute="leading" secondItem="Clb-4o-P3F" secondAttribute="leading" constant="10" id="DRn-yB-UG2"/>
+                            <constraint firstItem="AFg-hK-pvP" firstAttribute="top" secondItem="Clb-4o-P3F" secondAttribute="top" constant="13" id="Jzh-o1-QO6"/>
+                            <constraint firstAttribute="trailing" secondItem="rKB-7g-ZJN" secondAttribute="trailing" constant="10" id="NSZ-xx-SqJ"/>
+                            <constraint firstItem="rKB-7g-ZJN" firstAttribute="centerY" secondItem="Clb-4o-P3F" secondAttribute="centerY" id="Tss-FY-0CX"/>
+                            <constraint firstAttribute="bottom" secondItem="kHA-4v-W9a" secondAttribute="bottom" constant="13.5" id="Udf-V9-tmB"/>
+                            <constraint firstItem="kHA-4v-W9a" firstAttribute="top" secondItem="AFg-hK-pvP" secondAttribute="bottom" constant="10" id="a5M-hx-Q4s"/>
+                            <constraint firstItem="kHA-4v-W9a" firstAttribute="leading" secondItem="Clb-4o-P3F" secondAttribute="leading" constant="10" id="qvZ-DH-x8W"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Clb-4o-P3F" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2ZC-MW-Wgr"/>
+                <constraint firstItem="Clb-4o-P3F" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="32I-hK-kWI"/>
+                <constraint firstAttribute="bottom" secondItem="Clb-4o-P3F" secondAttribute="bottom" id="9vg-FU-ZVd"/>
+                <constraint firstAttribute="trailing" secondItem="Clb-4o-P3F" secondAttribute="trailing" id="Smc-oc-GqH"/>
+            </constraints>
+            <connections>
+                <outlet property="menuPhotoImageView" destination="rKB-7g-ZJN" id="z6u-g0-rS6"/>
+                <outlet property="nameLabel" destination="AFg-hK-pvP" id="kBM-OX-HvD"/>
+                <outlet property="priceLabel" destination="kHA-4v-W9a" id="oJl-ww-Jci"/>
+            </connections>
+            <point key="canvasLocation" x="63.768115942028992" y="85.379464285714278"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Example" width="225" height="225"/>
+        <namedColor name="Amarillo">
+            <color red="0.94900000095367432" green="0.63499999046325684" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
