@@ -14,6 +14,8 @@ class RestaurantsTableViewCell: UITableViewCell {
     @IBOutlet weak var deliveryCost: UILabel!
     @IBOutlet weak var estimateTimeLabel: UILabel!
     
+    @IBOutlet weak var cardView: UIView!
+    
     @IBOutlet weak var menuCardCollectionView:UICollectionView!
     
     var cellNib = "cardMenuCell"
@@ -24,12 +26,21 @@ class RestaurantsTableViewCell: UITableViewCell {
         menuCardCollectionView.register(UINib(nibName: "CardMenuCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellNib)
         self.menuCardCollectionView.dataSource = self
         self.menuCardCollectionView.delegate = self
+        
+        cardView.backgroundColor = .clear
+        cardView.layer.masksToBounds = false
+        cardView.layer.shadowOpacity = 0.22
+        cardView.layer.shadowRadius = 3
+        cardView.layer.shadowOffset = CGSize(width: 0, height: 5)
+        cardView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
+        cardView.backgroundColor = UIColor.white
+        
     }
 
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15))
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0))
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

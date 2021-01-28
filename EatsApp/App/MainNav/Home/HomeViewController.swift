@@ -29,7 +29,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         "Sushi"
     ]
     
-    //MARK: TABLEVIEW
     //MARK: - TableView Delegate
     // Sections Title
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
