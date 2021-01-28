@@ -78,7 +78,7 @@ extension HeaderHome: UICollectionViewDataSource{
         }
         
         if (collectionView == categoriesCollectionView){
-            let celld = categoriesCollectionView.dequeueReusableCell(withReuseIdentifier: categ, for: indexPath) as! CategoriesCollectionViewCell
+             let celld = categoriesCollectionView.dequeueReusableCell(withReuseIdentifier: categ, for: indexPath) as! CategoriesCollectionViewCell
             
             celld.name.text = "Category"
             return celld

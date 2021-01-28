@@ -11,8 +11,15 @@ class CategoriesViewController: UIViewController {
 
     @IBOutlet weak var categoriesTableView: UITableView!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Header TableView
+        let header = CategoriesHeaderView(frame: CGRect(x: 0, y: 0, width:view.frame.width, height: 340))
+        
+        categoriesTableView.tableHeaderView = header
         
     }
 
