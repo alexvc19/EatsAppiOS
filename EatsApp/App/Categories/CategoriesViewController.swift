@@ -58,7 +58,9 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = categoriesTableView.dequeueReusableCell(withIdentifier: cellNib, for: indexPath) as? RestaurantsTableViewCell else {
             fatalError()
         }
-        
+        DispatchQueue.main.async {
+            cell.photoImageView.roundCorners([.topLeft, .topRight], radius: 5)
+        }
         cell.restaurantNameLabel?.text = restNames[indexPath.section]
         cell.estimateTimeLabel?.text = "20 - 30 minutos"
         cell.deliveryCost?.text = "$30.00"

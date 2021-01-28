@@ -27,6 +27,7 @@ class RestaurantsTableViewCell: UITableViewCell {
         self.menuCardCollectionView.dataSource = self
         self.menuCardCollectionView.delegate = self
         
+        //Shadow card
         cardView.backgroundColor = .clear
         cardView.layer.masksToBounds = false
         cardView.layer.shadowOpacity = 0.22
@@ -34,6 +35,8 @@ class RestaurantsTableViewCell: UITableViewCell {
         cardView.layer.shadowOffset = CGSize(width: 0, height: 5)
         cardView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
         cardView.backgroundColor = UIColor.white
+        
+        //
         
     }
 
@@ -63,6 +66,15 @@ extension RestaurantsTableViewCell: UICollectionViewDelegate, UICollectionViewDa
         }
         return cell
     }
-    
-    
+}
+
+extension UIImageView {
+    public func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
+        let maskPath = UIBezierPath(roundedRect: bounds,
+                                    byRoundingCorners: corners,
+                                    cornerRadii: CGSize(width: radius, height: radius))
+        let shape = CAShapeLayer()
+        shape.path = maskPath.cgPath
+        layer.mask = shape
+    }
 }
