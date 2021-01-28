@@ -13,6 +13,8 @@ class RestaurantsTableViewCell: UITableViewCell {
     @IBOutlet weak var deliveryCost: UILabel!
     @IBOutlet weak var estimateTimeLabel: UILabel!
     
+    @IBOutlet weak var cardView: CardViewCell!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
        

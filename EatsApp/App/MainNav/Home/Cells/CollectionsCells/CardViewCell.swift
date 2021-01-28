@@ -35,11 +35,11 @@ class CardViewCell: UICollectionViewCell {
         iv4.tintColor = UIColor(named: "AmarilloClaro")
         iv5.tintColor = UIColor(named: "AmarilloClaro")
         
-        stackView.addArrangedSubview(iv1)
-        stackView.addArrangedSubview(iv2)
-        stackView.addArrangedSubview(iv3)
-        stackView.addArrangedSubview(iv4)
-        stackView.addArrangedSubview(iv5)
+        stackView?.addArrangedSubview(iv1)
+        stackView?.addArrangedSubview(iv2)
+        stackView?.addArrangedSubview(iv3)
+        stackView?.addArrangedSubview(iv4)
+        stackView?.addArrangedSubview(iv5)
         
 //        let viewXib = Bundle.main.loadNibNamed("card", owner: self, options: nil)![0] as! UIView
 //

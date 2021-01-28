@@ -25,7 +25,7 @@ class CategoriesViewController: UIViewController {
         super.viewDidLoad()
         
         //Header TableView
-        let header = CategoriesHeaderView(frame: CGRect(x: 0, y: 0, width:view.frame.width, height: 360))
+        let header = CategoriesHeaderView(frame: CGRect(x: 0, y: 0, width:view.frame.width, height: 350))
         
         categoriesTableView.register(UINib(nibName: "RestaurantsTableViewCell", bundle: nil), forCellReuseIdentifier: cellNib)
         
@@ -46,9 +46,9 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
             fatalError()
         }
         
-        cell.restaurantNameLabel.text = restNames[indexPath.row]
-        cell.estimateTimeLabel.text = "20 - 30 minutos"
-        cell.deliveryCost.text = "$30.00"
+        cell.restaurantNameLabel?.text = restNames[indexPath.row]
+        cell.estimateTimeLabel?.text = "20 - 30 minutos"
+        cell.deliveryCost?.text = "$30.00"
         
         return cell
     }
