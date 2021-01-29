@@ -17,7 +17,7 @@ struct Restaurant: Codable {
 let jsonString = """
 [
     {
-        "name": "okuma",
+        "name": "okuma d",
         "deliveryCost": "18",
         "estimateTime": "30min"
     }, {
@@ -28,8 +28,10 @@ let jsonString = """
 ]
 """
 
-let jsonData = jsonString.data(using: .utf8)!
-let decoder = JSONDecoder()
-let restaurant = try! decoder.decode(Restaurant.self, from: jsonData)
+var tabledata = [Restaurant]()
+//
+//
+//let decoder = JSONDecoder()
+//let restaurant = try! decoder.decode(Restaurant.self, from: jsonData)
 
 

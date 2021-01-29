@@ -13,7 +13,21 @@ class CategoriesViewController: UIViewController {
     
     var cellNib = "restaurantCell"
     
-    var restaurant = [Restaurant]()
+    var tabledata = [Restaurant]()
+    
+    func getFehData(){
+        
+        do {
+            let jsonData = jsonString.data(using: .utf8)!
+            let decoder = JSONDecoder()
+            tabledata = try! decoder.decode([Restaurant].self, from: jsonData)
+            
+            print(tabledata)
+            
+        }catch {
+            print(error)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +41,7 @@ class CategoriesViewController: UIViewController {
         self.categoriesTableView.dataSource = self
         self.categoriesTableView.delegate = self
         
+        getFehData()
     }
     
 }
@@ -34,7 +49,7 @@ class CategoriesViewController: UIViewController {
 extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return restaurant.count
+        return tabledata.count
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10
@@ -55,9 +70,10 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
             cell.photoImageView.roundCorners([.topLeft, .topRight], radius: 5)
         }
         cell.selectionStyle = .none
-        cell.restaurantNameLabel?.text = restaurant[indexPath.section].name
-        cell.estimateTimeLabel?.text = restaurant[indexPath.section].estimateTime
-        cell.deliveryCost?.text = restaurant[indexPath.section].deliveryCost
+        cell.restaurantNameLabel?.text = tabledata[indexPath.section].name
+        cell.estimateTimeLabel?.text = tabledata[indexPath.section].estimateTime
+        cell.deliveryCost?.text = tabledata[indexPath.section].deliveryCost
+        cell.photoImageView.image = UIImage(named: "pedido")
         
         return cell
     }
