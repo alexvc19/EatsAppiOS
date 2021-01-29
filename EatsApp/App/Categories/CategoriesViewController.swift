@@ -13,7 +13,7 @@ class CategoriesViewController: UIViewController {
     
     var cellNib = "restaurantCell"
     
-    
+    var restaurant = [Restaurant]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class CategoriesViewController: UIViewController {
 extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return restaurats.count
+        return restaurant.count
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10
@@ -55,9 +55,9 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
             cell.photoImageView.roundCorners([.topLeft, .topRight], radius: 5)
         }
         cell.selectionStyle = .none
-        cell.restaurantNameLabel?.text = restaurats[indexPath.section].name
-        cell.estimateTimeLabel?.text = restaurats[indexPath.section].estimateTime
-        cell.deliveryCost?.text = restaurats[indexPath.section].deliveryCost
+        cell.restaurantNameLabel?.text = restaurant[indexPath.section].name
+        cell.estimateTimeLabel?.text = restaurant[indexPath.section].estimateTime
+        cell.deliveryCost?.text = restaurant[indexPath.section].deliveryCost
         
         return cell
     }
@@ -65,9 +65,9 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
 }
 //MARK: - Collection Restaurant Card
 extension RestaurantsTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource{
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return foods.count
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -75,8 +75,7 @@ extension RestaurantsTableViewCell: UICollectionViewDelegate, UICollectionViewDa
         guard let cell = menuCardCollectionView.dequeueReusableCell(withReuseIdentifier: cellNib, for: indexPath) as? CardMenuCollectionViewCell else {
             fatalError()
         }
-        cell.nameLabel.text = restaurats[indexPath.section].menu[indexPath.row].name
-        cell.priceLabel.text = restaurats[indexPath.section].menu[indexPath.row].price
+        
         return cell
     }
 }
