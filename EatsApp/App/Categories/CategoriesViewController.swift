@@ -7,26 +7,13 @@
 
 import UIKit
 
-struct ResData {
-    var name: String
-    var deliveryCost: String
-    var estimateTime: String
-    
-}
-
 class CategoriesViewController: UIViewController {
-
+    
     @IBOutlet weak var categoriesTableView: UITableView!
     
     var cellNib = "restaurantCell"
     
-    let restaurats = [
-        ResData(name: "Okuma", deliveryCost: "$20.00", estimateTime: "30 - 40 minutos"),
-        ResData(name: "TuSushi", deliveryCost: "$30.00", estimateTime: "30 - 40 minutos"),
-        ResData(name: "Sushido", deliveryCost: "$25.00", estimateTime: "30 - 40 minutos"),
-        ResData(name: "Megumi", deliveryCost: "$18.00", estimateTime: "30 - 40 minutos"),
-        ResData(name: "Estilo oriental", deliveryCost: "$23.00", estimateTime: "30 - 40 minutos")
-    ]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +26,11 @@ class CategoriesViewController: UIViewController {
         categoriesTableView.tableHeaderView = header
         self.categoriesTableView.dataSource = self
         self.categoriesTableView.delegate = self
+        
     }
-
+    
 }
+//MARK: - Restaurant Card Cell
 extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -57,10 +46,7 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 297
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = categoriesTableView.dequeueReusableCell(withIdentifier: cellNib, for: indexPath) as? RestaurantsTableViewCell else {
             fatalError()
@@ -76,5 +62,21 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+}
+//MARK: - Collection Restaurant Card
+extension RestaurantsTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource{
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return foods.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = menuCardCollectionView.dequeueReusableCell(withReuseIdentifier: cellNib, for: indexPath) as? CardMenuCollectionViewCell else {
+            fatalError()
+        }
+        cell.nameLabel.text = restaurats[indexPath.section].menu[indexPath.row].name
+        cell.priceLabel.text = restaurats[indexPath.section].menu[indexPath.row].price
+        return cell
+    }
 }

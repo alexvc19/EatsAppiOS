@@ -71,6 +71,7 @@
 		4AAC3B1F25C13E720026F610 /* RestaurantsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AAC3B1D25C13E720026F610 /* RestaurantsTableViewCell.xib */; };
 		4ACB5138259FBCA1000E0857 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACB5137259FBCA1000E0857 /* SearchViewController.swift */; };
 		4ACB513D259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACB513C259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift */; };
+		4AD1F13525C3728E00046B5A /* Datos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1F13425C3728E00046B5A /* Datos.swift */; };
 		91735F173AB2F4C042811E38 /* Pods_EatsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D8B98B3FB8FD200C24DEB2 /* Pods_EatsAppTests.framework */; };
 		D1EAA3A44C0CF66EC91A3AFF /* Pods_EatsApp_EatsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF937E729FEBB71B275E2C88 /* Pods_EatsApp_EatsAppUITests.framework */; };
 		D5E7B422B0B5B7262D4BE7BD /* Pods_EatsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713C2A85BCA61D60A0A18FB9 /* Pods_EatsApp.framework */; };
@@ -167,6 +168,7 @@
 		4AAC3B1D25C13E720026F610 /* RestaurantsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantsTableViewCell.xib; sourceTree = "<group>"; };
 		4ACB5137259FBCA1000E0857 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4ACB513C259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		4AD1F13425C3728E00046B5A /* Datos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datos.swift; sourceTree = "<group>"; };
 		713C2A85BCA61D60A0A18FB9 /* Pods_EatsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74560C490A2656D564FACB0E /* Pods-EatsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-EatsAppTests/Pods-EatsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AAC345E16794F51F44C9F5F0 /* Pods-EatsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp.release.xcconfig"; path = "Target Support Files/Pods-EatsApp/Pods-EatsApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 		4A279E272582E5B30096F79A /* EatsApp */ = {
 			isa = PBXGroup;
 			children = (
+				4AD1F13325C3726C00046B5A /* HardData */,
 				4A279E282582E5B30096F79A /* AppDelegate.swift */,
 				4A46ED80258DA755006CB62E /* SceneDelegate.swift */,
 				4A46ED88258DB321006CB62E /* App */,
@@ -558,6 +561,14 @@
 				4A79010A25948FD10055852C /* RegisterViewController.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		4AD1F13325C3726C00046B5A /* HardData */ = {
+			isa = PBXGroup;
+			children = (
+				4AD1F13425C3728E00046B5A /* Datos.swift */,
+			);
+			path = HardData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -848,6 +859,7 @@
 				4A2EE10025BBFBB40034C37E /* HelpViewController.swift in Sources */,
 				4ACB513D259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift in Sources */,
 				4A46ED81258DA756006CB62E /* SceneDelegate.swift in Sources */,
+				4AD1F13525C3728E00046B5A /* Datos.swift in Sources */,
 				4A79010B25948FD10055852C /* RegisterViewController.swift in Sources */,
 				4A4524BE25A13894004A480D /* LastOrdersViewController.swift in Sources */,
 				4A41690225BA3EB100C47063 /* PaymentMethodTableViewCell.swift in Sources */,

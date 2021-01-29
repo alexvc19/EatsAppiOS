@@ -7,11 +7,6 @@
 
 import UIKit
 
-struct Menu {
-    var name: String
-    var price: String
-}
-
 class RestaurantsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var photoImageView: UIImageView!
@@ -24,6 +19,7 @@ class RestaurantsTableViewCell: UITableViewCell {
     @IBOutlet weak var menuCardCollectionView:UICollectionView!
     
     var cellNib = "cardMenuCell"
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -56,20 +52,7 @@ class RestaurantsTableViewCell: UITableViewCell {
     }
     
 }
-extension RestaurantsTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource{
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        guard let cell = menuCardCollectionView.dequeueReusableCell(withReuseIdentifier: cellNib, for: indexPath) as? CardMenuCollectionViewCell else {
-            fatalError()
-        }
-        return cell
-    }
-}
+
 
 extension UIImageView {
     public func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
