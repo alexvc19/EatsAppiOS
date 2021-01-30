@@ -7,9 +7,10 @@
 
 import UIKit
 
-class RestaurantViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate {
+class RestaurantViewController: UIViewController, UIGestureRecognizerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var buttonContent: UIView!
     
     let foodNames = [
         //primera seccion
@@ -41,13 +42,29 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         
     ]
     
+
+
+    //MARK: - VIEWDIDLOAD
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        let header = HeaderRestaurant(frame: CGRect(x:0,y: -47,width: view.frame.size.width, height: 493))
+        tableView.tableHeaderView = header
+       
+       
+    }
+    
+}
+extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource{
+    
     //MARK: - tableview delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
     //Titulos de las secciones
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let headerframe = tableView.frame
         let title : UILabel = UILabel()
@@ -87,16 +104,4 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
     
         return cell
     }
-
-    //MARK: - VIEWDIDLOAD
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let header = HeaderRestaurant(frame: CGRect(x:0,y: -47,width: view.frame.size.width, height: 493))
-    
-        tableView.tableHeaderView = header
-       
-       
-    }
-    
 }

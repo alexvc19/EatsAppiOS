@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="133" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hc9-ah-wdz">
-                                <rect key="frame" x="0.0" y="88" width="414" height="707"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="133" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hc9-ah-wdz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="716"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="hP9-yf-SLL" customClass="FoodTableViewCell" customModule="EatsApp" customModuleProvider="target">
@@ -86,17 +86,26 @@
                                     <outlet property="delegate" destination="Aer-Nu-MTG" id="7Ti-kM-qHP"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MqA-Rh-CV1">
-                                <rect key="frame" x="0.0" y="803" width="414" height="59"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MqA-Rh-CV1">
+                                <rect key="frame" x="0.0" y="804" width="414" height="58"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7f0-gw-opH">
-                                        <rect key="frame" x="36" y="0.0" width="315" height="52"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7f0-gw-opH">
+                                        <rect key="frame" x="50" y="3" width="314" height="52"/>
                                         <color key="backgroundColor" name="Amarillo"/>
-                                        <state key="normal" title="Button"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                        <state key="normal" title="Carrito">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="DNF-mR-AeA"/>
+                                    <constraint firstItem="7f0-gw-opH" firstAttribute="top" secondItem="MqA-Rh-CV1" secondAttribute="top" constant="3" id="bqs-Ly-OKN"/>
+                                    <constraint firstAttribute="trailing" secondItem="7f0-gw-opH" secondAttribute="trailing" constant="50" id="eyJ-kO-YiN"/>
+                                    <constraint firstItem="7f0-gw-opH" firstAttribute="leading" secondItem="MqA-Rh-CV1" secondAttribute="leading" constant="50" id="l9M-m4-BZe"/>
+                                    <constraint firstAttribute="bottom" secondItem="7f0-gw-opH" secondAttribute="bottom" constant="3" id="qwr-70-mhc"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fSN-dS-r8V"/>
@@ -116,6 +125,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="SiL-wE-5UD"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="buttonContent" destination="MqA-Rh-CV1" id="jbx-YM-f8G"/>
                         <outlet property="tableView" destination="Hc9-ah-wdz" id="7BM-vn-oqm"/>
                     </connections>
                 </viewController>
@@ -150,9 +160,6 @@
         <namedColor name="Gris">
             <color red="0.54900002479553223" green="0.54900002479553223" blue="0.54900002479553223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

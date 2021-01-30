@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A09ADC225C510DA00357D8E /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A09ADC125C510DA00357D8E /* OrderViewController.swift */; };
+		4A09ADCD25C5111800357D8E /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A09ADCC25C5111800357D8E /* Order.storyboard */; };
 		4A1260DD25B933DD003D0BEA /* HeaderAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1260DC25B933DD003D0BEA /* HeaderAccount.swift */; };
 		4A1260E525B93404003D0BEA /* HeaderAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1260E425B93404003D0BEA /* HeaderAccount.xib */; };
 		4A133FBE25ABAED600DF8E39 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A133FBD25ABAED600DF8E39 /* FoodTableViewCell.swift */; };
@@ -97,6 +99,8 @@
 /* Begin PBXFileReference section */
 		33E530F06872FCDCD041C1EB /* Pods-EatsApp-EatsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp-EatsAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-EatsApp-EatsAppUITests/Pods-EatsApp-EatsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		47DDE463AB1CFEBABA24F4F5 /* Pods-EatsApp-EatsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp-EatsAppUITests.release.xcconfig"; path = "Target Support Files/Pods-EatsApp-EatsAppUITests/Pods-EatsApp-EatsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4A09ADC125C510DA00357D8E /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		4A09ADCC25C5111800357D8E /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		4A1260DC25B933DD003D0BEA /* HeaderAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAccount.swift; sourceTree = "<group>"; };
 		4A1260E425B93404003D0BEA /* HeaderAccount.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderAccount.xib; sourceTree = "<group>"; };
 		4A133FBD25ABAED600DF8E39 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
@@ -228,6 +232,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4A09ADBF25C5102800357D8E /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				4A23B03D25AAD1E300FA066A /* MenuCells */,
+				4A80FF5325AAB5A20019C4F5 /* Header */,
+				4A9B8AB425AA71EE00874BBF /* Restaurant.storyboard */,
+				4A9B8ABC25AA740400874BBF /* RestaurantViewController.swift */,
+				4A133FBD25ABAED600DF8E39 /* FoodTableViewCell.swift */,
+			);
+			path = Restaurant;
+			sourceTree = "<group>";
+		};
+		4A09ADC025C5104800357D8E /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				4A09ADC125C510DA00357D8E /* OrderViewController.swift */,
+				4A09ADCC25C5111800357D8E /* Order.storyboard */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
 		4A1260DB25B93379003D0BEA /* HeaderAccount */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,14 +365,14 @@
 			path = Acconunt;
 			sourceTree = "<group>";
 		};
-		4A2B2994258ACF170045EAD0 /* Orders */ = {
+		4A2B2994258ACF170045EAD0 /* LastOrders */ = {
 			isa = PBXGroup;
 			children = (
 				4A2B299E258ACF5D0045EAD0 /* Orders.storyboard */,
 				4A4524BD25A13894004A480D /* LastOrdersViewController.swift */,
 				4A4524C525A13B63004A480D /* LastOrdesTableViewCell.swift */,
 			);
-			path = Orders;
+			path = LastOrders;
 			sourceTree = "<group>";
 		};
 		4A2B2995258ACF290045EAD0 /* Search */ = {
@@ -502,7 +527,7 @@
 		4A9B8AAC25AA693E00874BBF /* MainNav */ = {
 			isa = PBXGroup;
 			children = (
-				4A2B2994258ACF170045EAD0 /* Orders */,
+				4A2B2994258ACF170045EAD0 /* LastOrders */,
 				4A2B298E258AACAF0045EAD0 /* Acconunt */,
 				4A2B297F258AA5CA0045EAD0 /* Main */,
 				4A54D1B22584395500B64EE8 /* Home */,
@@ -515,11 +540,8 @@
 		4A9B8AB325AA71AD00874BBF /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
-				4A23B03D25AAD1E300FA066A /* MenuCells */,
-				4A80FF5325AAB5A20019C4F5 /* Header */,
-				4A9B8AB425AA71EE00874BBF /* Restaurant.storyboard */,
-				4A9B8ABC25AA740400874BBF /* RestaurantViewController.swift */,
-				4A133FBD25ABAED600DF8E39 /* FoodTableViewCell.swift */,
+				4A09ADC025C5104800357D8E /* Order */,
+				4A09ADBF25C5102800357D8E /* Restaurant */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -679,6 +701,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A09ADCD25C5111800357D8E /* Order.storyboard in Resources */,
 				4A279E782582EF9F0096F79A /* LogIn.storyboard in Resources */,
 				4A7C911525AE542800455A73 /* HeaderHome.xib in Resources */,
 				4A4168F225BA0F6300C47063 /* PayMethods.storyboard in Resources */,
@@ -869,6 +892,7 @@
 				4A4168D825BA022D00C47063 /* TermsViewController.swift in Sources */,
 				4AAC3B1025C13D360026F610 /* CategoriesViewController.swift in Sources */,
 				4A7C911025AE540100455A73 /* HeaderHome.swift in Sources */,
+				4A09ADC225C510DA00357D8E /* OrderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
