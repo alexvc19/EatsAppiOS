@@ -13,21 +13,6 @@ class CategoriesViewController: UIViewController {
     
     var cellNib = "restaurantCell"
     
-    var tabledata = [Restaurant]()
-    
-    func getFehData(){
-        
-        do {
-            let jsonData = jsonString.data(using: .utf8)!
-            let decoder = JSONDecoder()
-            tabledata = try! decoder.decode([Restaurant].self, from: jsonData)
-            
-            print(tabledata)
-            
-        }catch {
-            print(error)
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +26,6 @@ class CategoriesViewController: UIViewController {
         self.categoriesTableView.dataSource = self
         self.categoriesTableView.delegate = self
         
-        getFehData()
     }
     
 }
@@ -49,7 +33,8 @@ class CategoriesViewController: UIViewController {
 extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return tabledata.count
+        return 5
+        
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 10
@@ -70,9 +55,9 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
             cell.photoImageView.roundCorners([.topLeft, .topRight], radius: 5)
         }
         cell.selectionStyle = .none
-        cell.restaurantNameLabel?.text = tabledata[indexPath.section].name
-        cell.estimateTimeLabel?.text = tabledata[indexPath.section].estimateTime
-        cell.deliveryCost?.text = tabledata[indexPath.section].deliveryCost
+        cell.restaurantNameLabel?.text = "name"
+        cell.estimateTimeLabel?.text = "30 - 40 minutos"
+        cell.deliveryCost?.text = "$30"
         cell.photoImageView.image = UIImage(named: "pedido")
         
         return cell
@@ -83,7 +68,7 @@ extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
 extension RestaurantsTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource{
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

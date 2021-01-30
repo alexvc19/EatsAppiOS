@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="133" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hc9-ah-wdz">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="133" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hc9-ah-wdz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="707"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="hP9-yf-SLL" customClass="FoodTableViewCell" customModule="EatsApp" customModuleProvider="target">
@@ -86,14 +86,30 @@
                                     <outlet property="delegate" destination="Aer-Nu-MTG" id="7Ti-kM-qHP"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MqA-Rh-CV1">
+                                <rect key="frame" x="0.0" y="803" width="414" height="59"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7f0-gw-opH">
+                                        <rect key="frame" x="36" y="0.0" width="315" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" name="Amarillo"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fSN-dS-r8V"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Hc9-ah-wdz" firstAttribute="trailing" secondItem="fSN-dS-r8V" secondAttribute="trailing" id="43Z-gB-96Z"/>
-                            <constraint firstAttribute="bottom" secondItem="Hc9-ah-wdz" secondAttribute="bottom" id="YiE-fV-FT6"/>
+                            <constraint firstItem="MqA-Rh-CV1" firstAttribute="top" secondItem="Hc9-ah-wdz" secondAttribute="bottom" id="Ev4-1S-SAq"/>
+                            <constraint firstItem="MqA-Rh-CV1" firstAttribute="leading" secondItem="fSN-dS-r8V" secondAttribute="leading" id="Fjp-MD-yY8"/>
+                            <constraint firstItem="MqA-Rh-CV1" firstAttribute="bottom" secondItem="fSN-dS-r8V" secondAttribute="bottom" id="RBy-Fn-InQ"/>
                             <constraint firstItem="Hc9-ah-wdz" firstAttribute="leading" secondItem="fSN-dS-r8V" secondAttribute="leading" id="an2-sT-QP4"/>
+                            <constraint firstItem="Hc9-ah-wdz" firstAttribute="top" secondItem="fSN-dS-r8V" secondAttribute="top" id="juf-hJ-c21"/>
                             <constraint firstItem="Hc9-ah-wdz" firstAttribute="top" secondItem="fSN-dS-r8V" secondAttribute="top" id="uxD-SX-4uI"/>
+                            <constraint firstItem="MqA-Rh-CV1" firstAttribute="trailing" secondItem="fSN-dS-r8V" secondAttribute="trailing" id="xuT-4n-Y6Z"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Restaurante" leftItemsSupplementBackButton="YES" id="3Sm-bn-b9J">
@@ -128,9 +144,15 @@
     </scenes>
     <resources>
         <image name="Example" width="225" height="225"/>
+        <namedColor name="Amarillo">
+            <color red="0.94900000095367432" green="0.63499999046325684" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Gris">
             <color red="0.54900002479553223" green="0.54900002479553223" blue="0.54900002479553223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

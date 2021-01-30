@@ -93,12 +93,9 @@ class RestaurantViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         
         let header = HeaderRestaurant(frame: CGRect(x:0,y: -47,width: view.frame.size.width, height: 493))
-        let footer = UIView(frame: CGRect(x:0,y: 0,width: view.frame.size.width, height: 300))
-        
-        footer.backgroundColor = .red
-        
+    
         tableView.tableHeaderView = header
-        tableView.tableFooterView = footer
+       
        
     }
     
