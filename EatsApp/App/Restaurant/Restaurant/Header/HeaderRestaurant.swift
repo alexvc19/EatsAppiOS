@@ -19,7 +19,6 @@ class HeaderRestaurant: UIView, UICollectionViewDelegate {
     
     let cellIdentifier = "menucell"
     
-      
     
     private func initCollectionView() {
        

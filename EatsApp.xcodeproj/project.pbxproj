@@ -74,6 +74,8 @@
 		4ACB5138259FBCA1000E0857 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACB5137259FBCA1000E0857 /* SearchViewController.swift */; };
 		4ACB513D259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACB513C259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift */; };
 		4AD1F13525C3728E00046B5A /* Datos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1F13425C3728E00046B5A /* Datos.swift */; };
+		4AF2A1FF25C62B5900069534 /* HeaderOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF2A1FE25C62B5900069534 /* HeaderOrder.swift */; };
+		4AF2A20725C62B6F00069534 /* HeaderOrder.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AF2A20625C62B6F00069534 /* HeaderOrder.xib */; };
 		91735F173AB2F4C042811E38 /* Pods_EatsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D8B98B3FB8FD200C24DEB2 /* Pods_EatsAppTests.framework */; };
 		D1EAA3A44C0CF66EC91A3AFF /* Pods_EatsApp_EatsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF937E729FEBB71B275E2C88 /* Pods_EatsApp_EatsAppUITests.framework */; };
 		D5E7B422B0B5B7262D4BE7BD /* Pods_EatsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713C2A85BCA61D60A0A18FB9 /* Pods_EatsApp.framework */; };
@@ -173,6 +175,8 @@
 		4ACB5137259FBCA1000E0857 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4ACB513C259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		4AD1F13425C3728E00046B5A /* Datos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datos.swift; sourceTree = "<group>"; };
+		4AF2A1FE25C62B5900069534 /* HeaderOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderOrder.swift; sourceTree = "<group>"; };
+		4AF2A20625C62B6F00069534 /* HeaderOrder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderOrder.xib; sourceTree = "<group>"; };
 		713C2A85BCA61D60A0A18FB9 /* Pods_EatsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74560C490A2656D564FACB0E /* Pods-EatsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-EatsAppTests/Pods-EatsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AAC345E16794F51F44C9F5F0 /* Pods-EatsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp.release.xcconfig"; path = "Target Support Files/Pods-EatsApp/Pods-EatsApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -247,6 +251,7 @@
 		4A09ADC025C5104800357D8E /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				4AF2A1FD25C62B0000069534 /* Header */,
 				4A09ADC125C510DA00357D8E /* OrderViewController.swift */,
 				4A09ADCC25C5111800357D8E /* Order.storyboard */,
 			);
@@ -593,6 +598,15 @@
 			path = HardData;
 			sourceTree = "<group>";
 		};
+		4AF2A1FD25C62B0000069534 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				4AF2A1FE25C62B5900069534 /* HeaderOrder.swift */,
+				4AF2A20625C62B6F00069534 /* HeaderOrder.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -728,6 +742,7 @@
 				4A950BD225C2332C001812F7 /* CategoriesHeaderView.xib in Resources */,
 				4A2B2997258ACF4A0045EAD0 /* Search.storyboard in Resources */,
 				4A2B2990258AACC70045EAD0 /* Account.storyboard in Resources */,
+				4AF2A20725C62B6F00069534 /* HeaderOrder.xib in Resources */,
 				4A79010325948F600055852C /* Register.storyboard in Resources */,
 				4A7C912825AE562900455A73 /* SliderCollectionViewCell.xib in Resources */,
 			);
@@ -884,6 +899,7 @@
 				4A46ED81258DA756006CB62E /* SceneDelegate.swift in Sources */,
 				4AD1F13525C3728E00046B5A /* Datos.swift in Sources */,
 				4A79010B25948FD10055852C /* RegisterViewController.swift in Sources */,
+				4AF2A1FF25C62B5900069534 /* HeaderOrder.swift in Sources */,
 				4A4524BE25A13894004A480D /* LastOrdersViewController.swift in Sources */,
 				4A41690225BA3EB100C47063 /* PaymentMethodTableViewCell.swift in Sources */,
 				4A2B2972258AA40A0045EAD0 /* ViewController.swift in Sources */,

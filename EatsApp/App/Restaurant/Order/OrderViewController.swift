@@ -16,14 +16,44 @@ class OrderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let header = UIView(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.size.width, height: 200.0))
-        header.backgroundColor = .cyan
+        let header = HeaderOrder(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.size.width, height: 410.0))
         
         orderTableview.tableHeaderView = header
     }
     
 }
 extension OrderViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    //Titulos de las secciones
+     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let headerframe = tableView.frame
+        let title : UILabel = UILabel()
+        
+        title.frame = CGRect(x: 20, y: 20, width: headerframe.size.width, height: 25)
+        title.text = "Elige tu sushi"
+        title.textColor = .black
+        title.font = UIFont(name: "Helvetica-Bold", size: 21.0)
+        
+        let headerView:UIView = UIView(frame: CGRect(x: 0, y: 0, width: headerframe.size.width, height: headerframe.size.height))
+        
+        headerView.addSubview(title)
+        
+        return headerView
+    }
+    //Altura del seccion header
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50.0
+    }
+    
+    //Numero de secciones
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
