@@ -13,6 +13,11 @@ class OrderViewController: UIViewController {
     @IBOutlet weak var buttonContentView: UIView!
     @IBOutlet weak var addItemButtom: UIButton!
     
+    let data = [
+        ["apples","oranges","grapes"],
+        ["banana", "strawberry"]
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,16 +56,16 @@ extension OrderViewController: UITableViewDelegate, UITableViewDataSource{
     
     //Numero de secciones
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return data[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = orderTableview.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-    
+        let cell = orderTableview.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! orderTableViewCell
+        cell.itemName.text = data[indexPath.section][indexPath.row]
         return cell
     }
     

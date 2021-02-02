@@ -49,6 +49,7 @@
 		4A4F3F4B25AE802700B3F95F /* CardCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4F3F4A25AE802700B3F95F /* CardCollectionTableViewCell.xib */; };
 		4A4F3F5D25AE81E600B3F95F /* CardViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F3F5B25AE81E600B3F95F /* CardViewCell.swift */; };
 		4A4F3F5E25AE81E600B3F95F /* CardViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A4F3F5C25AE81E600B3F95F /* CardViewCell.xib */; };
+		4A4F774D25C8E83000EEE4D5 /* orderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F774C25C8E83000EEE4D5 /* orderTableViewCell.swift */; };
 		4A54D1B8258439CA00B64EE8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54D1B7258439CA00B64EE8 /* HomeViewController.swift */; };
 		4A68FD7225B960DC00F541DE /* OptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68FD7125B960DB00F541DE /* OptionsTableViewCell.swift */; };
 		4A79010325948F600055852C /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A79010225948F600055852C /* Register.storyboard */; };
@@ -149,6 +150,7 @@
 		4A4F3F4A25AE802700B3F95F /* CardCollectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardCollectionTableViewCell.xib; sourceTree = "<group>"; };
 		4A4F3F5B25AE81E600B3F95F /* CardViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewCell.swift; sourceTree = "<group>"; };
 		4A4F3F5C25AE81E600B3F95F /* CardViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewCell.xib; sourceTree = "<group>"; };
+		4A4F774C25C8E83000EEE4D5 /* orderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderTableViewCell.swift; sourceTree = "<group>"; };
 		4A54D1B7258439CA00B64EE8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4A68FD7125B960DB00F541DE /* OptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTableViewCell.swift; sourceTree = "<group>"; };
 		4A75A3292144AE9B99B9AC90 /* Pods-EatsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp.debug.xcconfig"; path = "Target Support Files/Pods-EatsApp/Pods-EatsApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				4AF2A1FD25C62B0000069534 /* Header */,
 				4A09ADC125C510DA00357D8E /* OrderViewController.swift */,
 				4A09ADCC25C5111800357D8E /* Order.storyboard */,
+				4A4F774C25C8E83000EEE4D5 /* orderTableViewCell.swift */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -886,6 +889,7 @@
 				4A4F3F4225AE7A5D00B3F95F /* CardCollectionTableViewCell.swift in Sources */,
 				4A279E292582E5B30096F79A /* AppDelegate.swift in Sources */,
 				4A2B2989258AA80B0045EAD0 /* TabBarViewController.swift in Sources */,
+				4A4F774D25C8E83000EEE4D5 /* orderTableViewCell.swift in Sources */,
 				4A4168E825BA0F1A00C47063 /* PayMethodsViewController.swift in Sources */,
 				4AAC3B1E25C13E720026F610 /* RestaurantsTableViewCell.swift in Sources */,
 				4A7C912725AE562900455A73 /* SliderCollectionViewCell.swift in Sources */,
