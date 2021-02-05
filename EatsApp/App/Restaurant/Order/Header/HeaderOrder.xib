@@ -53,6 +53,7 @@
                 <constraint firstItem="nBN-sD-Bwn" firstAttribute="top" secondItem="Cwr-Zl-aEg" secondAttribute="bottom" constant="5" id="Z6T-eh-yMr"/>
                 <constraint firstItem="nBN-sD-Bwn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="daD-7m-Kgf"/>
                 <constraint firstItem="GQM-2a-QfT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="q6y-ap-bdZ"/>
+                <constraint firstItem="jMI-DX-Wkj" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="yaW-yw-ThE"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
