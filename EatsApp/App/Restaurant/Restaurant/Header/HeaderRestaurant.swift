@@ -49,7 +49,7 @@ class HeaderRestaurant: UIView, UICollectionViewDelegate {
 extension HeaderRestaurant: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

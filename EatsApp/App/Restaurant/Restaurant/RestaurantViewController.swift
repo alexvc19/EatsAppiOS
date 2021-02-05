@@ -42,6 +42,7 @@ class RestaurantViewController: UIViewController, UIGestureRecognizerDelegate {
         
     ]
     
+    let storyBoardId = "Order"
 
 
     //MARK: - VIEWDIDLOAD
@@ -60,7 +61,8 @@ extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource{
     
     //MARK: - tableview delegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        let vc = UIStoryboard.init(name: storyBoardId, bundle: Bundle.main).instantiateViewController(withIdentifier: storyBoardId)
+        self.navigationController?.show(vc, sender: nil)
     }
     
     //Titulos de las secciones
@@ -97,7 +99,10 @@ extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource{
     //MARK: - tableview datasource
     //Data en las celdas
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier:"cell", for: indexPath) as! FoodTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier:"cell", for: indexPath) as? FoodTableViewCell else {
+            fatalError()
+        }
+        cell.selectionStyle = .none
         cell.nameFoodLabel?.text = foodNames[indexPath.section][indexPath.row]
         cell.priceFoodLabel?.text = foodPrice[indexPath.section][indexPath.row]
         cell.descriptionLabel?.text = foodDescription[indexPath.section][indexPath.row]

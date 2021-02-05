@@ -14,8 +14,8 @@ class OrderViewController: UIViewController {
     @IBOutlet weak var addItemButtom: UIButton!
     
     let data = [
-        ["apples","oranges","grapes"],
-        ["banana", "strawberry"]
+        ["Camaron","Res","Salmon","Alga"],
+        ["Camaron","Res","Salmon","Alga"],
     ]
     
     override func viewDidLoad() {
@@ -24,16 +24,11 @@ class OrderViewController: UIViewController {
         let header = HeaderOrder(frame: CGRect(x: 0.0, y: 0.0, width: view.frame.size.width, height: 410.0))
         
         orderTableview.tableHeaderView = header
-        
-        
     }
-    
-    
 }
 extension OrderViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         //select mark por section
         for row in 0..<tableView.numberOfRows(inSection: indexPath.section) {
             if let cell = tableView.cellForRow(at: IndexPath(row: row, section: indexPath.section)) {
@@ -75,6 +70,7 @@ extension OrderViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = orderTableview.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! orderTableViewCell
         
+        cell.selectionStyle = .none
         cell.itemName.text = data[indexPath.section][indexPath.row]
         
         return cell
