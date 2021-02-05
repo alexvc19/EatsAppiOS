@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A0786F125CD4F4200BF6742 /* TicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0786F025CD4F4200BF6742 /* TicketViewController.swift */; };
+		4A0786F925CD4F5D00BF6742 /* Ticket.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A0786F825CD4F5D00BF6742 /* Ticket.storyboard */; };
 		4A09ADC225C510DA00357D8E /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A09ADC125C510DA00357D8E /* OrderViewController.swift */; };
 		4A09ADCD25C5111800357D8E /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A09ADCC25C5111800357D8E /* Order.storyboard */; };
 		4A1260DD25B933DD003D0BEA /* HeaderAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1260DC25B933DD003D0BEA /* HeaderAccount.swift */; };
@@ -102,6 +104,8 @@
 /* Begin PBXFileReference section */
 		33E530F06872FCDCD041C1EB /* Pods-EatsApp-EatsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp-EatsAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-EatsApp-EatsAppUITests/Pods-EatsApp-EatsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		47DDE463AB1CFEBABA24F4F5 /* Pods-EatsApp-EatsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp-EatsAppUITests.release.xcconfig"; path = "Target Support Files/Pods-EatsApp-EatsAppUITests/Pods-EatsApp-EatsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4A0786F025CD4F4200BF6742 /* TicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewController.swift; sourceTree = "<group>"; };
+		4A0786F825CD4F5D00BF6742 /* Ticket.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ticket.storyboard; sourceTree = "<group>"; };
 		4A09ADC125C510DA00357D8E /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		4A09ADCC25C5111800357D8E /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		4A1260DC25B933DD003D0BEA /* HeaderAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAccount.swift; sourceTree = "<group>"; };
@@ -236,6 +240,15 @@
 				F3D8B98B3FB8FD200C24DEB2 /* Pods_EatsAppTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A0786EF25CD4EF300BF6742 /* Ticket */ = {
+			isa = PBXGroup;
+			children = (
+				4A0786F025CD4F4200BF6742 /* TicketViewController.swift */,
+				4A0786F825CD4F5D00BF6742 /* Ticket.storyboard */,
+			);
+			path = Ticket;
 			sourceTree = "<group>";
 		};
 		4A09ADBF25C5102800357D8E /* Restaurant */ = {
@@ -376,6 +389,7 @@
 		4A2B2994258ACF170045EAD0 /* LastOrders */ = {
 			isa = PBXGroup;
 			children = (
+				4A0786EF25CD4EF300BF6742 /* Ticket */,
 				4A2B299E258ACF5D0045EAD0 /* Orders.storyboard */,
 				4A4524BD25A13894004A480D /* LastOrdersViewController.swift */,
 				4A4524C525A13B63004A480D /* LastOrdesTableViewCell.swift */,
@@ -729,6 +743,7 @@
 				4A950C1325C2580F001812F7 /* CardMenuCollectionViewCell.xib in Resources */,
 				4A2EE10825BBFBC70034C37E /* Help.storyboard in Resources */,
 				4A4168F725BA0F7900C47063 /* InfoPersonal.storyboard in Resources */,
+				4A0786F925CD4F5D00BF6742 /* Ticket.storyboard in Resources */,
 				4A2DB48625873D260024163C /* GoogleService-Info.plist in Resources */,
 				4A2B2981258AA5FA0045EAD0 /* Main.storyboard in Resources */,
 				4A2B299F258ACF5D0045EAD0 /* Orders.storyboard in Resources */,
@@ -877,6 +892,7 @@
 			files = (
 				4A4168ED25BA0F3800C47063 /* InfoPersonalViewController.swift in Sources */,
 				4A23B03825AACECB00FA066A /* MenuCollectionViewCell.swift in Sources */,
+				4A0786F125CD4F4200BF6742 /* TicketViewController.swift in Sources */,
 				4A950BD325C2332C001812F7 /* CategoriesHeaderView.swift in Sources */,
 				4A2EE0FA25BBDD6C0034C37E /* LocationTableViewCell.swift in Sources */,
 				4A4524DB25A173F4004A480D /* AccountViewController.swift in Sources */,
