@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="416" height="424"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pedido" translatesAutoresizingMaskIntoConstraints="NO" id="jMI-DX-Wkj">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logotype" translatesAutoresizingMaskIntoConstraints="NO" id="jMI-DX-Wkj">
                     <rect key="frame" x="0.0" y="0.0" width="416" height="294"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="294" id="sc3-n0-1Ue"/>
@@ -62,7 +62,7 @@
         </view>
     </objects>
     <resources>
-        <image name="pedido" width="708" height="250"/>
+        <image name="Logotype" width="172" height="172"/>
         <namedColor name="Gris">
             <color red="0.54900002479553223" green="0.54900002479553223" blue="0.54900002479553223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

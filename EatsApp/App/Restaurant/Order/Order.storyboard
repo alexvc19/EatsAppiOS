@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Order View Controller-->
+        <!--Order-->
         <scene sceneID="E8U-a9-cS4">
             <objects>
-                <viewController storyboardIdentifier="Order" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b8k-ck-Np1" customClass="OrderViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Order" title="Order" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b8k-ck-Np1" customClass="OrderViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ti0-M2-bKe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,7 +107,9 @@
                             <constraint firstItem="YsG-CN-fbp" firstAttribute="trailing" secondItem="GdW-DX-Hem" secondAttribute="trailing" id="xVe-p9-pmQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3mc-40-49U"/>
+                    <navigationItem key="navigationItem" title="Order" leftItemsSupplementBackButton="YES" id="3mc-40-49U">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Hj6-VM-12K"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="addItemButtom" destination="8je-cq-Fpy" id="ds8-kx-qJc"/>
                         <outlet property="buttonContentView" destination="YsG-CN-fbp" id="msk-a2-Z88"/>

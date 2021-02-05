@@ -13,6 +13,7 @@ class CategoriesViewController: UIViewController {
     
     var cellNib = "restaurantCell"
     
+    let storyBoardId = "Restaurant"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,11 @@ class CategoriesViewController: UIViewController {
 }
 //MARK: - Restaurant Card Cell
 extension CategoriesViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = UIStoryboard.init(name: storyBoardId, bundle: Bundle.main).instantiateViewController(withIdentifier: storyBoardId)
+        self.navigationController?.show(vc, sender: nil)
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 5
