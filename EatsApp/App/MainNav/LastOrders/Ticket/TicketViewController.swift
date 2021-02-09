@@ -18,6 +18,7 @@ class TicketViewController: UIViewController {
     @IBOutlet weak var star4: UIButton!
     @IBOutlet weak var star5: UIButton!
     
+    @IBOutlet weak var itemsStack: UIStackView!
     @IBOutlet weak var textField: UITextView!
     
     let starIcon = "star.fill"
@@ -31,6 +32,18 @@ class TicketViewController: UIViewController {
         
         textField.layer.borderColor = UIColor(named: "Amarillo")?.cgColor
         textField.layer.borderWidth = 0.5
+        
+        
+        let item = ItemView(frame: CGRect(x: 0, y: 0, width: 372, height: 51))
+        let item2 = ItemView()
+        
+        itemsStack.addArrangedSubview(item2)
+        itemsStack.addArrangedSubview(item)
+      
+        
+ 
+        itemsStack.autoresizingMask = [UIView.AutoresizingMask.flexibleLeftMargin, UIView.AutoresizingMask.flexibleRightMargin, UIView.AutoresizingMask.flexibleTopMargin, UIView.AutoresizingMask.flexibleBottomMargin]
+     
         
     }
     
