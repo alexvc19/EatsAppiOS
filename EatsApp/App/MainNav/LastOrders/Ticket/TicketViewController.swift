@@ -11,6 +11,13 @@ class TicketViewController: UIViewController {
     
     @IBOutlet weak var ticketTableVIew:UITableView!
     
+    var items = [
+        "peach",
+        "apple",
+        "orage",
+        "grapes"
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,13 +37,15 @@ class TicketViewController: UIViewController {
 }
 extension TicketViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = ticketTableVIew.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
-        cell.textLabel?.text = "Test"
+        guard let cell = ticketTableVIew.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ItemTableViewCell else {
+            fatalError()
+        }
+        cell.nameItem.text = items[indexPath.row]
+        cell.selectionStyle = .none
         
         return cell
     }

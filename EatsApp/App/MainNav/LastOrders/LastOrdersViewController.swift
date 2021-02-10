@@ -9,15 +9,14 @@ import UIKit
 
 class LastOrdersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var lastOrdersTableView: UITableView!
+    let storyBoardId = "Ticket"
     
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 50
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 10 // Espacio que deseas tener.
-//    }
+    @IBOutlet weak var lastOrdersTableView: UITableView!
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = UIStoryboard.init(name: storyBoardId, bundle: Bundle.main).instantiateViewController(withIdentifier: storyBoardId)
+        self.navigationController?.show(vc, sender: nil)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 30
@@ -39,16 +38,5 @@ class LastOrdersViewController: UIViewController, UITableViewDelegate, UITableVi
 
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

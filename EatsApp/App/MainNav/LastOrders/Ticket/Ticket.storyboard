@@ -12,22 +12,55 @@
         <!--Ticket View Controller-->
         <scene sceneID="YGK-4l-u5V">
             <objects>
-                <viewController id="Qay-4D-7rP" customClass="TicketViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Ticket" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qay-4D-7rP" customClass="TicketViewController" customModule="EatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Fj-nJ-uB5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zkK-Hs-2cu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="29" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zkK-Hs-2cu">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Oyq-xP-hoJ">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="29" id="Oyq-xP-hoJ" customClass="ItemTableViewCell" customModule="EatsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="29"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oyq-xP-hoJ" id="Vva-07-5IR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="29"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfg-3z-Rgv">
+                                                    <rect key="frame" x="20" y="5" width="9" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i24-nA-vpr">
+                                                    <rect key="frame" x="39" y="5" width="84" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sW0-Pf-OEQ">
+                                                    <rect key="frame" x="336" y="5" width="58" height="19"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="i24-nA-vpr" firstAttribute="centerY" secondItem="zfg-3z-Rgv" secondAttribute="centerY" id="2KL-Df-TRv"/>
+                                                <constraint firstItem="sW0-Pf-OEQ" firstAttribute="centerY" secondItem="i24-nA-vpr" secondAttribute="centerY" id="DtR-eG-JCu"/>
+                                                <constraint firstItem="i24-nA-vpr" firstAttribute="leading" secondItem="zfg-3z-Rgv" secondAttribute="trailing" constant="10" id="ThY-kt-nRR"/>
+                                                <constraint firstAttribute="bottom" secondItem="zfg-3z-Rgv" secondAttribute="bottom" constant="5" id="TrH-Wi-f4v"/>
+                                                <constraint firstItem="zfg-3z-Rgv" firstAttribute="leading" secondItem="Vva-07-5IR" secondAttribute="leading" constant="20" id="iZ4-8O-s3b"/>
+                                                <constraint firstAttribute="trailing" secondItem="sW0-Pf-OEQ" secondAttribute="trailing" constant="20" id="pBp-Hl-Zau"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameItem" destination="i24-nA-vpr" id="83b-mF-Yhw"/>
+                                            <outlet property="numOfItems" destination="zfg-3z-Rgv" id="jtZ-8V-w56"/>
+                                            <outlet property="priceItem" destination="sW0-Pf-OEQ" id="s5b-wd-Mxo"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

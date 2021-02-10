@@ -67,7 +67,7 @@ class StarsView: UIView {
     private func commonInit(){
         let viewFromXib = Bundle.main.loadNibNamed("StarsView", owner: self, options: nil)![0] as! UIView
     
-        viewFromXib.frame = self.bounds
+        
         addSubview(viewFromXib)
        
     }
