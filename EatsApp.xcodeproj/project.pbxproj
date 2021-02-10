@@ -56,6 +56,10 @@
 		4A4F774D25C8E83000EEE4D5 /* orderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F774C25C8E83000EEE4D5 /* orderTableViewCell.swift */; };
 		4A54D1B8258439CA00B64EE8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A54D1B7258439CA00B64EE8 /* HomeViewController.swift */; };
 		4A68FD7225B960DC00F541DE /* OptionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A68FD7125B960DB00F541DE /* OptionsTableViewCell.swift */; };
+		4A723BBD25D476C8007F5632 /* TicketHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A723BBC25D476C8007F5632 /* TicketHeaderView.swift */; };
+		4A723BC425D476E9007F5632 /* TicketHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A723BC325D476E9007F5632 /* TicketHeaderView.xib */; };
+		4A723BCA25D478AE007F5632 /* TicketFooderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A723BC925D478AE007F5632 /* TicketFooderView.swift */; };
+		4A723BD325D478D3007F5632 /* TicketFooderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A723BD225D478D3007F5632 /* TicketFooderView.xib */; };
 		4A79010325948F600055852C /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A79010225948F600055852C /* Register.storyboard */; };
 		4A79010B25948FD10055852C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79010A25948FD10055852C /* RegisterViewController.swift */; };
 		4A7C911025AE540100455A73 /* HeaderHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7C910F25AE540100455A73 /* HeaderHome.swift */; };
@@ -161,6 +165,10 @@
 		4A4F774C25C8E83000EEE4D5 /* orderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orderTableViewCell.swift; sourceTree = "<group>"; };
 		4A54D1B7258439CA00B64EE8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4A68FD7125B960DB00F541DE /* OptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTableViewCell.swift; sourceTree = "<group>"; };
+		4A723BBC25D476C8007F5632 /* TicketHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketHeaderView.swift; sourceTree = "<group>"; };
+		4A723BC325D476E9007F5632 /* TicketHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketHeaderView.xib; sourceTree = "<group>"; };
+		4A723BC925D478AE007F5632 /* TicketFooderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketFooderView.swift; sourceTree = "<group>"; };
+		4A723BD225D478D3007F5632 /* TicketFooderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketFooderView.xib; sourceTree = "<group>"; };
 		4A75A3292144AE9B99B9AC90 /* Pods-EatsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp.debug.xcconfig"; path = "Target Support Files/Pods-EatsApp/Pods-EatsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4A79010225948F600055852C /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		4A79010A25948FD10055852C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -249,6 +257,8 @@
 		4A0786EF25CD4EF300BF6742 /* Ticket */ = {
 			isa = PBXGroup;
 			children = (
+				4A723BC825D47884007F5632 /* Fooder */,
+				4A723BBB25D47673007F5632 /* Header */,
 				4A37873025D1F1390022D8CD /* ItemsCell */,
 				4A0786F025CD4F4200BF6742 /* TicketViewController.swift */,
 				4A0786F825CD4F5D00BF6742 /* Ticket.storyboard */,
@@ -521,6 +531,24 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		4A723BBB25D47673007F5632 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				4A723BBC25D476C8007F5632 /* TicketHeaderView.swift */,
+				4A723BC325D476E9007F5632 /* TicketHeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		4A723BC825D47884007F5632 /* Fooder */ = {
+			isa = PBXGroup;
+			children = (
+				4A723BC925D478AE007F5632 /* TicketFooderView.swift */,
+				4A723BD225D478D3007F5632 /* TicketFooderView.xib */,
+			);
+			path = Fooder;
+			sourceTree = "<group>";
+		};
 		4A7C910B25AE537700455A73 /* Header */ = {
 			isa = PBXGroup;
 			children = (
@@ -755,6 +783,7 @@
 				4A4168DD25BA025600C47063 /* TermsViewController.storyboard in Resources */,
 				4A37873725D1F1980022D8CD /* ItemView.xib in Resources */,
 				4A279E352582E5B70096F79A /* LaunchScreen.storyboard in Resources */,
+				4A723BD325D478D3007F5632 /* TicketFooderView.xib in Resources */,
 				4A950C1325C2580F001812F7 /* CardMenuCollectionViewCell.xib in Resources */,
 				4A2EE10825BBFBC70034C37E /* Help.storyboard in Resources */,
 				4A4168F725BA0F7900C47063 /* InfoPersonal.storyboard in Resources */,
@@ -764,6 +793,7 @@
 				4A2B299F258ACF5D0045EAD0 /* Orders.storyboard in Resources */,
 				4A80FF5825AAB6400019C4F5 /* HeaderRestaurant.xib in Resources */,
 				4A279E322582E5B70096F79A /* Assets.xcassets in Resources */,
+				4A723BC425D476E9007F5632 /* TicketHeaderView.xib in Resources */,
 				4A23B03925AACECB00FA066A /* MenuCollectionViewCell.xib in Resources */,
 				4A4F3F5E25AE81E600B3F95F /* CardViewCell.xib in Resources */,
 				4A4F3F4B25AE802700B3F95F /* CardCollectionTableViewCell.xib in Resources */,
@@ -914,11 +944,13 @@
 				4A4524DB25A173F4004A480D /* AccountViewController.swift in Sources */,
 				4A4524C625A13B63004A480D /* LastOrdesTableViewCell.swift in Sources */,
 				4A7C912E25AE563E00455A73 /* CategoriesCollectionViewCell.swift in Sources */,
+				4A723BBD25D476C8007F5632 /* TicketHeaderView.swift in Sources */,
 				4ACB5138259FBCA1000E0857 /* SearchViewController.swift in Sources */,
 				4A279E852582F0830096F79A /* LogInViewController.swift in Sources */,
 				4A950C1225C2580F001812F7 /* CardMenuCollectionViewCell.swift in Sources */,
 				4A2EE0ED25BBD3BF0034C37E /* LocationsViewController.swift in Sources */,
 				4A4F3F4225AE7A5D00B3F95F /* CardCollectionTableViewCell.swift in Sources */,
+				4A723BCA25D478AE007F5632 /* TicketFooderView.swift in Sources */,
 				4A279E292582E5B30096F79A /* AppDelegate.swift in Sources */,
 				4A2B2989258AA80B0045EAD0 /* TabBarViewController.swift in Sources */,
 				4A4F774D25C8E83000EEE4D5 /* orderTableViewCell.swift in Sources */,
