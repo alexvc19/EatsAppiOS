@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,11 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TicketFooderView" customModule="EatsApp" customModuleProvider="target">
             <connections>
-                <outlet property="star1" destination="i6H-SE-you" id="GP2-0s-0t2"/>
-                <outlet property="star2" destination="fha-d2-djS" id="AZ5-o0-DXx"/>
-                <outlet property="star3" destination="2pu-My-WdJ" id="swo-xN-xz1"/>
-                <outlet property="star4" destination="eST-23-f3M" id="pl6-MJ-VgS"/>
-                <outlet property="star5" destination="EVr-pB-qPL" id="Nka-pV-ChB"/>
                 <outlet property="textField" destination="GEt-9N-gSn" id="bB6-Uh-Iq9"/>
             </connections>
         </placeholder>
@@ -49,90 +43,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dob-hS-Xlr">
-                    <rect key="frame" x="20" y="85.5" width="170" height="34"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6H-SE-you">
-                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="34" id="BdX-6G-Lvz"/>
-                                <constraint firstAttribute="height" constant="34" id="l87-Og-GvD"/>
-                            </constraints>
-                            <color key="tintColor" name="AmarilloClaro"/>
-                            <state key="normal">
-                                <imageReference key="image" image="star" catalog="system" symbolScale="default" renderingMode="template"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="23"/>
-                            </state>
-                            <connections>
-                                <action selector="pressStar1:" destination="-1" eventType="touchUpInside" id="5K1-ab-KlX"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fha-d2-djS">
-                            <rect key="frame" x="34" y="0.0" width="34" height="34"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="34" id="69n-DY-lbb"/>
-                                <constraint firstAttribute="height" constant="34" id="K9n-BX-WVl"/>
-                            </constraints>
-                            <color key="tintColor" name="AmarilloClaro"/>
-                            <state key="normal">
-                                <imageReference key="image" image="star" catalog="system" symbolScale="default" renderingMode="template"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="23"/>
-                            </state>
-                            <connections>
-                                <action selector="pressStar2:" destination="-1" eventType="touchUpInside" id="Qy1-6s-rdK"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pu-My-WdJ">
-                            <rect key="frame" x="68" y="0.0" width="34" height="34"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="34" id="5fW-6J-b7s"/>
-                                <constraint firstAttribute="height" constant="34" id="Y9N-JX-G4d"/>
-                            </constraints>
-                            <color key="tintColor" name="AmarilloClaro"/>
-                            <state key="normal">
-                                <imageReference key="image" image="star" catalog="system" symbolScale="default" renderingMode="template"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="23"/>
-                            </state>
-                            <connections>
-                                <action selector="pressStar3:" destination="-1" eventType="touchUpInside" id="Ajv-Rn-Gia"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eST-23-f3M">
-                            <rect key="frame" x="102" y="0.0" width="34" height="34"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="34" id="fD1-4f-qU2"/>
-                                <constraint firstAttribute="width" constant="34" id="pAL-Ia-jfQ"/>
-                            </constraints>
-                            <color key="tintColor" name="AmarilloClaro"/>
-                            <state key="normal">
-                                <imageReference key="image" image="star" catalog="system" symbolScale="default" renderingMode="template"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="23"/>
-                            </state>
-                            <connections>
-                                <action selector="pressStar4:" destination="-1" eventType="touchUpInside" id="kGL-SB-Wuv"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EVr-pB-qPL">
-                            <rect key="frame" x="136" y="0.0" width="34" height="34"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="34" id="3me-iF-lia"/>
-                                <constraint firstAttribute="width" constant="34" id="bUh-ag-Egk"/>
-                            </constraints>
-                            <color key="tintColor" name="AmarilloClaro"/>
-                            <state key="normal">
-                                <imageReference key="image" image="star" catalog="system" symbolScale="default" renderingMode="template"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="23"/>
-                            </state>
-                            <connections>
-                                <action selector="pressStar5:" destination="-1" eventType="touchUpInside" id="1Yx-IY-khs"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="34" id="166-CH-exU"/>
-                        <constraint firstAttribute="width" constant="170" id="psB-WG-And"/>
-                    </constraints>
-                </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VlS-iF-SpE">
                     <rect key="frame" x="84" y="239.5" width="246" height="41"/>
                     <color key="backgroundColor" name="Rojo"/>
@@ -149,22 +59,31 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vMq-gM-lzQ" customClass="StarsView" customModule="EatsApp" customModuleProvider="target">
+                    <rect key="frame" x="20" y="85.5" width="170" height="34"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="HEm-0U-Pwn"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="h9J-u1-Yhh" firstAttribute="leading" secondItem="QXp-Kl-Rdd" secondAttribute="leading" id="1Ol-Rk-NpK"/>
                 <constraint firstAttribute="trailing" secondItem="h9J-u1-Yhh" secondAttribute="trailing" constant="20" id="2AJ-rQ-7x6"/>
-                <constraint firstItem="Dob-hS-Xlr" firstAttribute="top" secondItem="h9J-u1-Yhh" secondAttribute="bottom" constant="10" id="8h7-7S-4bs"/>
+                <constraint firstItem="vMq-gM-lzQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="3zF-Ab-eiX"/>
                 <constraint firstItem="QXp-Kl-Rdd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="DTO-ho-MWO"/>
-                <constraint firstItem="GEt-9N-gSn" firstAttribute="top" secondItem="Dob-hS-Xlr" secondAttribute="bottom" constant="10" id="Kcb-AB-ZFV"/>
-                <constraint firstItem="Dob-hS-Xlr" firstAttribute="leading" secondItem="h9J-u1-Yhh" secondAttribute="leading" id="ORp-hC-BRt"/>
+                <constraint firstItem="vMq-gM-lzQ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="170:301" id="IAq-Gq-e7t"/>
+                <constraint firstItem="vMq-gM-lzQ" firstAttribute="leading" secondItem="h9J-u1-Yhh" secondAttribute="leading" id="JLM-FH-eiY"/>
+                <constraint firstItem="GEt-9N-gSn" firstAttribute="top" secondItem="vMq-gM-lzQ" secondAttribute="bottom" constant="10" id="Jwf-gY-5CQ"/>
                 <constraint firstItem="QXp-Kl-Rdd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="RhU-15-d4G"/>
                 <constraint firstItem="GEt-9N-gSn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Y0N-1p-Uo1"/>
                 <constraint firstItem="VlS-iF-SpE" firstAttribute="centerX" secondItem="GEt-9N-gSn" secondAttribute="centerX" id="YbH-n4-nCr"/>
                 <constraint firstItem="h9J-u1-Yhh" firstAttribute="top" secondItem="QXp-Kl-Rdd" secondAttribute="bottom" constant="5" id="m2B-5O-70g"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GEt-9N-gSn" secondAttribute="trailing" constant="20" id="vU4-VQ-4u1"/>
                 <constraint firstItem="VlS-iF-SpE" firstAttribute="top" secondItem="GEt-9N-gSn" secondAttribute="bottom" constant="20" id="wJe-36-DWd"/>
+                <constraint firstItem="vMq-gM-lzQ" firstAttribute="top" secondItem="h9J-u1-Yhh" secondAttribute="bottom" constant="10" id="yz1-YG-clk"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
@@ -173,10 +92,6 @@
         </view>
     </objects>
     <resources>
-        <image name="star" catalog="system" width="128" height="116"/>
-        <namedColor name="AmarilloClaro">
-            <color red="1" green="0.82745098039215681" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Rojo">
             <color red="1" green="0.36100000143051147" blue="0.36100000143051147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -185,6 +100,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

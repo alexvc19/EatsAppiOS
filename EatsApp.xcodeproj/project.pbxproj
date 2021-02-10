@@ -60,6 +60,8 @@
 		4A723BC425D476E9007F5632 /* TicketHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A723BC325D476E9007F5632 /* TicketHeaderView.xib */; };
 		4A723BCA25D478AE007F5632 /* TicketFooderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A723BC925D478AE007F5632 /* TicketFooderView.swift */; };
 		4A723BD325D478D3007F5632 /* TicketFooderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A723BD225D478D3007F5632 /* TicketFooderView.xib */; };
+		4A723BDD25D4926F007F5632 /* StarsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A723BDC25D4926F007F5632 /* StarsView.xib */; };
+		4A723BE225D49294007F5632 /* StarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A723BE125D49294007F5632 /* StarsView.swift */; };
 		4A79010325948F600055852C /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A79010225948F600055852C /* Register.storyboard */; };
 		4A79010B25948FD10055852C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A79010A25948FD10055852C /* RegisterViewController.swift */; };
 		4A7C911025AE540100455A73 /* HeaderHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7C910F25AE540100455A73 /* HeaderHome.swift */; };
@@ -169,6 +171,8 @@
 		4A723BC325D476E9007F5632 /* TicketHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketHeaderView.xib; sourceTree = "<group>"; };
 		4A723BC925D478AE007F5632 /* TicketFooderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketFooderView.swift; sourceTree = "<group>"; };
 		4A723BD225D478D3007F5632 /* TicketFooderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicketFooderView.xib; sourceTree = "<group>"; };
+		4A723BDC25D4926F007F5632 /* StarsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarsView.xib; sourceTree = "<group>"; };
+		4A723BE125D49294007F5632 /* StarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsView.swift; sourceTree = "<group>"; };
 		4A75A3292144AE9B99B9AC90 /* Pods-EatsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp.debug.xcconfig"; path = "Target Support Files/Pods-EatsApp/Pods-EatsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4A79010225948F600055852C /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		4A79010A25948FD10055852C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -492,6 +496,7 @@
 		4A46ED88258DB321006CB62E /* App */ = {
 			isa = PBXGroup;
 			children = (
+				4A723BDA25D4923A007F5632 /* ReusableViews */,
 				4AAC3AF425C137140026F610 /* Categories */,
 				4A4168D625BA01EB00C47063 /* Terms */,
 				4A9B8AB325AA71AD00874BBF /* Restaurant */,
@@ -547,6 +552,23 @@
 				4A723BD225D478D3007F5632 /* TicketFooderView.xib */,
 			);
 			path = Fooder;
+			sourceTree = "<group>";
+		};
+		4A723BDA25D4923A007F5632 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				4A723BDB25D49252007F5632 /* Stars */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		4A723BDB25D49252007F5632 /* Stars */ = {
+			isa = PBXGroup;
+			children = (
+				4A723BDC25D4926F007F5632 /* StarsView.xib */,
+				4A723BE125D49294007F5632 /* StarsView.swift */,
+			);
+			path = Stars;
 			sourceTree = "<group>";
 		};
 		4A7C910B25AE537700455A73 /* Header */ = {
@@ -794,6 +816,7 @@
 				4A80FF5825AAB6400019C4F5 /* HeaderRestaurant.xib in Resources */,
 				4A279E322582E5B70096F79A /* Assets.xcassets in Resources */,
 				4A723BC425D476E9007F5632 /* TicketHeaderView.xib in Resources */,
+				4A723BDD25D4926F007F5632 /* StarsView.xib in Resources */,
 				4A23B03925AACECB00FA066A /* MenuCollectionViewCell.xib in Resources */,
 				4A4F3F5E25AE81E600B3F95F /* CardViewCell.xib in Resources */,
 				4A4F3F4B25AE802700B3F95F /* CardCollectionTableViewCell.xib in Resources */,
@@ -972,6 +995,7 @@
 				4A41690225BA3EB100C47063 /* PaymentMethodTableViewCell.swift in Sources */,
 				4A2B2972258AA40A0045EAD0 /* ViewController.swift in Sources */,
 				4A9B8ABD25AA740400874BBF /* RestaurantViewController.swift in Sources */,
+				4A723BE225D49294007F5632 /* StarsView.swift in Sources */,
 				4A1260DD25B933DD003D0BEA /* HeaderAccount.swift in Sources */,
 				4A4168D825BA022D00C47063 /* TermsViewController.swift in Sources */,
 				4AAC3B1025C13D360026F610 /* CategoriesViewController.swift in Sources */,

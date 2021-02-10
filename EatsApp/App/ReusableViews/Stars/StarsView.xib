@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StarsView" customModule="EatsApp" customModuleProvider="target">
+            <connections>
+                <outlet property="star1" destination="xGI-XR-WZx" id="HF2-1u-qHK"/>
+                <outlet property="star2" destination="jLw-Qv-707" id="WCh-fG-1n5"/>
+                <outlet property="star3" destination="8Ta-bF-Xeh" id="FTG-Kk-zhp"/>
+                <outlet property="star4" destination="gzG-NS-g3X" id="tlm-1p-XaK"/>
+                <outlet property="star5" destination="p4C-Pk-V08" id="n64-7O-vvc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="170" height="34"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="Fpk-p0-SIw">
+                    <rect key="frame" x="0.0" y="0.0" width="170" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGI-XR-WZx">
+                            <rect key="frame" x="0.0" y="0.0" width="34" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="Gb9-dh-RP0"/>
+                                <constraint firstAttribute="width" constant="34" id="hzQ-av-Nq3"/>
+                            </constraints>
+                            <color key="tintColor" name="AmarilloClaro"/>
+                            <state key="normal">
+                                <imageReference key="image" image="star" catalog="system" symbolScale="default" renderingMode="template"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="23"/>
+                            </state>
+                            <connections>
+                                <action selector="pressStar1:" destination="-1" eventType="touchUpInside" id="cn9-62-SK8"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLw-Qv-707">
+                            <rect key="frame" x="34" y="0.0" width="34" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="3fI-Hh-8G7"/>
+                                <constraint firstAttribute="width" constant="34" id="D3q-N7-L8l"/>
+                            </constraints>
+                            <color key="tintColor" name="AmarilloClaro"/>
+                            <state key="normal">
+                                <imageReference key="image" image="star" catalog="system" symbolScale="default" renderingMode="template"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="23"/>
+                            </state>
+                            <connections>
+                                <action selector="pressStar2:" destination="-1" eventType="touchUpInside" id="kW6-fG-yxS"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ta-bF-Xeh">
+                            <rect key="frame" x="68" y="0.0" width="34" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="1kH-5l-Ame"/>
+                                <constraint firstAttribute="width" constant="34" id="qc5-Rf-ooR"/>
+                            </constraints>
+                            <color key="tintColor" name="AmarilloClaro"/>
+                            <state key="normal">
+                                <imageReference key="image" image="star" catalog="system" symbolScale="default" renderingMode="template"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="23"/>
+                            </state>
+                            <connections>
+                                <action selector="pressStar3:" destination="-1" eventType="touchUpInside" id="avy-pw-RqG"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzG-NS-g3X">
+                            <rect key="frame" x="102" y="0.0" width="34" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="34" id="YSk-D6-oON"/>
+                                <constraint firstAttribute="height" constant="34" id="YWQ-Dj-Hcz"/>
+                            </constraints>
+                            <color key="tintColor" name="AmarilloClaro"/>
+                            <state key="normal">
+                                <imageReference key="image" image="star" catalog="system" symbolScale="default" renderingMode="template"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="23"/>
+                            </state>
+                            <connections>
+                                <action selector="pressStar4:" destination="-1" eventType="touchUpInside" id="bFP-sx-q5i"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4C-Pk-V08">
+                            <rect key="frame" x="136" y="0.0" width="34" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="34" id="9oq-zy-90N"/>
+                                <constraint firstAttribute="width" constant="34" id="as7-Ca-hbL"/>
+                            </constraints>
+                            <color key="tintColor" name="AmarilloClaro"/>
+                            <state key="normal">
+                                <imageReference key="image" image="star" catalog="system" symbolScale="default" renderingMode="template"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="23"/>
+                            </state>
+                            <connections>
+                                <action selector="pressStar5:" destination="-1" eventType="touchUpInside" id="uOD-2I-KRi"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Fpk-p0-SIw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0k5-Wh-dhw"/>
+                <constraint firstItem="Fpk-p0-SIw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mL7-Wv-8Jq"/>
+                <constraint firstAttribute="trailing" secondItem="Fpk-p0-SIw" secondAttribute="trailing" id="tFn-HL-Wyz"/>
+                <constraint firstItem="Fpk-p0-SIw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zxM-dN-o4j"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-59.420289855072468" y="363.61607142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <namedColor name="AmarilloClaro">
+            <color red="1" green="0.82745098039215681" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
