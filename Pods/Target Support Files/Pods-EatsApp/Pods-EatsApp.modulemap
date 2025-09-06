@@ -1,6 +1,0 @@
-framework module Pods_EatsApp {
-  umbrella header "Pods-EatsApp-umbrella.h"
-
-  export *
-  module * { export * }
-}

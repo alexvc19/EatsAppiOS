@@ -3,20 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4A1260DD25B933DD003D0BEA /* HeaderAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1260DC25B933DD003D0BEA /* HeaderAccount.swift */; };
 		4A1260E525B93404003D0BEA /* HeaderAccount.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A1260E425B93404003D0BEA /* HeaderAccount.xib */; };
 		4A133FBE25ABAED600DF8E39 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A133FBD25ABAED600DF8E39 /* FoodTableViewCell.swift */; };
-		4A21073925BC2B0C00A6ED7A /* Encodable Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21073225BC2B0B00A6ED7A /* Encodable Extensions.swift */; };
-		4A21073A25BC2B0C00A6ED7A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21073325BC2B0B00A6ED7A /* User.swift */; };
-		4A21073B25BC2B0C00A6ED7A /* FIRFirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21073425BC2B0B00A6ED7A /* FIRFirestoreService.swift */; };
-		4A21073C25BC2B0C00A6ED7A /* FIRCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21073525BC2B0B00A6ED7A /* FIRCollectionReference.swift */; };
-		4A21073D25BC2B0C00A6ED7A /* PhotosCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21073625BC2B0B00A6ED7A /* PhotosCategories.swift */; };
-		4A21073E25BC2B0C00A6ED7A /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21073725BC2B0B00A6ED7A /* Photos.swift */; };
-		4A21073F25BC2B0C00A6ED7A /* Snapshot Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A21073825BC2B0C00A6ED7A /* Snapshot Extensions.swift */; };
 		4A23B03825AACECB00FA066A /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23B03625AACECB00FA066A /* MenuCollectionViewCell.swift */; };
 		4A23B03925AACECB00FA066A /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A23B03725AACECB00FA066A /* MenuCollectionViewCell.xib */; };
 		4A279E292582E5B30096F79A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A279E282582E5B30096F79A /* AppDelegate.swift */; };
@@ -72,7 +65,6 @@
 		4ACB513D259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACB513C259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift */; };
 		91735F173AB2F4C042811E38 /* Pods_EatsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D8B98B3FB8FD200C24DEB2 /* Pods_EatsAppTests.framework */; };
 		D1EAA3A44C0CF66EC91A3AFF /* Pods_EatsApp_EatsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF937E729FEBB71B275E2C88 /* Pods_EatsApp_EatsAppUITests.framework */; };
-		D5E7B422B0B5B7262D4BE7BD /* Pods_EatsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 713C2A85BCA61D60A0A18FB9 /* Pods_EatsApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +85,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		33E530F06872FCDCD041C1EB /* Pods-EatsApp-EatsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp-EatsAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-EatsApp-EatsAppUITests/Pods-EatsApp-EatsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		47DDE463AB1CFEBABA24F4F5 /* Pods-EatsApp-EatsAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp-EatsAppUITests.release.xcconfig"; path = "Target Support Files/Pods-EatsApp-EatsAppUITests/Pods-EatsApp-EatsAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4A1260DC25B933DD003D0BEA /* HeaderAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderAccount.swift; sourceTree = "<group>"; };
 		4A1260E425B93404003D0BEA /* HeaderAccount.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderAccount.xib; sourceTree = "<group>"; };
 		4A133FBD25ABAED600DF8E39 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
@@ -150,7 +140,6 @@
 		4A4F3F5C25AE81E600B3F95F /* CardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCollectionViewCell.xib; sourceTree = "<group>"; };
 		4A54D1B7258439CA00B64EE8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4A68FD7125B960DB00F541DE /* OptionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTableViewCell.swift; sourceTree = "<group>"; };
-		4A75A3292144AE9B99B9AC90 /* Pods-EatsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp.debug.xcconfig"; path = "Target Support Files/Pods-EatsApp/Pods-EatsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4A79010225948F600055852C /* Register.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
 		4A79010A25948FD10055852C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4A7C910F25AE540100455A73 /* HeaderHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderHome.swift; sourceTree = "<group>"; };
@@ -166,10 +155,7 @@
 		4ACB5137259FBCA1000E0857 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		4ACB513C259FBF40000E0857 /* PrincipalCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		713C2A85BCA61D60A0A18FB9 /* Pods_EatsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		74560C490A2656D564FACB0E /* Pods-EatsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-EatsAppTests/Pods-EatsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AAC345E16794F51F44C9F5F0 /* Pods-EatsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsApp.release.xcconfig"; path = "Target Support Files/Pods-EatsApp/Pods-EatsApp.release.xcconfig"; sourceTree = "<group>"; };
 		BF937E729FEBB71B275E2C88 /* Pods_EatsApp_EatsAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatsApp_EatsAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAB6CA896CE50409144A8859 /* Pods-EatsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EatsAppTests.release.xcconfig"; path = "Target Support Files/Pods-EatsAppTests/Pods-EatsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		F3D8B98B3FB8FD200C24DEB2 /* Pods_EatsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EatsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -178,7 +164,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5E7B422B0B5B7262D4BE7BD /* Pods_EatsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,19 +186,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03B16568E814CDE275363E3D /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4A75A3292144AE9B99B9AC90 /* Pods-EatsApp.debug.xcconfig */,
-				AAC345E16794F51F44C9F5F0 /* Pods-EatsApp.release.xcconfig */,
-				33E530F06872FCDCD041C1EB /* Pods-EatsApp-EatsAppUITests.debug.xcconfig */,
-				47DDE463AB1CFEBABA24F4F5 /* Pods-EatsApp-EatsAppUITests.release.xcconfig */,
-				74560C490A2656D564FACB0E /* Pods-EatsAppTests.debug.xcconfig */,
-				CAB6CA896CE50409144A8859 /* Pods-EatsAppTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		0C9029BC673F8786CABF896B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,7 +235,6 @@
 				4A279E3E2582E5B80096F79A /* EatsAppTests */,
 				4A279E492582E5B80096F79A /* EatsAppUITests */,
 				4A279E262582E5B30096F79A /* Products */,
-				03B16568E814CDE275363E3D /* Pods */,
 				0C9029BC673F8786CABF896B /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -532,11 +503,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A279E4F2582E5B80096F79A /* Build configuration list for PBXNativeTarget "EatsApp" */;
 			buildPhases = (
-				BBAD2D3F6E1DDF6FDAFA685C /* [CP] Check Pods Manifest.lock */,
 				4A279E212582E5B30096F79A /* Sources */,
 				4A279E222582E5B30096F79A /* Frameworks */,
 				4A279E232582E5B30096F79A /* Resources */,
-				C2A6998296B9A01C0EF22312 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -617,6 +586,9 @@
 				Base,
 			);
 			mainGroup = 4A279E1C2582E5B30096F79A;
+			packageReferences = (
+				B0E3EF962E6CDC730038DAF2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 4A279E262582E5B30096F79A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -707,9 +679,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EatsApp-EatsAppUITests/Pods-EatsApp-EatsAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EatsApp-EatsAppUITests/Pods-EatsApp-EatsAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -738,45 +714,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BBAD2D3F6E1DDF6FDAFA685C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EatsApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C2A6998296B9A01C0EF22312 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EatsApp/Pods-EatsApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EatsApp/Pods-EatsApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EatsApp/Pods-EatsApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -784,12 +721,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A21073E25BC2B0C00A6ED7A /* Photos.swift in Sources */,
 				4A4168ED25BA0F3800C47063 /* InfoPersonalViewController.swift in Sources */,
 				4A23B03825AACECB00FA066A /* MenuCollectionViewCell.swift in Sources */,
 				4A2EE0FA25BBDD6C0034C37E /* LocationTableViewCell.swift in Sources */,
 				4A4524DB25A173F4004A480D /* AccountViewController.swift in Sources */,
-				4A21073A25BC2B0C00A6ED7A /* User.swift in Sources */,
 				4A4524C625A13B63004A480D /* LastOrdesTableViewCell.swift in Sources */,
 				4A7C912E25AE563E00455A73 /* CategoriesCollectionViewCell.swift in Sources */,
 				4ACB5138259FBCA1000E0857 /* SearchViewController.swift in Sources */,
@@ -798,9 +733,7 @@
 				4A4F3F4225AE7A5D00B3F95F /* CardCollectionTableViewCell.swift in Sources */,
 				4A279E292582E5B30096F79A /* AppDelegate.swift in Sources */,
 				4A2B2989258AA80B0045EAD0 /* TabBarViewController.swift in Sources */,
-				4A21073B25BC2B0C00A6ED7A /* FIRFirestoreService.swift in Sources */,
 				4A4168E825BA0F1A00C47063 /* PayMethodsViewController.swift in Sources */,
-				4A21073D25BC2B0C00A6ED7A /* PhotosCategories.swift in Sources */,
 				4A7C912725AE562900455A73 /* SliderCollectionViewCell.swift in Sources */,
 				4A54D1B8258439CA00B64EE8 /* HomeViewController.swift in Sources */,
 				4A80FF5D25AABBA10019C4F5 /* HeaderRestaurant.swift in Sources */,
@@ -815,11 +748,8 @@
 				4A41690225BA3EB100C47063 /* PaymentMethodTableViewCell.swift in Sources */,
 				4A2B2972258AA40A0045EAD0 /* ViewController.swift in Sources */,
 				4A9B8ABD25AA740400874BBF /* RestaurantViewController.swift in Sources */,
-				4A21073F25BC2B0C00A6ED7A /* Snapshot Extensions.swift in Sources */,
-				4A21073C25BC2B0C00A6ED7A /* FIRCollectionReference.swift in Sources */,
 				4A1260DD25B933DD003D0BEA /* HeaderAccount.swift in Sources */,
 				4A4168D825BA022D00C47063 /* TermsViewController.swift in Sources */,
-				4A21073925BC2B0C00A6ED7A /* Encodable Extensions.swift in Sources */,
 				4A7C911025AE540100455A73 /* HeaderHome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -926,7 +856,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -981,7 +911,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -993,20 +923,25 @@
 		};
 		4A279E502582E5B80096F79A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A75A3292144AE9B99B9AC90 /* Pods-EatsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3FYVV972G7;
+				DRIVERKIT_DEPLOYMENT_TARGET = 24.0;
 				INFOPLIST_FILE = EatsApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexvc.EatsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1014,20 +949,25 @@
 		};
 		4A279E512582E5B80096F79A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AAC345E16794F51F44C9F5F0 /* Pods-EatsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3FYVV972G7;
+				DRIVERKIT_DEPLOYMENT_TARGET = 24.0;
 				INFOPLIST_FILE = EatsApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexvc.EatsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1035,7 +975,6 @@
 		};
 		4A279E532582E5B80096F79A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74560C490A2656D564FACB0E /* Pods-EatsAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1058,7 +997,6 @@
 		};
 		4A279E542582E5B80096F79A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAB6CA896CE50409144A8859 /* Pods-EatsAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1081,7 +1019,6 @@
 		};
 		4A279E562582E5B80096F79A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33E530F06872FCDCD041C1EB /* Pods-EatsApp-EatsAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1102,7 +1039,6 @@
 		};
 		4A279E572582E5B80096F79A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47DDE463AB1CFEBABA24F4F5 /* Pods-EatsApp-EatsAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1161,6 +1097,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B0E3EF962E6CDC730038DAF2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 4A279E1D2582E5B30096F79A /* Project object */;
 }

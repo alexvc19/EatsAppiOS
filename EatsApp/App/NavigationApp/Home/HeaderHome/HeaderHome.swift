@@ -6,9 +6,6 @@
 //
 
 import UIKit
-import FirebaseFirestore
-import FirebaseUI
-import FirebaseFirestoreSwift
 
 class HeaderHome: UIView, UICollectionViewDelegate {
 
@@ -18,8 +15,6 @@ class HeaderHome: UIView, UICollectionViewDelegate {
     var slider = "sliderCell"
     var categ = "categorieCell"
     
-    var photos = [Photos]()
-    var photosCategories = [PhotosCategories]()
     
     private func initCollectionView() {
 
@@ -32,23 +27,6 @@ class HeaderHome: UIView, UICollectionViewDelegate {
         sliderCollectionView.dataSource = self
         sliderCollectionView.delegate = self
         
-        //MARK: - Firebase Service
-        FIRFirestoreService.shared.read(from: .photos, returning: Photos.self) { (photos) in
-            self.photos = photos
-            
-            //CollectionView Reload data
-            DispatchQueue.main.async {
-                self.sliderCollectionView.reloadData()
-            }
-        }
-        
-        FIRFirestoreService.shared.read(from: .categories, returning: PhotosCategories.self) { (photosCategories) in
-            self.photosCategories = photosCategories
-            
-            DispatchQueue.main.async {
-                self.categoriesCollectionView.reloadData()
-            }
-        }
     }
     
     override init(frame: CGRect){
@@ -75,35 +53,25 @@ extension HeaderHome: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        if collectionView == categoriesCollectionView {
-            return photosCategories.count
-        }
-        return photos.count
+        return 5
 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        guard let cell = sliderCollectionView.dequeueReusableCell(withReuseIdentifier: slider, for: indexPath) as? SliderCollectionViewCell else {
-            fatalError("cant dequeue cell")
+        if collectionView == sliderCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: slider, for: indexPath) as? SliderCollectionViewCell else {
+                fatalError("cant dequeue SliderCollectionViewCell")
+            }
+            return cell
+        } else if collectionView == categoriesCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: categ, for: indexPath) as? CategoriesCollectionViewCell else {
+                fatalError("cant dequeue CategoriesCollectionViewCell")
+            }
+            cell.name.text = ""
+            return cell
+        } else {
+            fatalError("Unknown collectionView")
         }
-        
-        if (collectionView == categoriesCollectionView){
-            let celld = categoriesCollectionView.dequeueReusableCell(withReuseIdentifier: categ, for: indexPath) as! CategoriesCollectionViewCell
-   
-            let photograp = photosCategories[indexPath.row]
-            celld.photoImageView.sd_setImage(with: URL(string: photograp.icon))
-            celld.name.text = photograp.categorieName
-    
-            return celld
-    
-        }
-        
-        let photo = photos[indexPath.row]
-        let url: URL? = photo.urlPhoto
-        
-        cell.photoImageView.sd_setImage(with: url)
-        
-        return cell
     }
+
 }

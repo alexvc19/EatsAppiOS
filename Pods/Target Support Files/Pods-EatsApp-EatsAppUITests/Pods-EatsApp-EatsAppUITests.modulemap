@@ -1,6 +1,0 @@
-framework module Pods_EatsApp_EatsAppUITests {
-  umbrella header "Pods-EatsApp-EatsAppUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
