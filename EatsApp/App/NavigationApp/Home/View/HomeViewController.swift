@@ -8,7 +8,8 @@
 import UIKit
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
-    
+    let viewModel = EAHomeViewModel()
+
     @IBOutlet weak var pageView: UIPageControl!
     @IBOutlet weak var tableView: UITableView!
 
@@ -71,19 +72,28 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //MARK: -  ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Header TableView
         let header = HeaderHome(frame: CGRect(x: 0, y: 0, width:view.frame.width, height: 320))
-        
+        header.viewModel = viewModel
         tableView.tableHeaderView = header
         
         // Cerrar el keyboard
         let tapGesture = UITapGestureRecognizer(target: self, action:     #selector(tapGestureHandler))
             view.addGestureRecognizer(tapGesture)
-        
         tableView.register(UINib(nibName: "CardCollectionTableViewCell", bundle: nil), forCellReuseIdentifier: "cellCard")
-    
+        bindViewModel()
+        viewModel.fetchCategories()
     }
+    
+    private func bindViewModel() {
+        viewModel.didUpdateCategories = { [weak self] in
+            DispatchQueue.main.async {
+                if let header = self?.tableView.tableHeaderView as? HeaderHome {
+                    header.reloadCollections()
+                }
+            }
+        }
+    }
+
     //MARK: - Funcion para cerrar el keyboard
     @objc func tapGestureHandler() {
 //        ubicationTextF.endEditing(true)

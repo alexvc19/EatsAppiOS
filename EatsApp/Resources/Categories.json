@@ -1,0 +1,19 @@
+{
+  "categories": [
+    { "name": "bbqs", "image": "https://www.dhresource.com/webp/m/0x0/f2/albu/g21/M01/9F/D1/rBNaOWDtGQ6AJi5RAAxNm4ECqLU276.jpg" },
+    { "name": "BestFoods", "image": "https://herramientas-ia.com/wp-content/uploads/2024/08/planos-en-fotografia-gastronomica-1024x585.jpg" },
+    { "name": "breads", "image": "https://thumbs.dreamstime.com/b/el-pan-37734414.jpg" },
+    { "name": "burgers", "image": "https://www.shutterstock.com/image-photo/burger-600nw-228275755.jpg" },
+    { "name": "chocolates", "image": "https://example.com/images/chocolates.jpg" },
+    { "name": "desserts", "image": "https://example.com/images/desserts.jpg" },
+    { "name": "drinks", "image": "https://example.com/images/drinks.jpg" },
+    { "name": "FriedChicken", "image": "https://example.com/images/fried-chicken.jpg" },
+    { "name": "IceCream", "image": "https://example.com/images/ice-cream.jpg" },
+    { "name": "pizzas", "image": "https://example.com/images/pizzas.jpg" },
+    { "name": "porks", "image": "https://example.com/images/porks.jpg" },
+    { "name": "sandwiches", "image": "https://example.com/images/sandwiches.jpg" },
+    { "name": "sausages", "image": "https://example.com/images/sausages.jpg" },
+    { "name": "steaks", "image": "https://example.com/images/steaks.jpg" }
+  ]
+}
+

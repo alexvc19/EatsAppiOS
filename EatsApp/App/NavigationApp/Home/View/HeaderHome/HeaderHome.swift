@@ -12,12 +12,21 @@ class HeaderHome: UIView, UICollectionViewDelegate {
     @IBOutlet weak var sliderCollectionView: UICollectionView!
     @IBOutlet weak var categoriesCollectionView: UICollectionView!
     
+    var viewModel: EAHomeViewModel? {
+        didSet {
+            viewModel?.didUpdateCategories = { [weak self] in
+                DispatchQueue.main.async {
+                    self?.reloadCollections()
+                   
+                }
+            }
+        }
+    }
+    
     var slider = "sliderCell"
     var categ = "categorieCell"
     
-    
     private func initCollectionView() {
-
         sliderCollectionView.register(UINib(nibName: "SliderCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: slider)
         categoriesCollectionView.register(UINib(nibName: "CategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: categ)
         
@@ -46,15 +55,16 @@ class HeaderHome: UIView, UICollectionViewDelegate {
         addSubview(viewFromXib)
         initCollectionView()
     }
-
-
+    func reloadCollections() {
+        sliderCollectionView.reloadData()
+        categoriesCollectionView.reloadData()
+    }
+    
 }
 extension HeaderHome: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return 5
-
+        return viewModel?.categories.count ?? 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -67,7 +77,10 @@ extension HeaderHome: UICollectionViewDataSource{
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: categ, for: indexPath) as? CategoriesCollectionViewCell else {
                 fatalError("cant dequeue CategoriesCollectionViewCell")
             }
-            cell.name.text = ""
+            if let category = viewModel?.categories[indexPath.item] {
+                cell.name.text = category.name.uppercased()
+                cell.photoImageView.loadImage(from: category.imageURL, placeholder: UIImage(named: "Example"))
+            }
             return cell
         } else {
             fatalError("Unknown collectionView")

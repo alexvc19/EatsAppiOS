@@ -16,7 +16,7 @@ class LogInViewController: UIViewController {
         
     }
     @IBAction func signUpButtonAction(_ sender: Any) {
-        let password = pass.text
+        _ = pass.text
     
     }
 
@@ -48,7 +48,7 @@ class LogInViewController: UIViewController {
         let icon = UIImage(named: "Google")!
         googleButton.setImage(icon, for: .normal)
         googleButton.imageView!.contentMode = .scaleAspectFill
-        googleButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -20, bottom: 0, right: 0)
+        //googleButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: -20, bottom: 0, right: 0)
         
         //MARK: - Cerrar el keyboard
         let tapGesture = UITapGestureRecognizer(target: self, action:     #selector(tapGestureHandler))
